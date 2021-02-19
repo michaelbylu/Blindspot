@@ -11,6 +11,17 @@ public class PipeManager : MonoBehaviour
     }
     public gridRow[] pipes;
 
+    // position of start point in the grid
+    public int startX;
+    public int startY;
+    // position of end point in the grid
+    public int endX;
+    public int endY;
+
+    public GameObject PuzzleUI;
+    public GameObject ImageUI;
+    // index of this puzzle
+    public int index;
     private bool[,] visited;
     // number of rows in the grid
     private int length;
@@ -30,11 +41,25 @@ public class PipeManager : MonoBehaviour
         
     }
 
+    private void OnEnable() {
+        PuzzleUI.SetActive(true);
+    }
+
+    private void OnDisable() {
+        PuzzleUI.SetActive(false);
+        ImageUI.SetActive(false);
+    }
+
     public void StartBfs() {
         visited = new bool [length, height];
-        visited[0, 0] = true;
-        Bfs(1, 0, 3);
+        Bfs(startX, startY, 3);
         ChangeColor();
+        if(visited[endX, endY]) {
+            ImageUI.SetActive(true);
+            if(index == 1) {
+                GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().ShowDialogue();
+            }
+        }
     }
 
     public void Bfs(int x, int y, int direction) {
