@@ -23,9 +23,11 @@ public class JsonReader : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.K)) {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
             ChangeLine("0");
         }
         if(Input.GetKeyDown(KeyCode.A)) {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
             ChangeLine("9");
         }
     }
