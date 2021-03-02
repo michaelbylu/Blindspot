@@ -1,0 +1,20 @@
+{
+    "options": 
+    [
+        {
+            "optionIndex": "12",
+            "optionLines":
+            [
+                "OK…… let me take a look…",
+                "It’s about class time, maybe later?",
+                "I don’t want to do math problem now."
+            ],
+            "nextLines":
+            [
+                "puzzle1",
+                "13",
+                "13"
+            ]
+        }
+    ]
+}

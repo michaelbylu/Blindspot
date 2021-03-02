@@ -1,0 +1,89 @@
+{
+    "lines":
+    [
+        {
+            "dialogue": "Hey Mei! How’s it going?",
+            "image": "frank_illustration",
+            "lineIndex": "0",
+            "nextLine": "1"
+        },
+        {
+            "dialogue": "I'm doing pretty good! How about you?",
+            "image": "",
+            "lineIndex": "1",
+            "nextLine": "2"
+        },
+        {
+            "dialogue": "Um. I'm ok, it's just...",
+            "image": "frank_illustration",
+            "lineIndex": "2",
+            "nextLine": "3"
+        },
+        {
+            "dialogue": "What’s wrong!?",
+            "image": "",
+            "lineIndex": "3",
+            "nextLine": "4"
+        },
+        {
+            "dialogue": "The quiz...",
+            "image": "frank_illustration",
+            "lineIndex": "4",
+            "nextLine": "5"
+        },
+        {
+            "dialogue": "That quiz from our calculus class?",
+            "image": "",
+            "lineIndex": "5",
+            "nextLine": "6"
+        },
+        {
+            "dialogue": "Yeah, It's so hard and it is not a lot of time for us to finish everything.",
+            "image": "frank_illustration",
+            "lineIndex": "6",
+            "nextLine": "7"
+        },
+        {
+            "dialogue": "Could you help me with this?",
+            "image": "frank_illustration",
+            "lineIndex": "7",
+            "nextLine": "8"
+        },
+        {
+            "dialogue": "Sure! I'm actually also working on the quiz. Let's take a look together!",
+            "image": "",
+            "lineIndex": "8",
+            "nextLine": "puzzle1"
+        },
+        {
+            "dialogue": "OMG, How did you figure it out so fast?",
+            "image": "frank_illustration",
+            "lineIndex": "9",
+            "nextLine": "10"
+        },
+        {
+            "dialogue": "That's why everybody thinks Chinese people are good at math!",
+            "image": "frank_illustration",
+            "lineIndex": "10",
+            "nextLine": "11"
+        },
+        {
+            "dialogue": "Oh, how about this next question? How did you solve this one?",
+            "image": "frank_illustration",
+            "lineIndex": "11",
+            "nextLine": "12"
+        },
+        {
+            "dialogue": "That's frustrated...I'm not gifted to do math...It's the result of my work.",
+            "image": "",
+            "lineIndex": "12",
+            "nextLine": "options"
+        },
+        {
+            "dialogue": "Come on! We got plenty of time, it should be very easy for you right?",
+            "image": "frank_illustration",
+            "lineIndex": "13",
+            "nextLine": "puzzle1"
+        }
+    ]
+}
