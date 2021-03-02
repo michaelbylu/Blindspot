@@ -50,13 +50,13 @@ public class JsonReader : MonoBehaviour
         lineObject.SetActive(true);
         lineObject.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = next.dialogue;
         lineObject.transform.Find("Frame").GetComponent<RawImage>().texture = 
-            Resources.Load<Texture2D>("Art/Scene1/text_box");
-        if(next.image == "") {
+            Resources.Load<Texture2D>("Art/Scene1/" + next.frame);
+        if(next.illustration == "") {
             lineObject.transform.Find("Illustration").GetComponent<RawImage>().texture = null;
         }
         else {
             lineObject.transform.Find("Illustration").GetComponent<RawImage>().texture = 
-            Resources.Load<Texture2D>("Art/Scene1/" + next.image);
+            Resources.Load<Texture2D>("Art/Scene1/" + next.illustration);
         }
         currentLine = next.lineIndex;
         nextLine = next.nextLine;

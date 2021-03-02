@@ -7,7 +7,9 @@ public class Line
     //The string dialogue to be shown in the text box
     public string dialogue;
     //The name of illustration texture (MUST be in the Resources folder)
-    public string image;
+    public string illustration;
+    //The name of frame texture (MUST be in the Resources folder)
+    public string frame;
     //String index for this line
     public string lineIndex;
     //String index for the next line
