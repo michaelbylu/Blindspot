@@ -55,8 +55,8 @@ public class JsonReader : MonoBehaviour
             lineObject.transform.Find("Illustration").GetComponent<RawImage>().texture = null;
         }
         else {
-            lineObject.transform.Find("Illustration").GetComponent<RawImage>().texture = 
-            Resources.Load<Texture2D>("Art/Scene1/" + next.illustration);
+            lineObject.transform.Find("Illustration").GetComponent<IllustrationController>().
+            ChangeTexture("Art/Scene1/" + next.illustration);
         }
         currentLine = next.lineIndex;
         nextLine = next.nextLine;
