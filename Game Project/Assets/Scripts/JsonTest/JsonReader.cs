@@ -37,6 +37,7 @@ public class JsonReader : MonoBehaviour
     public void ChangeLine(string targetIndex) {
         if(targetIndex == "puzzle1") {
             lineObject.SetActive(false);
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
             return;
         }
         if(targetIndex == "options") {
@@ -75,12 +76,10 @@ public class JsonReader : MonoBehaviour
             Debug.Log("target option " + targetIndex + " not found.");
             return;
         }
-        Debug.Log("getting child buttons");
         foreach(Button button in lineObject.transform.Find("Options").GetComponentsInChildren<Button>(true)){
             button.gameObject.SetActive(true);
             int optionIndex = button.gameObject.name[6] - 49;
             button.gameObject.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = target.optionLines[optionIndex];
-            Debug.Log("option button " + optionIndex + " enabled!");
         }
         nextLine = "";
     }

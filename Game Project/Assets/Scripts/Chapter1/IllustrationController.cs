@@ -31,7 +31,11 @@ public class IllustrationController : MonoBehaviour
             targetTexture = texture;
             isSwitching = true;
             isFadingOut = true;
-            Debug.Log("Changing texture to " + texture);
+            if(rawImage.texture == null) {
+                Color color = rawImage.color;
+                color.a = 0f;
+                rawImage.color = color;
+            }
         }
     }
 

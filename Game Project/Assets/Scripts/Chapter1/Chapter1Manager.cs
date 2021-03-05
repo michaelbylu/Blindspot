@@ -2,58 +2,60 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+
+//This manager dude is gonna handle all the cheap n dirty code
+//Wish him luck!
 public class Chapter1Manager : MonoBehaviour
 {
-    [System.Serializable]
-    public struct part {
-        public GameObject[] lines;
-    }
-    public part[] parts;
-    private int partIndex = 0;
-    private int lineIndex = 0;
+    public GameObject chair;
+    public GameObject book;
+    public GameObject puzzle1;
+    public JsonReader jsonReader;
+    private int currentStage = 0;
+    private bool stageChanged = false;
     void Start()
     {
-        
-    }
-    private void OnEnable() {
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (stageChanged)
+        {
+            CheckStage();
+        }
     }
 
-    public void JumpTo(int line) {
-        GameObject target = parts[partIndex].lines[line];
-        if(target == null) {
-            return;
+    private void CheckStage()
+    {
+        switch (currentStage)
+        {
+            case 1: //When player sit on the chair
+                jsonReader.ChangeLine("0");
+                stageChanged = false;
+                break;
+            case 2: //When first part dialogues end and the book is ready for click
+                book.GetComponent<BookController>().EnableClick();
+                stageChanged = false;
+                break;
+            case 3: //When book is clicked, show the first puzzle
+                puzzle1.SetActive(true);
+                stageChanged = false;
+                break;
+            case 4: //When puzzle is completed, show next line
+                jsonReader.ChangeLine("9");
+                stageChanged = false;
+                break;
+            default:
+                stageChanged = false;
+                break;
         }
-        parts[partIndex].lines[lineIndex].SetActive(false);
-        target.SetActive(true);
-        gameObject.GetComponent<BoxCollider2D>().enabled = (target.GetComponentInChildren<Button>() == null);
     }
 
-    public void JumpToNext() {
-        parts[partIndex].lines[lineIndex].SetActive(false);
-        if(lineIndex == parts[partIndex].lines.Length - 1) {
-            partIndex++;
-            lineIndex = 0;
-        }
-        else {
-            lineIndex++;
-        }
-        GameObject nextLine = parts[partIndex].lines[lineIndex];
-        nextLine.SetActive(true);
-        gameObject.GetComponent<BoxCollider2D>().enabled = (nextLine.GetComponentInChildren<Button>() == null);
-    }
-    public void HideCurrentLine() {
-        GameObject nextLine = parts[partIndex].lines[lineIndex];
-        nextLine.SetActive(false);
-    }
-
-    private void OnMouseUp() {
-        JumpToNext();
+    public void ChangeStage()
+    {
+        currentStage++;
+        stageChanged = true;
     }
 }
