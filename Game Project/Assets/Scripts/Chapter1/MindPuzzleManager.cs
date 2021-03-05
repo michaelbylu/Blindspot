@@ -33,12 +33,12 @@ public class MindPuzzleManager : MonoBehaviour
     }
 
     IEnumerator ShowSolution() {
-        yield return new WaitForSeconds(2.0f);
-        for(int i=0; i<placedPuzzle; i++) {
-            equations[i].GetComponent<FadeInOut>().StartFadingOut();
-        }
-        yield return new WaitForSeconds(2.0f);
-        equations[placedPuzzle].SetActive(true);
+        // yield return new WaitForSeconds(2.0f);
+        // for(int i=0; i<placedPuzzle; i++) {
+        //     equations[i].GetComponent<FadeInOut>().StartFadingOut();
+        // }
+        // yield return new WaitForSeconds(2.0f);
+        // equations[placedPuzzle].SetActive(true);
         yield return new WaitForSeconds(3.0f);
         FadeInOut[] fadeInOuts = gameObject.GetComponentsInChildren<FadeInOut>();
         foreach(FadeInOut fadeInOut in fadeInOuts) {

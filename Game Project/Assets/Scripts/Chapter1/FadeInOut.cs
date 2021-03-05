@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class FadeInOut : MonoBehaviour
 {
-    // Start is called before the first frame update
     public float speed = 2f;
 
+    public bool blinkAtStart = false;
     private bool isFadingIn = false;
     private bool isFadingOut = false;
     private bool isBlinking = false;
     void Start()
     {
-        
+        if(blinkAtStart) {
+            StartBlinking();
+        }
     }
 
     // Update is called once per frame
