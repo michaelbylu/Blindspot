@@ -10,4 +10,7 @@ public class Option
     public string[] nextLines;
     //String index for this option
     public string optionIndex;
+    //The name of illustration texture, if left as empty string then nothing happens
+    // (MUST be in the Resources folder)
+    public string illustration;
 }

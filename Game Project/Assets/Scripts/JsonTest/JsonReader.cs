@@ -35,7 +35,7 @@ public class JsonReader : MonoBehaviour
     //Switch dialogue content based on targetIndex
     //When targetIndex indicate options, turn on option buttons
     public void ChangeLine(string targetIndex) {
-        if(targetIndex == "puzzle1") {
+        if(targetIndex == "puzzle1-1" || targetIndex == "puzzle1-2") {
             lineObject.SetActive(false);
             GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
             return;
@@ -75,6 +75,10 @@ public class JsonReader : MonoBehaviour
         if(target == null) {
             Debug.Log("target option " + targetIndex + " not found.");
             return;
+        }
+        if(target.illustration != "") {
+            lineObject.transform.Find("Illustration").GetComponent<IllustrationController>().
+            ChangeTexture("Art/Scene1/" + target.illustration);
         }
         foreach(Button button in lineObject.transform.Find("Options").GetComponentsInChildren<Button>(true)){
             button.gameObject.SetActive(true);

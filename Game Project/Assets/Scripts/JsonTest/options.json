@@ -11,10 +11,11 @@
             ],
             "nextLines":
             [
-                "puzzle1",
+                "puzzle1-2",
                 "13",
                 "13"
-            ]
+            ],
+            "illustration": "Mei_make_choices"
         }
     ]
 }

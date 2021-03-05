@@ -9,7 +9,7 @@
         },
         {
             "dialogue": "I'm doing pretty good! How about you?",
-            "illustration": "",
+            "illustration": "Mei_speaking",
             "frame": "text_box",
             "lineIndex": "1",
             "nextLine": "2"
@@ -23,7 +23,7 @@
         },
         {
             "dialogue": "What’s wrong!?",
-            "illustration": "",
+            "illustration": "Mei_speaking",
             "frame": "text_box",
             "lineIndex": "3",
             "nextLine": "4"
@@ -37,7 +37,7 @@
         },
         {
             "dialogue": "That quiz from our calculus class?",
-            "illustration": "",
+            "illustration": "Mei_speaking",
             "frame": "text_box",
             "lineIndex": "5",
             "nextLine": "6"
@@ -58,10 +58,10 @@
         },
         {
             "dialogue": "Sure! I'm actually also working on the quiz. Let's take a look together!",
-            "illustration": "",
+            "illustration": "Mei_speaking",
             "frame": "text_box",
             "lineIndex": "8",
-            "nextLine": "puzzle1"
+            "nextLine": "puzzle1-1"
         },
         {
             "dialogue": "OMG, How did you figure it out so fast?",
@@ -86,7 +86,7 @@
         },
         {
             "dialogue": "That's frustrated...I'm not gifted to do math...It's the result of my work.",
-            "illustration": "",
+            "illustration": "Mei_speaking",
             "frame": "text_box",
             "lineIndex": "12",
             "nextLine": "options"
@@ -96,7 +96,14 @@
             "illustration": "frank_illustration",
             "frame": "text_box",
             "lineIndex": "13",
-            "nextLine": "puzzle1"
+            "nextLine": "puzzle1-2"
+        },
+        {
+            "dialogue": "Come on! We got plenty of time, it should be very easy for you right?",
+            "illustration": "frank_illustration",
+            "frame": "text_box",
+            "lineIndex": "13",
+            "nextLine": "puzzle1-2"
         }
     ]
 }

@@ -7,9 +7,9 @@ using UnityEngine;
 //Wish him luck!
 public class Chapter1Manager : MonoBehaviour
 {
-    public GameObject chair;
     public GameObject book;
-    public GameObject puzzle1;
+    public GameObject puzzle1_1;
+    public GameObject puzzle1_2;
     public JsonReader jsonReader;
     private int currentStage = 0;
     private bool stageChanged = false;
@@ -39,12 +39,20 @@ public class Chapter1Manager : MonoBehaviour
                 book.GetComponent<BookController>().EnableClick();
                 stageChanged = false;
                 break;
-            case 3: //When book is clicked, show the first puzzle
-                puzzle1.SetActive(true);
+            case 3: //When book is clicked, show puzzle1-1
+                puzzle1_1.SetActive(true);
                 stageChanged = false;
                 break;
             case 4: //When puzzle is completed, show next line
                 jsonReader.ChangeLine("9");
+                stageChanged = false;
+                break;
+            case 5: //When second part dialogues end and the book is ready for click again
+                book.GetComponent<BookController>().EnableClick();
+                stageChanged = false;
+                break;
+            case 6: //When book is clicked again, show puzzle1-2
+                puzzle1_2.SetActive(true);
                 stageChanged = false;
                 break;
             default:
