@@ -22,22 +22,21 @@ public class JsonReader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.K)) {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
-            ChangeLine("0");
-        }
-        if(Input.GetKeyDown(KeyCode.A)) {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
-            ChangeLine("9");
-        }
+
     }
 
     //Switch dialogue content based on targetIndex
     //When targetIndex indicate options, turn on option buttons
     public void ChangeLine(string targetIndex) {
-        if(targetIndex == "puzzle1-1" || targetIndex == "puzzle1-2") {
+        if(targetIndex.StartsWith("puzzle")) {
             lineObject.SetActive(false);
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
+            if(targetIndex.Length > "puzzlex-x".Length) {
+                string level = targetIndex[9].ToString();
+                GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage(level);
+            }
+            else{
+                GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
+            }
             return;
         }
         if(targetIndex == "options") {

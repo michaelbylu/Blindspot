@@ -2,7 +2,7 @@
     "lines": [
         {
             "dialogue": "Hey Mei! How’s it going?",
-            "illustration": "frank_illustration",
+            "illustration": "Karen_illustration",
             "frame": "text_box",
             "lineIndex": "0",
             "nextLine": "1"
@@ -16,7 +16,7 @@
         },
         {
             "dialogue": "Um. I'm ok, it's just...",
-            "illustration": "frank_illustration",
+            "illustration": "Karen_illustration",
             "frame": "text_box",
             "lineIndex": "2",
             "nextLine": "3"
@@ -30,80 +30,193 @@
         },
         {
             "dialogue": "The quiz...",
-            "illustration": "frank_illustration",
+            "illustration": "Karen_illustration",
             "frame": "text_box",
             "lineIndex": "4",
             "nextLine": "5"
         },
         {
-            "dialogue": "That quiz from our calculus class?",
+            "dialogue": "That online quiz from our Calculus class?",
             "illustration": "Mei_speaking",
             "frame": "text_box",
             "lineIndex": "5",
             "nextLine": "6"
         },
         {
-            "dialogue": "Yeah, It's so hard and it is not a lot of time for us to finish everything.",
-            "illustration": "frank_illustration",
+            "dialogue": "Yeah. That quiz is just so hard. It takes me so much time during the weekend.",
+            "illustration": "Karen_illustration",
             "frame": "text_box",
             "lineIndex": "6",
-            "nextLine": "7"
+            "nextLine": "options"
         },
         {
-            "dialogue": "Could you help me with this?",
-            "illustration": "frank_illustration",
+            "dialogue": "Oh, really? So how did you figure out the extra credit questions?",
+            "illustration": "Karen_illustration",
             "frame": "text_box",
             "lineIndex": "7",
             "nextLine": "8"
         },
         {
-            "dialogue": "Sure! I'm actually also working on the quiz. Let's take a look together!",
+            "dialogue": "I was actually still working on those, but I had some ideas for what to try next.",
             "illustration": "Mei_speaking",
             "frame": "text_box",
             "lineIndex": "8",
-            "nextLine": "puzzle1-1"
+            "nextLine": "9"
         },
         {
-            "dialogue": "OMG, How did you figure it out so fast?",
-            "illustration": "frank_illustration",
+            "dialogue": "Great! So would you like to share your idea with me?",
+            "illustration": "Karen_illustration",
             "frame": "text_box",
             "lineIndex": "9",
             "nextLine": "10"
         },
         {
-            "dialogue": "That's why everybody thinks Chinese people are good at math!",
-            "illustration": "frank_illustration",
+            "dialogue": "Sure! Let's take a look together!",
+            "illustration": "Mei_speaking",
             "frame": "text_box",
             "lineIndex": "10",
-            "nextLine": "11"
+            "nextLine": "puzzle1-1"
         },
         {
-            "dialogue": "Oh, how about this next question? How did you solve this one?",
-            "illustration": "frank_illustration",
+            "dialogue": "Nice! Did the TA talk about the extra credit question during your discussion section?",
+            "illustration": "Karen_illustration",
             "frame": "text_box",
             "lineIndex": "11",
             "nextLine": "12"
         },
         {
-            "dialogue": "That's frustrated...I'm not gifted to do math...It's the result of my work.",
+            "dialogue": "No, not in our section. But I may have som e ideas for those questions now.",
             "illustration": "Mei_speaking",
             "frame": "text_box",
             "lineIndex": "12",
+            "nextLine": "9"
+        },
+        {
+            "dialogue": "Wow, how did you figure it out so fast?",
+            "illustration": "Karen_illustration",
+            "frame": "text_box",
+            "lineIndex": "13",
+            "nextLine": "14"
+        },
+        {
+            "dialogue": "So Chinese people are all good at math, right?",
+            "illustration": "Karen_illustration",
+            "frame": "text_box",
+            "lineIndex": "14",
             "nextLine": "options"
         },
         {
-            "dialogue": "Come on! We got plenty of time, it should be very easy for you right?",
-            "illustration": "frank_illustration",
+            "dialogue": "hah, I like the way you solve that question. How about this next one?" 
+            ,
+            "illustration": "Karen_illustration",
             "frame": "text_box",
-            "lineIndex": "13",
-            "nextLine": "puzzle1-2"
+            "lineIndex": "15",
+            "nextLine": "16"
         },
         {
-            "dialogue": "Come on! We got plenty of time, it should be very easy for you right?",
-            "illustration": "frank_illustration",
+            "dialogue": "Thanks. Just give me one second. I need to take a look at my notes.",
+            "illustration": "Mei_speaking",
             "frame": "text_box",
-            "lineIndex": "13",
-            "nextLine": "puzzle1-2"
+            "lineIndex": "16",
+            "nextLine": "puzzle1-2A"
+        },
+        {
+            "dialogue": "Same! That question also bothered me so much. So do you have any ideas for the next one?",
+            "illustration": "Karen_illustration",
+            "frame": "text_box",
+            "lineIndex": "17",
+            "nextLine": "18"
+        },
+        {
+            "dialogue": "Yeah, but I'm not 100% sure about that, but let's just go onto the next question.",
+            "illustration": "Mei_speaking",
+            "frame": "text_box",
+            "lineIndex": "18",
+            "nextLine": "puzzle1-2B"
+        },
+        {
+            "dialogue": "Oh, don't overthink it. It's just a compliment.",
+            "illustration": "Karen_illustration",
+            "frame": "text_box",
+            "lineIndex": "19",
+            "nextLine": "20"
+        },
+        {
+            "dialogue": "Um...never mind... let's move on to the next question.",
+            "illustration": "Mei_speaking",
+            "frame": "text_box",
+            "lineIndex": "20",
+            "nextLine": "puzzle1-2C"
+        },
+        {
+            "dialogue": "Nice job, Meimei! From your notes, you're way better at math than me.\nYou must have worked so hard for that.",
+            "illustration": "Karen_illustration",
+            "frame": "text_box",
+            "lineIndex": "21A",
+            "nextLine": "puzzle"
+        },
+        {
+            "dialogue": "Thanks for sharing your problem-solving skills. \nYou must be working so hard for that yesterday.",
+            "illustration": "Karen_illustration",
+            "frame": "text_box",
+            "lineIndex": "21B",
+            "nextLine": "puzzle"
+        },
+        {
+            "dialogue": "Thank you Meimei! So you guys must really have a talent for math. \nYou must all have a great passion for it!",
+            "illustration": "Karen_illustration",
+            "frame": "text_box",
+            "lineIndex": "21C",
+            "nextLine": "puzzle"
+        },
+        {
+            "dialogue": "Guys, you have 20 minutes to prepare for the upcoming presentation. \nAfter finalizing your ideas, each team will get 5 minutes to talk.",
+            "illustration": "Professor_illustration",
+            "frame": "text_box",
+            "lineIndex": "22",
+            "nextLine": "23"
+        },
+        {
+            "dialogue": "Alright. Let's get started.",
+            "illustration": "Karen_illustration",
+            "frame": "text_box",
+            "lineIndex": "23",
+            "nextLine": "24"
+        },
+        {
+            "dialogue": "Sure! I got an idea about the topic for our presentation, which is ......",
+            "illustration": "Frank_illustration",
+            "frame": "text_box",
+            "lineIndex": "24",
+            "nextLine": "25"
+        },
+        {
+            "dialogue": "That's a good idea! Maybe we can also add something like......",
+            "illustration": "Karen_illustration",
+            "frame": "text_box",
+            "lineIndex": "25",
+            "nextLine": "26"
+        },
+        {
+            "dialogue": "Yeah, that's a good point! We should definitely think about your suggestion for this topic.",
+            "illustration": "Frank_illustration",
+            "frame": "text_box",
+            "lineIndex": "26",
+            "nextLine": "27"
+        },
+        {
+            "dialogue": "Actually, I have another idea about this topic.",
+            "illustration": "Mei_speaking",
+            "frame": "text_box",
+            "lineIndex": "27",
+            "nextLine": "28"
+        },
+        {
+            "dialogue": "Based on what the professor just mentioned, maybe... um... we can think this topic in this way....",
+            "illustration": "Mei_speaking",
+            "frame": "text_box",
+            "lineIndex": "28",
+            "nextLine": "puzzle2-1"
         }
     ]
 }

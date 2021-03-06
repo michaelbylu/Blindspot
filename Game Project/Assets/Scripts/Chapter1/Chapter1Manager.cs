@@ -7,14 +7,14 @@ using UnityEngine;
 //Wish him luck!
 public class Chapter1Manager : MonoBehaviour
 {
-    public GameObject clock;
+    public GameObject[] clocks;
     public GameObject book;
     public GameObject puzzle1_1;
     public GameObject puzzle1_2;
+    public GameObject crowd;
     public JsonReader jsonReader;
     private int currentStage = 0;
-    private bool stageChanged = false;
-    private int currentDifficulty = 0;
+    private string currentDifficulty = "A";
     void Start()
     {
 
@@ -23,10 +23,6 @@ public class Chapter1Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (stageChanged)
-        {
-            CheckStage();
-        }
         if(Input.GetKeyDown(KeyCode.L)) {
             currentStage = 8;
             CheckStage();
@@ -39,39 +35,35 @@ public class Chapter1Manager : MonoBehaviour
         {
             case 1: //When player sit on the chair
                 jsonReader.ChangeLine("0");
-                stageChanged = false;
                 break;
             case 2: //When first part dialogues end and the book is ready for click
                 book.GetComponent<BookController>().EnableClick();
-                stageChanged = false;
                 break;
             case 3: //When book is clicked, show puzzle1-1
                 puzzle1_1.SetActive(true);
-                stageChanged = false;
                 break;
             case 4: //When puzzle1-1 is completed, show next line
-                jsonReader.ChangeLine("9");
-                stageChanged = false;
+                jsonReader.ChangeLine("13");
                 break;
             case 5: //When second part dialogues end and the book is ready for click again
                 book.GetComponent<BookController>().EnableClick();
-                stageChanged = false;
                 break;
             case 6: //When book is clicked again, show puzzle1-2
                 puzzle1_2.SetActive(true);
-                stageChanged = false;
                 break;
             case 7: //When puzzle1-2 is completed, show next line
-                jsonReader.ChangeLine("9");
-                stageChanged = false;
+                jsonReader.ChangeLine("21" + currentDifficulty);
                 break;
-            case 8: //When dialogues completed, turn on the clock
-                clock.SetActive(true);
-                clock.GetComponentInChildren<ClockController>().TurnOn(5);
-                stageChanged = false;
+            case 8: //When dialogues completed, turn on the clocks, crowd fadein
+                clocks[0].SetActive(true);
+                clocks[0].GetComponentInChildren<ClockController>().TurnOn(5);
+                clocks[1].GetComponentInChildren<ClockController>().TurnOn(5);
+                crowd.GetComponent<CrowdController>().EnableCrowd();
+                break;
+            case 9: //Start public class when crowd finish fading in
+                jsonReader.ChangeLine("22");
                 break;
             default:
-                stageChanged = false;
                 break;
         }
     }
@@ -79,12 +71,12 @@ public class Chapter1Manager : MonoBehaviour
     public void ChangeStage()
     {
         currentStage++;
-        stageChanged = true;
+        CheckStage();
     }
 
-    public void ChangeStage(int puzzleDifficulty) {
+    public void ChangeStage(string puzzleDifficulty) {
         currentStage++;
-        stageChanged = true;
+        CheckStage();
         currentDifficulty = puzzleDifficulty;
     }
 }

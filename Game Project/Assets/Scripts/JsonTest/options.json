@@ -2,16 +2,33 @@
     "options": 
     [
         {
-            "optionIndex": "12",
+            "optionIndex": "6",
             "optionLines":
             [
-                "OK…… let me take a look…",
-                "It’s about class time, maybe later?"
+                "Exactly! I also spent a lot of time on the quiz.",
+                "Yeah! The quiz was so hard. The TA even said the grade would be curved."
             ],
             "nextLines":
             [
-                "puzzle1-2",
-                "13"
+                "7",
+                "11"
+            ],
+            "illustration": "Mei_make_choices"
+        },
+        {
+            "optionIndex": "14",
+            "optionLines":
+            [
+                "Well... I don't know... Probably we are just gifted for that? - \"Use humor\"",
+                "Um... Not really. I just studied how to answer these questions yesterday. - \"Express disagreement\"",
+                "...maybe... do you guys really believe that? - \"X\""
+
+            ],
+            "nextLines":
+            [
+                "15",
+                "17",
+                "19"
             ],
             "illustration": "Mei_make_choices"
         }

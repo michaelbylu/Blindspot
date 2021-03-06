@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClockController : MonoBehaviour
 {
     public float speed;
+    public bool isStatic = true;
     private bool isOn = false;
     // Start is called before the first frame update
     void Start()
@@ -38,5 +39,8 @@ public class ClockController : MonoBehaviour
     IEnumerator OnForMinutes(float minutes) {
         yield return new WaitForSeconds(minutes);
         isOn = false; 
+        if(!isStatic) {
+            transform.parent.gameObject.SetActive(false);
+        }
     }
 }
