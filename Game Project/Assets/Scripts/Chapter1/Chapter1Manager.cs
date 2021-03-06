@@ -7,12 +7,14 @@ using UnityEngine;
 //Wish him luck!
 public class Chapter1Manager : MonoBehaviour
 {
+    public GameObject clock;
     public GameObject book;
     public GameObject puzzle1_1;
     public GameObject puzzle1_2;
     public JsonReader jsonReader;
     private int currentStage = 0;
     private bool stageChanged = false;
+    private int currentDifficulty = 0;
     void Start()
     {
 
@@ -23,6 +25,10 @@ public class Chapter1Manager : MonoBehaviour
     {
         if (stageChanged)
         {
+            CheckStage();
+        }
+        if(Input.GetKeyDown(KeyCode.L)) {
+            currentStage = 8;
             CheckStage();
         }
     }
@@ -43,7 +49,7 @@ public class Chapter1Manager : MonoBehaviour
                 puzzle1_1.SetActive(true);
                 stageChanged = false;
                 break;
-            case 4: //When puzzle is completed, show next line
+            case 4: //When puzzle1-1 is completed, show next line
                 jsonReader.ChangeLine("9");
                 stageChanged = false;
                 break;
@@ -53,6 +59,15 @@ public class Chapter1Manager : MonoBehaviour
                 break;
             case 6: //When book is clicked again, show puzzle1-2
                 puzzle1_2.SetActive(true);
+                stageChanged = false;
+                break;
+            case 7: //When puzzle1-2 is completed, show next line
+                jsonReader.ChangeLine("9");
+                stageChanged = false;
+                break;
+            case 8: //When dialogues completed, turn on the clock
+                clock.SetActive(true);
+                clock.GetComponentInChildren<ClockController>().TurnOn(5);
                 stageChanged = false;
                 break;
             default:
@@ -65,5 +80,11 @@ public class Chapter1Manager : MonoBehaviour
     {
         currentStage++;
         stageChanged = true;
+    }
+
+    public void ChangeStage(int puzzleDifficulty) {
+        currentStage++;
+        stageChanged = true;
+        currentDifficulty = puzzleDifficulty;
     }
 }

@@ -80,7 +80,8 @@ public class JsonReader : MonoBehaviour
             lineObject.transform.Find("Illustration").GetComponent<IllustrationController>().
             ChangeTexture("Art/Scene1/" + target.illustration);
         }
-        foreach(Button button in lineObject.transform.Find("Options").GetComponentsInChildren<Button>(true)){
+        foreach(Button button in lineObject.transform.Find("Options").Find(target.optionLines.Length.ToString()).
+            GetComponentsInChildren<Button>(true)){
             button.gameObject.SetActive(true);
             int optionIndex = button.gameObject.name[6] - 49;
             button.gameObject.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = target.optionLines[optionIndex];

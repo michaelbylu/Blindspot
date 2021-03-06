@@ -6,13 +6,11 @@
             "optionLines":
             [
                 "OK…… let me take a look…",
-                "It’s about class time, maybe later?",
-                "I don’t want to do math problem now."
+                "It’s about class time, maybe later?"
             ],
             "nextLines":
             [
                 "puzzle1-2",
-                "13",
                 "13"
             ],
             "illustration": "Mei_make_choices"

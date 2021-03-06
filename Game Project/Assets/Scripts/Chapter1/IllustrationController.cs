@@ -25,6 +25,11 @@ public class IllustrationController : MonoBehaviour
     private void OnEnable() {
         rawImage = GetComponent<RawImage>();
     }
+    private void OnDisable() {
+        Color color = rawImage.color;
+        color.a = 0f;
+        rawImage.color = color;
+    }
 
     public void ChangeTexture(string texture) {
         if(rawImage.texture != Resources.Load<Texture2D>(texture)) {
