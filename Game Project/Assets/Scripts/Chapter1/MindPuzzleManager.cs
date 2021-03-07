@@ -21,7 +21,7 @@ public class MindPuzzleManager : MonoBehaviour
     }
 
     private void CheckComplete() {
-        if(placedPuzzle == equations.Length - 1 && !isComplete) {
+        if(placedPuzzle == equations.Length && !isComplete) {
             isComplete = true;
             StartCoroutine(ShowSolution());
         }

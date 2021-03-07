@@ -24,7 +24,7 @@ public class Chapter1Manager : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.L)) {
-            currentStage = 8;
+            currentStage = 6;
             CheckStage();
         }
     }
