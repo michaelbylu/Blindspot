@@ -11,6 +11,7 @@ public class LoadingBar : MonoBehaviour
     public GameObject startPage;
     public VideoPlayer videoPlayer;
     public GameObject slideBar;
+    public RawImage dummy;
     public float loadingSpeed = 0.5f;
     private bool start = false;
     void Start()
@@ -32,6 +33,19 @@ public class LoadingBar : MonoBehaviour
     public void StartIntro() {
         startPage.SetActive(false);
         videoPlayer.gameObject.SetActive(true);
+        videoPlayer.url = "https://projectblindspot.s3.amazonaws.com/Intro_with_subs.mp4";
+        // RenderTexture rt = new RenderTexture(Screen.width, Screen.height, 24, RenderTextureFormat.ARGB32);
+        // rt.Create();
+        // videoPlayer.targetTexture = rt;
+        // videoPlayer.GetComponent<RawImage>().texture = rt;
+        // videoPlayer.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, Screen.height);
+        // videoPlayer.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, Screen.width);
+        //ScalableBufferManager.ResizeBuffers(Screen.width, Screen.height);
+        // videoPlayer.targetTexture.Release();
+        // videoPlayer.targetTexture.width = Screen.width;
+        // videoPlayer.targetTexture.height = Screen.height;
+        // videoPlayer.targetTexture.Create();
+        videoPlayer.Play();
         StartCoroutine(HoldForPlay());
     }
 
