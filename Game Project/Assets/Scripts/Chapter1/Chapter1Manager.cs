@@ -56,8 +56,8 @@ public class Chapter1Manager : MonoBehaviour
                 break;
             case 8: //When dialogues completed, turn on the clocks, crowd fadein
                 clocks[0].SetActive(true);
-                clocks[0].GetComponentInChildren<ClockController>().TurnOn(5);
-                clocks[1].GetComponentInChildren<ClockController>().TurnOn(5);
+                clocks[0].GetComponentInChildren<ClockController>().TurnOn(8);
+                clocks[1].GetComponentInChildren<ClockController>().TurnOn(8);
                 crowd.GetComponent<CrowdController>().EnableCrowd();
                 break;
             case 9: //Start public class when crowd finish fading in

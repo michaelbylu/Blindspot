@@ -47,17 +47,10 @@ public class JsonReader : MonoBehaviour
         if(next == null) {
             return;
         }
-        lineObject.SetActive(true);
-        lineObject.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = next.dialogue;
-        lineObject.transform.Find("Frame").GetComponent<RawImage>().texture = 
-            Resources.Load<Texture2D>("Art/Scene1/" + next.frame);
-        if(next.illustration == "") {
-            lineObject.transform.Find("Illustration").GetComponent<RawImage>().texture = null;
-        }
-        else {
-            lineObject.transform.Find("Illustration").GetComponent<IllustrationController>().
+        lineObject.SetActive(true);      
+        bool flag = lineObject.transform.Find("Illustration").GetComponent<IllustrationController>().
             ChangeTexture("Art/Scene1/" + next.illustration);
-        }
+        lineObject.transform.Find("Frame").GetComponent<FrameController>().ChangeText(next.dialogue, "Art/Scene1/" + next.frame, flag);
         currentLine = next.lineIndex;
         nextLine = next.nextLine;
     }
@@ -75,10 +68,6 @@ public class JsonReader : MonoBehaviour
             Debug.Log("target option " + targetIndex + " not found.");
             return;
         }
-        if(target.illustration != "") {
-            lineObject.transform.Find("Illustration").GetComponent<IllustrationController>().
-            ChangeTexture("Art/Scene1/" + target.illustration);
-        }
         foreach(Button button in lineObject.transform.Find("Options").Find(target.optionLines.Length.ToString()).
             GetComponentsInChildren<Button>(true)){
             button.gameObject.SetActive(true);
@@ -88,12 +77,17 @@ public class JsonReader : MonoBehaviour
         nextLine = "";
     }
 
-    //After player made a choice, disable option buttons and move to next line
+    //After player made a choice, disable option buttons and move to the line that player chose
+    //Show the illustration field in the option
     public void DisableOptions(int optionIndex) {
         foreach(Button button in lineObject.transform.Find("Options").GetComponentsInChildren<Button>(true)){
             button.gameObject.SetActive(false);
         }
         Option target = testOptions.Find(currentLine);
-        ChangeLine(target.nextLines[optionIndex]);
+        bool flag = lineObject.transform.Find("Illustration").GetComponent<IllustrationController>().
+            ChangeTexture("Art/Scene1/" + target.illustration);
+        lineObject.transform.Find("Frame").GetComponent<FrameController>().
+            ChangeText(target.optionLines[optionIndex], "Art/Scene1/text_box", flag);
+        nextLine = target.nextLines[optionIndex];
     }
 }

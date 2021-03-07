@@ -31,7 +31,7 @@ public class IllustrationController : MonoBehaviour
         rawImage.color = color;
     }
 
-    public void ChangeTexture(string texture) {
+    public bool ChangeTexture(string texture) {
         if(rawImage.texture != Resources.Load<Texture2D>(texture)) {
             targetTexture = texture;
             isSwitching = true;
@@ -42,6 +42,7 @@ public class IllustrationController : MonoBehaviour
                 rawImage.color = color;
             }
         }
+        return rawImage.texture != Resources.Load<Texture2D>(texture);
     }
 
     private void FadeInOut() {
