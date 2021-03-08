@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 //This manager dude is gonna handle all the cheap n dirty code
 //Wish him luck!
@@ -13,6 +15,8 @@ public class Chapter1Manager : MonoBehaviour
     public GameObject puzzle1_2;
     public GameObject puzzle2_1;
     public GameObject puzzle2_2;
+    public GameObject flashback;
+    public GameObject endPage;
     public GameObject crowd;
     public JsonReader jsonReader;
     private int currentStage = 0;
@@ -28,6 +32,12 @@ public class Chapter1Manager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.L)) {
             currentStage = 9;
             CheckStage();
+        }
+        if(Input.GetKeyDown(KeyCode.R) && currentStage >= 15) {
+            SceneManager.LoadScene(1);
+        }
+        if(Input.GetKeyDown(KeyCode.P) && currentStage >= 15) {
+            SceneManager.LoadScene(0);
         }
     }
 
@@ -73,7 +83,27 @@ public class Chapter1Manager : MonoBehaviour
                 break;
             case 12: //Start puzzle2-2
                 puzzle2_2.SetActive(true);
-                break;                              
+                break;
+            case 13: //Line before flashback
+                jsonReader.ChangeLine("33" + currentDifficulty);
+                break;
+            case 14: //Play flashback based on previous choices
+                flashback.SetActive(true);
+                GetComponent<AudioSource>().Pause();
+                if(jsonReader.CheckLog("19") && jsonReader.CheckLog("puzzle2-2A")) {
+                    flashback.GetComponent<VideoPlayer>().url = 
+                        "https://projectblindspot.s3.amazonaws.com/Chapter1NegativeFB_with_sub.mp4";                   
+                }
+                else {
+                    flashback.GetComponent<VideoPlayer>().url = 
+                        "https://projectblindspot.s3.amazonaws.com/Chapter1PositiveFB_with_sub.mp4";
+                
+                }
+                flashback.GetComponent<VideoPlayer>().Play();
+                break;
+            case 15: //End page (for now)
+                endPage.SetActive(true);
+                break;
             default:
                 break;
         }

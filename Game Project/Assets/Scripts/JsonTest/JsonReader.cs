@@ -12,11 +12,13 @@ public class JsonReader : MonoBehaviour
     private string nextLine = "";
     private Lines testLines;
     private Options testOptions;
+    private ArrayList lineLog;
     // Start is called before the first frame update
     void Start()
     {
         testLines = JsonUtility.FromJson<Lines>(linesJson.text);
         testOptions = JsonUtility.FromJson<Options>(optionsJson.text);
+        lineLog = new ArrayList();
     }
 
     // Update is called once per frame
@@ -53,6 +55,7 @@ public class JsonReader : MonoBehaviour
         lineObject.transform.Find("Frame").GetComponent<FrameController>().ChangeText(next.dialogue, "Art/Scene1/" + next.frame, flag);
         currentLine = next.lineIndex;
         nextLine = next.nextLine;
+        lineLog.Add(nextLine);
     }
 
     //Automatically jump to the next line
@@ -89,5 +92,10 @@ public class JsonReader : MonoBehaviour
         lineObject.transform.Find("Frame").GetComponent<FrameController>().
             ChangeText(target.optionLines[optionIndex], "Art/Scene1/text_box", flag);
         nextLine = target.nextLines[optionIndex];
+        lineLog.Add(nextLine);
+    }
+
+    public bool CheckLog(string line) {
+        return lineLog.Contains(line);
     }
 }

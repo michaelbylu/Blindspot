@@ -245,6 +245,27 @@
             "frame": "text_box",
             "lineIndex": "32",
             "nextLine": "options"
+        },
+        {
+            "dialogue": "Nice job, everyone. So we'll present what we just discussed. MeiMei, if there is a chance, we can talk about your idea next time.",
+            "illustration": "Frank_illustration",
+            "frame": "text_box",
+            "lineIndex": "33A",
+            "nextLine": "puzzle"
+        },
+        {
+            "dialogue": "Thanks for clarifying your idea for us! I really appreciate it. We should consider your idea as part of our presentation.",
+            "illustration": "Frank_illustration",
+            "frame": "text_box",
+            "lineIndex": "33B",
+            "nextLine": "puzzle"
+        },
+        {
+            "dialogue": "Oh, sorry, I didn't quite understand your idea earlier, but I believe it will be an excellent point to add to our presentation.",
+            "illustration": "Karen_illustration",
+            "frame": "text_box",
+            "lineIndex": "33C",
+            "nextLine": "puzzle"
         }
     ]
 }
