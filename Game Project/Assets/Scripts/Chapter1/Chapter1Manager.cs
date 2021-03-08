@@ -11,6 +11,8 @@ public class Chapter1Manager : MonoBehaviour
     public GameObject book;
     public GameObject puzzle1_1;
     public GameObject puzzle1_2;
+    public GameObject puzzle2_1;
+    public GameObject puzzle2_2;
     public GameObject crowd;
     public JsonReader jsonReader;
     private int currentStage = 0;
@@ -24,7 +26,7 @@ public class Chapter1Manager : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.L)) {
-            currentStage = 6;
+            currentStage = 9;
             CheckStage();
         }
     }
@@ -63,6 +65,15 @@ public class Chapter1Manager : MonoBehaviour
             case 9: //Start public class when crowd finish fading in
                 jsonReader.ChangeLine("22");
                 break;
+            case 10: //Start puzzle2-1
+                puzzle2_1.SetActive(true);
+                break;
+            case 11: // When puzzle2-1 completed, start the next dialogues
+                jsonReader.ChangeLine("29");
+                break;
+            case 12: //Start puzzle2-2
+                puzzle2_2.SetActive(true);
+                break;                              
             default:
                 break;
         }

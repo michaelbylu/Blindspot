@@ -31,6 +31,23 @@
                 "19"
             ],
             "illustration": "Mei_make_choices"
+        },
+        {
+            "optionIndex": "32",
+            "optionLines":
+            [
+                "OK. Nevermind. Let's just do Frank's idea. We don't have too much time left now.",
+                "Alright, maybe it's my bad for not making it clear. Let me try saying it another way...",
+                "I THINK YOU DIDN'T GET MY POINT ACTUALLY. IT'S VERY DIFFERENT FR OM FRANK'S IDEA. IT'S LIKE......"
+
+            ],
+            "nextLines":
+            [
+                "puzzle2-2",
+                "puzzle2-2",
+                "puzzle2-2"
+            ],
+            "illustration": "Mei_make_choices"
         }
     ]
 }

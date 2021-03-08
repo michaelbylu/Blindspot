@@ -217,6 +217,34 @@
             "frame": "text_box",
             "lineIndex": "28",
             "nextLine": "puzzle2-1"
+        },
+        {
+            "dialogue": "...Oh, I got your point. Do you mean something like this......?",
+            "illustration": "Frank_illustration",
+            "frame": "text_box",
+            "lineIndex": "29",
+            "nextLine": "30"
+        },
+        {
+            "dialogue": "You only have 5 minutes remaining for your in-class presentation.\nMake sure you guys are ready for what you are going to say.",
+            "illustration": "Professor_illustration",
+            "frame": "text_box",
+            "lineIndex": "30",
+            "nextLine": "31"
+        },
+        {
+            "dialogue": "Meimei, your idea sounds really good. But I think your idea is kind of similar to Frank's, and we can always add it as an appendix when we finalize our presentation.",
+            "illustration": "Karen_illustration",
+            "frame": "text_box",
+            "lineIndex": "31",
+            "nextLine": "32"
+        },
+        {
+            "dialogue": "What do you think?",
+            "illustration": "Karen_illustration",
+            "frame": "text_box",
+            "lineIndex": "32",
+            "nextLine": "options"
         }
     ]
 }

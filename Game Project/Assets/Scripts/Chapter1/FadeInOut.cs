@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class FadeInOut : MonoBehaviour
 {
+    // Fade in/out speed
     public float speed = 2f;
 
+    // For object that has isBlinking, the interval between fade in/out
+    public float blinkInterval = 0.01f;
     public bool blinkAtStart = false;
     private bool isFadingIn = false;
     private bool isFadingOut = false;
@@ -27,7 +30,7 @@ public class FadeInOut : MonoBehaviour
                 color.a = 1f;
                 isFadingIn = false;
                 if(isBlinking) {
-                    isFadingOut = true;
+                    StartCoroutine(WaitForFadeOut());
                 }
             }
             GetComponent<SpriteRenderer>().color = color;
@@ -39,7 +42,7 @@ public class FadeInOut : MonoBehaviour
                 color.a = 0f;
                 isFadingOut = false;
                 if(isBlinking) {
-                    isFadingIn = true;
+                    StartCoroutine(WaitForFadeIn());
                 }
             }
             GetComponent<SpriteRenderer>().color = color;
@@ -48,9 +51,13 @@ public class FadeInOut : MonoBehaviour
 
     private void OnEnable() {
         isFadingIn = true;
+        if(blinkAtStart) {
+            isFadingIn = false;
+            StartBlinking();
+        }
     }
 
-    public void StartFadeIn() {
+    public void StartFadingIn() {
         isFadingIn = true;
     }
 
@@ -70,5 +77,16 @@ public class FadeInOut : MonoBehaviour
         Color color = GetComponent<SpriteRenderer>().color;
         color.a = 1f;
         GetComponent<SpriteRenderer>().color = color;
+        StopAllCoroutines();
+    }
+
+    IEnumerator WaitForFadeOut() {
+        yield return new WaitForSeconds(Random.Range(0.8f * blinkInterval, 1.2f * blinkInterval));
+        isFadingOut = true;
+    }
+
+    IEnumerator WaitForFadeIn() {
+        yield return new WaitForSeconds(Random.Range(0.8f * blinkInterval, 1.2f * blinkInterval));
+        isFadingIn = true;
     }
 }

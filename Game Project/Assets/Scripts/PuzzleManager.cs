@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
 {
+    // Time interval between each bubble puzzle is generated
+    public float bubbleInterval = 3f;
+    public GameObject[] puzzles;
+    public GameObject chatBubble;
+    private int completedPuzzles = 0;
     // Start is called before the first frame update
-    public GameObject completePuzzle;
-    public GameObject puzzleOutline;
     void Start()
     {
         
@@ -15,23 +18,42 @@ public class PuzzleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckComplete();
+        
     }
 
-    private void CheckComplete() {
-        PuzzleController[] puzzles = GetComponentsInChildren<PuzzleController>();
-        if(puzzles.Length == 0) {
-            return;
+    private void OnEnable() {
+        puzzles[completedPuzzles].SetActive(true);
+    }
+
+    public void PuzzleCompleted() {
+        completedPuzzles++;
+        StartCoroutine(EnableNext());
+    }
+
+    IEnumerator EnableNext() {
+        yield return new WaitForSeconds(1f);
+        chatBubble.SetActive(true);
+        chatBubble.GetComponent<FadeInOut>().StartFadingIn();
+        yield return new WaitForSeconds(bubbleInterval);
+        chatBubble.GetComponent<FadeInOut>().StartFadingOut();
+        if(completedPuzzles < puzzles.Length) {
+            puzzles[completedPuzzles].SetActive(true);
+            puzzles[completedPuzzles - 1].SetActive(false);
         }
-        foreach(PuzzleController puzzleController in puzzles) {
-            if(!puzzleController.CheckPlaced()) {
-                return;
-            }
+        else {
+            puzzles[completedPuzzles - 1].SetActive(false);
+            StartCoroutine(FadeOut());
         }
-        foreach(PuzzleController puzzleController in puzzles) {
-            puzzleController.gameObject.SetActive(false);
+    }
+
+    IEnumerator FadeOut() {
+        FadeInOut[] fadeInOuts = gameObject.GetComponentsInChildren<FadeInOut>();
+        foreach(FadeInOut fadeInOut in fadeInOuts) {
+            Debug.Log(fadeInOut.gameObject.name);
+            fadeInOut.StopBlinking();
+            fadeInOut.StartFadingOut();
         }
-        puzzleOutline.SetActive(false);
-        completePuzzle.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
     }
 }
