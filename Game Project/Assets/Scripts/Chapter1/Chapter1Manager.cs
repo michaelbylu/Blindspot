@@ -21,6 +21,8 @@ public class Chapter1Manager : MonoBehaviour
     public JsonReader jsonReader;
     private int currentStage = 0;
     private string currentDifficulty = "A";
+
+    private bool isFadingOut = false;
     void Start()
     {
 
@@ -30,7 +32,7 @@ public class Chapter1Manager : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.L)) {
-            currentStage = 6;
+            currentStage = 10;
             CheckStage();
         }
         if(Input.GetKeyDown(KeyCode.R) && currentStage >= 15) {
@@ -38,6 +40,9 @@ public class Chapter1Manager : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.P) && currentStage >= 15) {
             SceneManager.LoadScene(0);
+        }
+        if(isFadingOut) {
+            GetComponent<AudioSource>().volume -= Time.deltaTime;
         }
     }
 
@@ -74,6 +79,7 @@ public class Chapter1Manager : MonoBehaviour
                 break;
             case 10: //Start puzzle2-1
                 puzzle2_1.SetActive(true);
+                clocks[1].GetComponentInChildren<ClockController>().TurnOn(4);
                 break;
             case 11: // When puzzle2-1 completed, start the next dialogues
                 jsonReader.ChangeLine("29");
@@ -85,18 +91,7 @@ public class Chapter1Manager : MonoBehaviour
                 jsonReader.ChangeLine("33" + currentDifficulty);
                 break;
             case 14: //Play flashback based on previous choices
-                flashback.SetActive(true);
-                GetComponent<AudioSource>().Pause();
-                if(jsonReader.CheckLog("19") && jsonReader.CheckLog("puzzle2-2A")) {
-                    flashback.GetComponent<VideoPlayer>().url = 
-                        "https://projectblindspot.s3.amazonaws.com/Chapter1NegativeFB_with_sub.mp4";                   
-                }
-                else {
-                    flashback.GetComponent<VideoPlayer>().url = 
-                        "https://projectblindspot.s3.amazonaws.com/Chapter1PositiveFB_with_sub.mp4";
-                
-                }
-                flashback.GetComponent<VideoPlayer>().Play();
+                StartCoroutine(EnableOutro());
                 break;
             case 15: //End page (for now)
                 endPage.SetActive(true);
@@ -118,6 +113,24 @@ public class Chapter1Manager : MonoBehaviour
         currentDifficulty = puzzleDifficulty;
     }
 
+    public void AudioFadeOut() {
+        isFadingOut = true;
+    }
+    IEnumerator EnableOutro() {
+        AudioFadeOut();
+        flashback.SetActive(true);
+        if(jsonReader.CheckLog("19") && jsonReader.CheckLog("puzzle2-2A")) {
+            flashback.GetComponent<VideoPlayer>().url = 
+                "https://projectblindspot.s3.amazonaws.com/Chapter1NegativeFB_with_sub.mp4";                   
+        }
+        else {
+            flashback.GetComponent<VideoPlayer>().url = 
+                "https://projectblindspot.s3.amazonaws.com/Chapter1PositiveFB_with_sub.mp4";
+        }
+        yield return new WaitForSeconds(2f);
+        flashback.GetComponent<VideoPlayer>().Play();
+    }
+
     IEnumerator EnableTransition() {
         yield return new WaitForSeconds(2f);
         clocks[0].SetActive(true);
@@ -125,4 +138,5 @@ public class Chapter1Manager : MonoBehaviour
         clocks[1].GetComponentInChildren<ClockController>().TurnOn(8);
         crowd.GetComponent<CrowdController>().EnableCrowd();
     }
+
 }
