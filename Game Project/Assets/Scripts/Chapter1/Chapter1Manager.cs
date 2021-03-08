@@ -30,7 +30,7 @@ public class Chapter1Manager : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.L)) {
-            currentStage = 9;
+            currentStage = 6;
             CheckStage();
         }
         if(Input.GetKeyDown(KeyCode.R) && currentStage >= 15) {
@@ -67,10 +67,7 @@ public class Chapter1Manager : MonoBehaviour
                 jsonReader.ChangeLine("21" + currentDifficulty);
                 break;
             case 8: //When dialogues completed, turn on the clocks, crowd fadein
-                clocks[0].SetActive(true);
-                clocks[0].GetComponentInChildren<ClockController>().TurnOn(8);
-                clocks[1].GetComponentInChildren<ClockController>().TurnOn(8);
-                crowd.GetComponent<CrowdController>().EnableCrowd();
+                StartCoroutine(EnableTransition());
                 break;
             case 9: //Start public class when crowd finish fading in
                 jsonReader.ChangeLine("22");
@@ -119,5 +116,13 @@ public class Chapter1Manager : MonoBehaviour
         currentStage++;
         CheckStage();
         currentDifficulty = puzzleDifficulty;
+    }
+
+    IEnumerator EnableTransition() {
+        yield return new WaitForSeconds(2f);
+        clocks[0].SetActive(true);
+        clocks[0].GetComponentInChildren<ClockController>().TurnOn(8);
+        clocks[1].GetComponentInChildren<ClockController>().TurnOn(8);
+        crowd.GetComponent<CrowdController>().EnableCrowd();
     }
 }

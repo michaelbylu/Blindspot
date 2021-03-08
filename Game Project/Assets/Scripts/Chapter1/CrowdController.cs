@@ -27,7 +27,7 @@ public class CrowdController : MonoBehaviour
             yield return new WaitForSeconds(interval);
             crowd[i].SetActive(true);
         }
-        yield return new WaitForSeconds(interval);
+        yield return new WaitForSeconds(2f);
         GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
     }
 }
