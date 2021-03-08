@@ -1,7 +1,7 @@
 {
     "lines": [
         {
-            "dialogue": "Hey Mei! How’s it going?",
+            "dialogue": "Hey Meimei, How's it going?",
             "illustration": "Karen_illustration",
             "frame": "text_box",
             "lineIndex": "0",
@@ -106,7 +106,7 @@
             "nextLine": "options"
         },
         {
-            "dialogue": "hah, I like the way you solve that question. How about this next one?" 
+            "dialogue": "Hah, I like the way you solve that question. How about this next one?" 
             ,
             "illustration": "Karen_illustration",
             "frame": "text_box",
@@ -121,14 +121,14 @@
             "nextLine": "puzzle1-2A"
         },
         {
-            "dialogue": "Same! That question also bothered me so much. So do you have any ideas for the next one?",
+            "dialogue": "Same! That question also bugged me. So do you have any ideas for the next one?",
             "illustration": "Karen_illustration",
             "frame": "text_box",
             "lineIndex": "17",
             "nextLine": "18"
         },
         {
-            "dialogue": "Yeah, but I'm not 100% sure about that, but let's just go onto the next question.",
+            "dialogue": "Yeah, but I'm not 100% sure...",
             "illustration": "Mei_speaking",
             "frame": "text_box",
             "lineIndex": "18",
@@ -149,14 +149,14 @@
             "nextLine": "puzzle1-2C"
         },
         {
-            "dialogue": "Nice job, Meimei! From your notes, you're way better at math than me.\nYou must have worked so hard for that.",
+            "dialogue": "Nice job, Meimei! From your notes, you're way better at math than me.",
             "illustration": "Karen_illustration",
             "frame": "text_box",
             "lineIndex": "21A",
             "nextLine": "puzzle"
         },
         {
-            "dialogue": "Thanks for sharing your problem-solving skills. \nYou must be working so hard for that yesterday.",
+            "dialogue": "You were working hard yesterday! Thanks for sharing your problem-solving skills.",
             "illustration": "Karen_illustration",
             "frame": "text_box",
             "lineIndex": "21B",
@@ -177,7 +177,7 @@
             "nextLine": "23"
         },
         {
-            "dialogue": "Alright. Let's get started.",
+            "dialogue": "All right. Let's get started.",
             "illustration": "Karen_illustration",
             "frame": "text_box",
             "lineIndex": "23",
@@ -198,7 +198,7 @@
             "nextLine": "26"
         },
         {
-            "dialogue": "Yeah, that's a good point! We should definitely think about your suggestion for this topic.",
+            "dialogue": "Good point! Let's use your suggestion!",
             "illustration": "Frank_illustration",
             "frame": "text_box",
             "lineIndex": "26",
@@ -212,7 +212,7 @@
             "nextLine": "28"
         },
         {
-            "dialogue": "Based on what the professor just mentioned, maybe... um... we can think this topic in this way....",
+            "dialogue": "Based on what the professor just mentioned, maybe... um... we can think about this topic in this way....",
             "illustration": "Mei_speaking",
             "frame": "text_box",
             "lineIndex": "28",
