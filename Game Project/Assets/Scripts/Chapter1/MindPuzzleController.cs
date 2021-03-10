@@ -16,6 +16,8 @@ public class MindPuzzleController : MonoBehaviour
     private bool isNear = false;
     private bool isDragged = false;
     private bool isPlaced = false;
+
+    private List<string> blockers;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +43,7 @@ public class MindPuzzleController : MonoBehaviour
 
     private void OnEnable() {
         nextPath = new Vector3(Random.Range(xRange[0], xRange[1]), Random.Range(yRange[0], yRange[1]), 0f);
+        blockers = new List<string>();
     }
 
     private void Float() {
@@ -60,13 +63,13 @@ public class MindPuzzleController : MonoBehaviour
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         offset = gameObject.transform.position - 
         Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+        isDragged = true;
     }
 
     private void OnMouseDrag() {
-        if(isNear || isPlaced) {
+        if(isNear || isPlaced || blockers.Count != 0) {
             return;
         }
-        isDragged = true;
         Vector3 cursorScreenPoint = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
         Vector3 cursorPosition = Camera.main.ScreenToWorldPoint (cursorScreenPoint) + offset;
         transform.position = cursorPosition;
@@ -79,10 +82,35 @@ public class MindPuzzleController : MonoBehaviour
         isDragged = false;
         if(Vector3.Distance(transform.position, destination.position) < minDistance){
             isNear = true;
+            GetComponent<PolygonCollider2D>().enabled = false;
         }
     }
 
     public bool CheckPlaced() {
         return isPlaced;
+    }
+
+    private void OnTriggerStay2D(Collider2D other) {
+        if(other.name.StartsWith("text")) {
+            if(!blockers.Contains(other.name)){
+                blockers.Add(other.name);
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.name.StartsWith("text")) {
+            if(!blockers.Contains(other.name)){
+                blockers.Add(other.name);
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        if(other.name.StartsWith("text")) {
+            if(blockers.Contains(other.name)){
+                blockers.Remove(other.name);
+            }
+        }
     }
 }
