@@ -8,6 +8,7 @@ public class MindPuzzleManager : MonoBehaviour
     public GameObject[] equations;
     private int placedPuzzle = 0;
     private bool isComplete = false;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,10 @@ public class MindPuzzleManager : MonoBehaviour
         CheckComplete();
     }
 
+    private void OnEnable() {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void CheckComplete() {
         if(placedPuzzle == equations.Length && !isComplete) {
             isComplete = true;
@@ -28,8 +33,7 @@ public class MindPuzzleManager : MonoBehaviour
     }
 
     public void PuzzlePlaced() {
-        equations[placedPuzzle].SetActive(true);
-        placedPuzzle++;
+        StartCoroutine(EnableEquation());
     }
 
     IEnumerator ShowSolution() {
@@ -46,6 +50,13 @@ public class MindPuzzleManager : MonoBehaviour
         }
         yield return new WaitForSeconds(2.0f);
         GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
+    }
+
+    IEnumerator EnableEquation() {
+        yield return new WaitForSeconds(1f);
+        audioSource.Play();
+        equations[placedPuzzle].SetActive(true);
+        placedPuzzle++;
     }
 
 }

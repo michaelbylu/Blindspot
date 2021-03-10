@@ -7,6 +7,8 @@ public class MindPuzzleController : MonoBehaviour
     public Transform destination;
     public float minDistance = 1.0f;
     public float moveSpeed = 2.0f;
+    public float dragSpeed = 3.0f;
+    public float blockSpeed = 0.2f;
     public float[] xRange;
     public float[] yRange;
     private Vector3 nextPath;
@@ -18,6 +20,7 @@ public class MindPuzzleController : MonoBehaviour
     private bool isPlaced = false;
 
     private List<string> blockers;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +40,7 @@ public class MindPuzzleController : MonoBehaviour
                 isNear = false;
                 isPlaced = true;
                 GetComponentInParent<MindPuzzleManager>().PuzzlePlaced();
+                audioSource.Play();
             }
         }
     }
@@ -44,6 +48,7 @@ public class MindPuzzleController : MonoBehaviour
     private void OnEnable() {
         nextPath = new Vector3(Random.Range(xRange[0], xRange[1]), Random.Range(yRange[0], yRange[1]), 0f);
         blockers = new List<string>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Float() {
@@ -67,12 +72,17 @@ public class MindPuzzleController : MonoBehaviour
     }
 
     private void OnMouseDrag() {
-        if(isNear || isPlaced || blockers.Count != 0) {
+        if(isNear || isPlaced) {
             return;
         }
         Vector3 cursorScreenPoint = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
         Vector3 cursorPosition = Camera.main.ScreenToWorldPoint (cursorScreenPoint) + offset;
-        transform.position = cursorPosition;
+        if(Vector3.Distance(cursorPosition, transform.position) <= Time.deltaTime * dragSpeed && blockers.Count == 0) {
+            transform.position = cursorPosition;
+            return;
+        }
+        transform.position += (cursorPosition - transform.position).normalized * Time.deltaTime *
+            (blockers.Count == 0? dragSpeed : blockSpeed);
     }
 
     private void OnMouseUp() {
