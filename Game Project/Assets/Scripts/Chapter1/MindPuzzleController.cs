@@ -18,6 +18,7 @@ public class MindPuzzleController : MonoBehaviour
     private bool isPlaced = false;
 
     private List<string> blockers;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +38,7 @@ public class MindPuzzleController : MonoBehaviour
                 isNear = false;
                 isPlaced = true;
                 GetComponentInParent<MindPuzzleManager>().PuzzlePlaced();
+                audioSource.Play();
             }
         }
     }
@@ -44,6 +46,7 @@ public class MindPuzzleController : MonoBehaviour
     private void OnEnable() {
         nextPath = new Vector3(Random.Range(xRange[0], xRange[1]), Random.Range(yRange[0], yRange[1]), 0f);
         blockers = new List<string>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Float() {
