@@ -90,7 +90,7 @@ public class Chapter1Manager : MonoBehaviour
                 StartCoroutine(EnableTransition());
                 break;
             case 9: //Start public class when crowd finish fading in
-                AudioFadeIn(1f);
+                AudioFadeIn(0.4f);
                 jsonReader.ChangeLine("22");
                 break;
             case 10: //Start puzzle2-1
@@ -154,7 +154,7 @@ public class Chapter1Manager : MonoBehaviour
     }
 
     IEnumerator EnableTransition() {
-        AudioFadeOut(0.3f);
+        AudioFadeOut(0.2f);
         yield return new WaitForSeconds(2f);
         clocks[0].SetActive(true);
         clocks[0].GetComponentInChildren<ClockController>().TurnOn(8);
