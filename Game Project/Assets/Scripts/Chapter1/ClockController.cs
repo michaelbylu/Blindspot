@@ -33,12 +33,18 @@ public class ClockController : MonoBehaviour
 
     public void TurnOn(float time) {
         isOn = true;
+        if(GetComponent<AudioSource>() != null) {
+            GetComponent<AudioSource>().Play();
+        }
         StartCoroutine(OnForMinutes(time));
     }
 
     IEnumerator OnForMinutes(float minutes) {
         yield return new WaitForSeconds(minutes);
         isOn = false; 
+        if(GetComponent<AudioSource>() != null) {
+            GetComponent<AudioSource>().Stop();
+        }
         if(!isStatic) {
             transform.parent.gameObject.SetActive(false);
         }

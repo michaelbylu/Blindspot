@@ -21,11 +21,15 @@ public class Chapter1Manager : MonoBehaviour
     public JsonReader jsonReader;
     private int currentStage = 0;
     private string currentDifficulty = "A";
+    public float fadeSpeed = 0.5f;
+    private AudioSource audioSource;
+    private float targetVolume;
 
     private bool isFadingOut = false;
+    private bool isFadingIn = false;
     void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,7 +46,18 @@ public class Chapter1Manager : MonoBehaviour
             SceneManager.LoadScene(0);
         }
         if(isFadingOut) {
-            GetComponent<AudioSource>().volume -= Time.deltaTime;
+            audioSource.volume -= fadeSpeed * Time.deltaTime;
+            if(audioSource.volume <= targetVolume) {
+                audioSource.volume = targetVolume;
+                isFadingOut = false;
+            }
+        }
+        else if(isFadingIn) {
+            audioSource.volume += fadeSpeed * Time.deltaTime;
+            if(audioSource.volume >= targetVolume) {
+                audioSource.volume = targetVolume;
+                isFadingIn = false;
+            }
         }
     }
 
@@ -69,12 +84,13 @@ public class Chapter1Manager : MonoBehaviour
                 puzzle1_2.SetActive(true);
                 break;
             case 7: //When puzzle1-2 is completed, show next line
-                jsonReader.ChangeLine("21" + currentDifficulty);
+                StartCoroutine(CloseBook());
                 break;
             case 8: //When dialogues completed, turn on the clocks, crowd fadein
                 StartCoroutine(EnableTransition());
                 break;
             case 9: //Start public class when crowd finish fading in
+                AudioFadeIn(1f);
                 jsonReader.ChangeLine("22");
                 break;
             case 10: //Start puzzle2-1
@@ -113,11 +129,17 @@ public class Chapter1Manager : MonoBehaviour
         currentDifficulty = puzzleDifficulty;
     }
 
-    public void AudioFadeOut() {
+    public void AudioFadeOut(float volume) {
         isFadingOut = true;
+        targetVolume = volume;
+    }
+
+    public void AudioFadeIn(float volume) {
+        isFadingIn = true;
+        targetVolume = volume;
     }
     IEnumerator EnableOutro() {
-        AudioFadeOut();
+        AudioFadeOut(0f);
         flashback.SetActive(true);
         if(jsonReader.CheckLog("19") && jsonReader.CheckLog("puzzle2-2A")) {
             flashback.GetComponent<VideoPlayer>().url = 
@@ -132,11 +154,19 @@ public class Chapter1Manager : MonoBehaviour
     }
 
     IEnumerator EnableTransition() {
+        AudioFadeOut(0.3f);
         yield return new WaitForSeconds(2f);
         clocks[0].SetActive(true);
         clocks[0].GetComponentInChildren<ClockController>().TurnOn(8);
         clocks[1].GetComponentInChildren<ClockController>().TurnOn(8);
         crowd.GetComponent<CrowdController>().EnableCrowd();
+    }
+
+    IEnumerator CloseBook() {
+        yield return new WaitForSeconds(1f);
+        book.GetComponent<BookController>().CloseBook();
+        yield return new WaitForSeconds(2f);
+        jsonReader.ChangeLine("21" + currentDifficulty);
     }
 
 }

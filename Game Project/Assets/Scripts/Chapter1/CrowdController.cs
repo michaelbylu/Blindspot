@@ -23,6 +23,7 @@ public class CrowdController : MonoBehaviour
     }
 
     IEnumerator CrowdEnable() {
+        GetComponent<AudioSource>().Play();
         for(int i=0; i<crowd.Length;i++) {
             yield return new WaitForSeconds(interval);
             crowd[i].SetActive(true);
