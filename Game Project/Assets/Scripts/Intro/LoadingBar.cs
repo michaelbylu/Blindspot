@@ -28,6 +28,9 @@ public class LoadingBar : MonoBehaviour
                 SceneManager.LoadScene(1);
             }
         }
+        if(Input.GetKeyDown(KeyCode.P)) {
+            SceneManager.LoadScene(1);
+        }
     }
 
     public void StartIntro() {

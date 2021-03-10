@@ -470,6 +470,8 @@ MonoBehaviour:
   destination: {fileID: 1075173904}
   minDistance: 0.5
   moveSpeed: 0.5
+  dragSpeed: 10
+  blockSpeed: 0.2
   xRange:
   - -8
   - -2.5
@@ -1111,6 +1113,8 @@ MonoBehaviour:
   destination: {fileID: 1893828434}
   minDistance: 0.5
   moveSpeed: 0.5
+  dragSpeed: 3
+  blockSpeed: 0.2
   xRange:
   - -8
   - -2.5
@@ -1375,7 +1379,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d90f57fcf3e9e8340b111a4a975180bf, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1586,7 +1590,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213167102}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.92, y: 1.35, z: 0}
+  m_LocalPosition: {x: -6.7, y: 3.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 313284546}
@@ -2273,6 +2277,8 @@ MonoBehaviour:
   destination: {fileID: 1520286147}
   minDistance: 0.5
   moveSpeed: 0.5
+  dragSpeed: 10
+  blockSpeed: 0.2
   xRange:
   - -8
   - -2.5
@@ -2978,6 +2984,8 @@ MonoBehaviour:
   destination: {fileID: 484824596}
   minDistance: 0.3
   moveSpeed: 0.5
+  dragSpeed: 3
+  blockSpeed: 0.2
   xRange:
   - -8
   - -2.5
@@ -3251,6 +3259,8 @@ MonoBehaviour:
   destination: {fileID: 1198863023}
   minDistance: 0.5
   moveSpeed: 0.5
+  dragSpeed: 3
+  blockSpeed: 0.2
   xRange:
   - -8
   - -2.5
@@ -5466,7 +5476,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651368476}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.92, y: 1.35, z: 0}
+  m_LocalPosition: {x: -7.4399996, y: 1.5899999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 313284546}
@@ -6468,6 +6478,8 @@ MonoBehaviour:
   destination: {fileID: 530756121}
   minDistance: 0.3
   moveSpeed: 0.5
+  dragSpeed: 10
+  blockSpeed: 0.2
   xRange:
   - -8
   - -2.5
@@ -6746,7 +6758,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735124526}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.92, y: 1.35, z: 0}
+  m_LocalPosition: {x: -4.91, y: 1.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 313284546}
@@ -7878,7 +7890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889556141}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.92, y: 1.35, z: 0}
+  m_LocalPosition: {x: -2.8799996, y: 3.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 313284546}
@@ -10785,6 +10797,8 @@ MonoBehaviour:
   destination: {fileID: 116963230}
   minDistance: 0.3
   moveSpeed: 0.5
+  dragSpeed: 3
+  blockSpeed: 0.2
   xRange:
   - -8
   - -2.5
@@ -11548,7 +11562,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517354360}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.92, y: 1.35, z: 0}
+  m_LocalPosition: {x: -4.3199997, y: 2.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 313284546}
@@ -11879,6 +11893,8 @@ MonoBehaviour:
   destination: {fileID: 564943245}
   minDistance: 0.3
   moveSpeed: 0.5
+  dragSpeed: 3
+  blockSpeed: 0.2
   xRange:
   - -8
   - -2.5
@@ -13131,7 +13147,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d90f57fcf3e9e8340b111a4a975180bf, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -15092,7 +15108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012322564}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.92, y: 1.35, z: 0}
+  m_LocalPosition: {x: -2.0199997, y: 2.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 313284546}
