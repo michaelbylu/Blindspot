@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
 
     private void Move() {
         if(!isMoving) {
+            GetComponent<AudioSource>().Stop();
             return;
         }
         if(currentWaypoint >= path.vectorPath.Count) {
@@ -56,6 +57,9 @@ public class PlayerController : MonoBehaviour
         }
         else{
             animator.transform.localScale = new Vector3(-1f,1f,1f);
+        }
+        if(isMoving && !GetComponent<AudioSource>().isPlaying) {
+            GetComponent<AudioSource>().Play();
         }
         gameObject.transform.position += moveSpeed * Time.deltaTime * 
             Vector3.Normalize(path.vectorPath[currentWaypoint] - gameObject.transform.position);

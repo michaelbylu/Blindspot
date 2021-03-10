@@ -5,10 +5,11 @@ using UnityEngine;
 public class BookController : MonoBehaviour
 {
     public Sprite openedBook;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,6 +27,7 @@ public class BookController : MonoBehaviour
         GetComponent<FadeInOut>().StopBlinking();
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<SpriteRenderer>().sprite = openedBook;
+        audioSource.Play();
         StartCoroutine(Hold(2));
     }
 
