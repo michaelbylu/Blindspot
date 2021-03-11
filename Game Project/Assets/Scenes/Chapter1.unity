@@ -4890,6 +4890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linesJson: {fileID: 4900000, guid: ca8c80e20390c0a4485ebd5478be902c, type: 3}
   optionsJson: {fileID: 4900000, guid: d797ce76b68887a4d8f8f2e0ce08b6d2, type: 3}
+  nextBtn: {fileID: 754104540}
   lineObject: {fileID: 279013009}
 --- !u!4 &576220625
 Transform:
@@ -10824,6 +10825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMeshProUGUI: {fileID: 2089959428}
   textMeshProNameTag: {fileID: 540269838}
+  NextBtnImg: {fileID: 754104543}
   fadeSpeed: 2
 --- !u!1 &1411806955
 GameObject:

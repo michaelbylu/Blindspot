@@ -1,10 +1,18 @@
 {
-    "lines": [
+    "lines": [        
+        {
+            "dialogue": "(...is that Emily?...)",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "0",
+            "nextLine": "0a",
+            "name": "Meimei"
+        },
         {
             "dialogue": "Hey Meimei, How's it going?",
             "illustration": "Karen_illustration",
             "frame": "dialogue-box",
-            "lineIndex": "0",
+            "lineIndex": "0a",
             "nextLine": "1",
             "name": "Emily"
 
@@ -118,8 +126,16 @@
             "illustration": "Karen_illustration",
             "frame": "dialogue-box",
             "lineIndex": "14",
-            "nextLine": "options",
+            "nextLine": "14a",
             "name": "Emily"
+        },        
+        {
+            "dialogue": "(...that's the result of my work...)",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "14a",
+            "nextLine": "options",
+            "name": "Meimei"
         },
         {
             "dialogue": "Hah, I like the way you solve that question. How about this next one?" 
@@ -195,10 +211,18 @@
             "name": "Emily"
         },
         {
+            "dialogue": "(...well, public speaking class now...",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "22",
+            "nextLine": "22a",
+            "name": "Meimei"
+        },
+        {
             "dialogue": "Guys, you have 20 minutes to prepare for the upcoming presentation. \nAfter finalizing your ideas, each team will get 5 minutes to talk.",
             "illustration": "Professor_illustration",
             "frame": "dialogue-box",
-            "lineIndex": "22",
+            "lineIndex": "22a",
             "nextLine": "23",
             "name": "Professor"
         },
@@ -255,6 +279,14 @@
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "29",
+            "nextLine": "29a",
+            "name": "Frank"
+        },
+        {
+            "dialogue": "(...no, he didn't...)",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "29a",
             "nextLine": "30",
             "name": "Frank"
         },

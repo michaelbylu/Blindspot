@@ -7,6 +7,7 @@ public class FrameController : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI textMeshProUGUI;
     public TMPro.TextMeshProUGUI textMeshProNameTag;
+    public Image NextBtnImg;
     public float fadeSpeed;
     private RawImage frame;
     private bool isFadingOut;
@@ -57,9 +58,11 @@ public class FrameController : MonoBehaviour
             frame.color = frameColor;
             Color textColor = textMeshProUGUI.color;
             Color nameTagColor = textMeshProNameTag.color;
+            Color btnColor = NextBtnImg.color;
             
             textMeshProUGUI.color = new Color(textColor.r, textColor.g, textColor.b, frameColor.a);
             textMeshProNameTag.color = new Color(nameTagColor.r, nameTagColor.g, nameTagColor.b, frameColor.a);
+            NextBtnImg.color = new Color(btnColor.r, btnColor.g, btnColor.b, frameColor.a);
         }
         else {
             Color frameColor = frame.color;
@@ -72,8 +75,11 @@ public class FrameController : MonoBehaviour
             frame.color = frameColor;
             Color textColor = textMeshProUGUI.color;
             Color nameTagColor = textMeshProNameTag.color;
+            Color btnColor = NextBtnImg.color;
+            
             textMeshProUGUI.color = new Color(textColor.r, textColor.g, textColor.b, frameColor.a);
             textMeshProNameTag.color = new Color(nameTagColor.r, nameTagColor.g, nameTagColor.b, frameColor.a);
+            NextBtnImg.color = new Color(btnColor.r, btnColor.g, btnColor.b, frameColor.a);
         }
     }
 
