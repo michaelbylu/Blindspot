@@ -1,7 +1,7 @@
 {
     "lines": [        
         {
-            "dialogue": "(...is that Emily?...)",
+            "dialogue": "(...is that Emily? I have not seen her since the last math class...)",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "0",
@@ -58,7 +58,7 @@
             "name": "Meimei"
         },
         {
-            "dialogue": "Yeah. That quiz is just so hard. It takes me so much time during the weekend.",
+            "dialogue": "Yeah. That quiz is just so hard. It took me so much time over the weekend.",
             "illustration": "Karen_illustration",
             "frame": "dialogue-box",
             "lineIndex": "6",
@@ -74,7 +74,7 @@
             "name": "Emily"
         },
         {
-            "dialogue": "I was actually still working on those, but I had some ideas for what to try next.",
+            "dialogue": "I was actually still working on those, but I have some ideas for what to try next.",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "8",
@@ -122,7 +122,7 @@
             "name": "Emily"
         },
         {
-            "dialogue": "So Chinese people are all good at math, right?",
+            "dialogue": "So Chinese people are all find math easy, right?",
             "illustration": "Karen_illustration",
             "frame": "dialogue-box",
             "lineIndex": "14",
@@ -275,7 +275,7 @@
             "name": "Meimei"
         },
         {
-            "dialogue": "...Oh, I got your point. Do you mean something like this......?",
+            "dialogue": "...Oh, I got your point. So you mean something like this......",
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "29",
