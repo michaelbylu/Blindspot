@@ -211,7 +211,7 @@
             "name": "Emily"
         },
         {
-            "dialogue": "(...well, public speaking class now...",
+            "dialogue": "(...well, public speaking class now...)",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "22",
@@ -288,7 +288,7 @@
             "frame": "dialogue-box",
             "lineIndex": "29a",
             "nextLine": "30",
-            "name": "Frank"
+            "name": "Meimei"
         },
         {
             "dialogue": "You only have 5 minutes remaining for your in-class presentation.\nMake sure you guys are ready for what you are going to say.",
