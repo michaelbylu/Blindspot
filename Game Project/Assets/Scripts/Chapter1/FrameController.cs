@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class FrameController : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI textMeshProUGUI;
+    public TMPro.TextMeshProUGUI textMeshProNameTag;
     public float fadeSpeed;
     private RawImage frame;
     private bool isFadingOut;
     private bool isSwitching;
     private string targetText;
+    private string nameTagText;
     private string targetTexture;
     // Start is called before the first frame update
     void Start()
@@ -49,11 +51,15 @@ public class FrameController : MonoBehaviour
                 isFadingOut = false;
                 frameColor.a = 0f;
                 frame.texture = Resources.Load<Texture2D>(targetTexture);
+                textMeshProNameTag.text = nameTagText;
                 textMeshProUGUI.text = targetText;
             }
             frame.color = frameColor;
             Color textColor = textMeshProUGUI.color;
+            Color nameTagColor = textMeshProNameTag.color;
+            
             textMeshProUGUI.color = new Color(textColor.r, textColor.g, textColor.b, frameColor.a);
+            textMeshProNameTag.color = new Color(nameTagColor.r, nameTagColor.g, nameTagColor.b, frameColor.a);
         }
         else {
             Color frameColor = frame.color;
@@ -65,7 +71,9 @@ public class FrameController : MonoBehaviour
             }
             frame.color = frameColor;
             Color textColor = textMeshProUGUI.color;
+            Color nameTagColor = textMeshProNameTag.color;
             textMeshProUGUI.color = new Color(textColor.r, textColor.g, textColor.b, frameColor.a);
+            textMeshProNameTag.color = new Color(nameTagColor.r, nameTagColor.g, nameTagColor.b, frameColor.a);
         }
     }
 
@@ -80,6 +88,16 @@ public class FrameController : MonoBehaviour
         else {
             textMeshProUGUI.text = text;
             frame.texture = Resources.Load<Texture2D>(texture);
+        }
+    }
+
+    public void ChangeNameTag(string name, bool isFading) {
+        Debug.Log("name: " + name + " " + isFadingOut.ToString());
+        if(isFading) {
+            nameTagText = name;
+        }
+        else{
+            textMeshProNameTag.text = name;
         }
     }
 }

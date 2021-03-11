@@ -53,6 +53,7 @@ public class JsonReader : MonoBehaviour
         bool flag = lineObject.transform.Find("Illustration").GetComponent<IllustrationController>().
             ChangeTexture("Art/Scene1/" + next.illustration);
         lineObject.transform.Find("Frame").GetComponent<FrameController>().ChangeText(next.dialogue, "Art/Scene1/" + next.frame, flag);
+        lineObject.transform.Find("Frame").GetComponent<FrameController>().ChangeNameTag(next.name, flag);
         currentLine = next.lineIndex;
         nextLine = next.nextLine;
         lineLog.Add(nextLine);
