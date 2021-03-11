@@ -8,6 +8,8 @@ public class PuzzleManager : MonoBehaviour
     public float bubbleInterval = 3f;
     public GameObject[] puzzles;
     public GameObject[] chatBubbles;
+    public GameObject[] otherBubbles;
+    public int num = 0;
     private int completedPuzzles = 0;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,7 @@ public class PuzzleManager : MonoBehaviour
     }
 
     private void OnEnable() {
-        puzzles[completedPuzzles].SetActive(true);
+        StartCoroutine(EnableNext());
     }
 
     public void PuzzleCompleted() {
@@ -31,14 +33,31 @@ public class PuzzleManager : MonoBehaviour
     }
 
     IEnumerator EnableNext() {
-        yield return new WaitForSeconds(2f);
-        chatBubbles[completedPuzzles - 1].SetActive(true);
-        chatBubbles[completedPuzzles - 1].GetComponent<FadeInOut>().StartFadingIn();
-        yield return new WaitForSeconds(bubbleInterval);
-        chatBubbles[completedPuzzles - 1].GetComponent<FadeInOut>().StartFadingOut();
+        int count = Random.Range(num - 1, num + 1);
+        //Show the completed chat bubble
+        if(completedPuzzles > 0) {
+            yield return new WaitForSeconds(bubbleInterval/2);
+            chatBubbles[completedPuzzles - 1].SetActive(true);
+            chatBubbles[completedPuzzles - 1].GetComponent<FadeInOut>().StartFadingIn();
+            yield return new WaitForSeconds(bubbleInterval);
+            chatBubbles[completedPuzzles - 1].GetComponent<FadeInOut>().StartFadingOut();
+        }
+        //Let M/F talk for a few rounds
+        for(int i=0; i<count; i++) {
+            yield return new WaitForSeconds(1f);
+            int rng = Random.Range(0, otherBubbles.Length);
+            otherBubbles[rng].SetActive(true);
+            yield return new WaitForSeconds(2.5f);
+            otherBubbles[rng].GetComponent<FadeInOut>().StartFadingOut();
+            yield return new WaitForSeconds(1.5f);
+            otherBubbles[rng].SetActive(false);
+
+        }
         if(completedPuzzles < puzzles.Length) {
             puzzles[completedPuzzles].SetActive(true);
-            puzzles[completedPuzzles - 1].SetActive(false);
+            if(completedPuzzles > 0) {
+                puzzles[completedPuzzles - 1].SetActive(false);
+            }
         }
         else {
             puzzles[completedPuzzles - 1].SetActive(false);
@@ -49,8 +68,6 @@ public class PuzzleManager : MonoBehaviour
     IEnumerator FadeOut() {
         FadeInOut[] fadeInOuts = gameObject.GetComponentsInChildren<FadeInOut>();
         foreach(FadeInOut fadeInOut in fadeInOuts) {
-            Debug.Log(fadeInOut.gameObject.name);
-            fadeInOut.StopBlinking();
             fadeInOut.StartFadingOut();
         }
         yield return new WaitForSeconds(3f);
