@@ -95,6 +95,8 @@ public class JsonReader : MonoBehaviour
             ChangeTexture("Art/Scene1/" + target.illustration);
         lineObject.transform.Find("Frame").GetComponent<FrameController>().
             ChangeText(target.optionLines[optionIndex], "Art/Scene1/dialogue-box", flag);
+        lineObject.transform.Find("Frame").GetComponent<FrameController>().
+            ChangeNameTag("Meimei", flag);
         nextLine = target.nextLines[optionIndex];
         lineLog.Add(nextLine);
     }
