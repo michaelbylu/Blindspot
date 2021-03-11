@@ -14,4 +14,6 @@ public class Line
     public string lineIndex;
     //String index for the next line
     public string nextLine;
+    //The name tag of each character
+    public string name;
 }

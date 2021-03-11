@@ -7,6 +7,7 @@ public class JsonReader : MonoBehaviour
 {
     public TextAsset linesJson;
     public TextAsset optionsJson;
+    public GameObject nextBtn;
     public GameObject lineObject;
     private string currentLine = "0";
     private string nextLine = "";
@@ -53,6 +54,7 @@ public class JsonReader : MonoBehaviour
         bool flag = lineObject.transform.Find("Illustration").GetComponent<IllustrationController>().
             ChangeTexture("Art/Scene1/" + next.illustration);
         lineObject.transform.Find("Frame").GetComponent<FrameController>().ChangeText(next.dialogue, "Art/Scene1/" + next.frame, flag);
+        lineObject.transform.Find("Frame").GetComponent<FrameController>().ChangeNameTag(next.name, flag);
         currentLine = next.lineIndex;
         nextLine = next.nextLine;
         lineLog.Add(nextLine);
@@ -66,6 +68,7 @@ public class JsonReader : MonoBehaviour
 
     //Enable option based on targetIndex (same index in the optionJson)
     public void EnableOptions(string targetIndex) {
+        nextBtn.SetActive(false);
         Option target = testOptions.Find(targetIndex);
         if(target == null) {
             Debug.Log("target option " + targetIndex + " not found.");
@@ -83,6 +86,7 @@ public class JsonReader : MonoBehaviour
     //After player made a choice, disable option buttons and move to the line that player chose
     //Show the illustration field in the option
     public void DisableOptions(int optionIndex) {
+        nextBtn.SetActive(true);
         foreach(Button button in lineObject.transform.Find("Options").GetComponentsInChildren<Button>(true)){
             button.gameObject.SetActive(false);
         }
@@ -90,7 +94,9 @@ public class JsonReader : MonoBehaviour
         bool flag = lineObject.transform.Find("Illustration").GetComponent<IllustrationController>().
             ChangeTexture("Art/Scene1/" + target.illustration);
         lineObject.transform.Find("Frame").GetComponent<FrameController>().
-            ChangeText(target.optionLines[optionIndex], "Art/Scene1/text_box", flag);
+            ChangeText(target.optionLines[optionIndex], "Art/Scene1/dialogue-box", flag);
+        lineObject.transform.Find("Frame").GetComponent<FrameController>().
+            ChangeNameTag("Meimei", flag);
         nextLine = target.nextLines[optionIndex];
         lineLog.Add(nextLine);
     }
