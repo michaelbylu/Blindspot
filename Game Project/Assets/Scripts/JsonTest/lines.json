@@ -1,350 +1,278 @@
 {
-    "lines": [        
-        {
-            "dialogue": "(...is that Emily?...)",
-            "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
-            "lineIndex": "0",
-            "nextLine": "0a",
-            "name": "Meimei"
-        },
+    "lines": [
         {
             "dialogue": "Hey Meimei, How's it going?",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
-            "lineIndex": "0a",
-            "nextLine": "1",
-            "name": "Emily"
-
+            "frame": "text_box",
+            "lineIndex": "0",
+            "nextLine": "1"
         },
         {
             "dialogue": "I'm doing pretty good! How about you?",
             "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "1",
-            "nextLine": "2",
-            "name": "Meimei"
+            "nextLine": "2"
         },
         {
             "dialogue": "Um. I'm ok, it's just...",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "2",
-            "nextLine": "3",
-            "name": "Emily"
+            "nextLine": "3"
         },
         {
             "dialogue": "What’s wrong!?",
             "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "3",
-            "nextLine": "4",
-            "name": "Meimei"
+            "nextLine": "4"
         },
         {
             "dialogue": "The quiz...",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "4",
-            "nextLine": "5",
-            "name": "Emily"
+            "nextLine": "5"
         },
         {
             "dialogue": "That online quiz from our Calculus class?",
             "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "5",
-            "nextLine": "6",
-            "name": "Meimei"
+            "nextLine": "6"
         },
         {
             "dialogue": "Yeah. That quiz is just so hard. It takes me so much time during the weekend.",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "6",
-            "nextLine": "options",
-            "name": "Emily"
+            "nextLine": "options"
         },
         {
             "dialogue": "Oh, really? So how did you figure out the extra credit questions?",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "7",
-            "nextLine": "8",
-            "name": "Emily"
+            "nextLine": "8"
         },
         {
             "dialogue": "I was actually still working on those, but I had some ideas for what to try next.",
             "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "8",
-            "nextLine": "9",
-            "name": "Meimei"
+            "nextLine": "9"
         },
         {
             "dialogue": "Great! So would you like to share your idea with me?",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "9",
-            "nextLine": "10",
-            "name": "Emily"
+            "nextLine": "10"
         },
         {
             "dialogue": "Sure! Let's take a look together!",
             "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "10",
-            "nextLine": "puzzle1-1",
-            "name": "Meimei"
+            "nextLine": "puzzle1-1"
         },
         {
             "dialogue": "Nice! Did the TA talk about the extra credit question during your discussion section?",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "11",
-            "nextLine": "12",
-            "name": "Emily"
+            "nextLine": "12"
         },
         {
             "dialogue": "No, not in our section. But I may have some ideas for those questions now.",
             "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "12",
-            "nextLine": "9",
-            "name": "Meimei"
+            "nextLine": "9"
         },
         {
             "dialogue": "Wow, how did you figure it out so fast?",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "13",
-            "nextLine": "14",
-            "name": "Emily"
+            "nextLine": "14"
         },
         {
             "dialogue": "So Chinese people are all good at math, right?",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "14",
-            "nextLine": "14a",
-            "name": "Emily"
-        },        
-        {
-            "dialogue": "(...that's the result of my work...)",
-            "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
-            "lineIndex": "14a",
-            "nextLine": "options",
-            "name": "Meimei"
+            "nextLine": "options"
         },
         {
             "dialogue": "Hah, I like the way you solve that question. How about this next one?" 
             ,
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "15",
-            "nextLine": "16",
-            "name": "Emily"
+            "nextLine": "16"
         },
         {
             "dialogue": "Thanks. Just give me one second. I need to take a look at my notes.",
             "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "16",
-            "nextLine": "puzzle1-2A",
-            "name": "Meimei"
+            "nextLine": "puzzle1-2A"
         },
         {
             "dialogue": "Same! That question also bugged me. So do you have any ideas for the next one?",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "17",
-            "nextLine": "18",
-            "name": "Meimei"
+            "nextLine": "18"
         },
         {
             "dialogue": "Yeah, but I'm not 100% sure...",
             "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "18",
-            "nextLine": "puzzle1-2B",
-            "name": "Meimei"
+            "nextLine": "puzzle1-2B"
         },
         {
             "dialogue": "Oh, don't overthink it. It's just a compliment.",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "19",
-            "nextLine": "20",
-            "name": "Emily"
+            "nextLine": "20"
         },
         {
             "dialogue": "Um...never mind... let's move on to the next question.",
             "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "20",
-            "nextLine": "puzzle1-2C",
-            "name": "Meimei"
+            "nextLine": "puzzle1-2C"
         },
         {
             "dialogue": "Nice job, Meimei! From your notes, you're way better at math than me.",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "21A",
-            "nextLine": "puzzle",
-            "name": "Emily"
+            "nextLine": "puzzle"
         },
         {
             "dialogue": "You were working hard yesterday! Thanks for sharing your problem-solving skills.",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "21B",
-            "nextLine": "puzzle",
-            "name": "Emily"
+            "nextLine": "puzzle"
         },
         {
             "dialogue": "Thank you Meimei! So you guys must really have a talent for math. \nYou must all have a great passion for it!",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "21C",
-            "nextLine": "puzzle",
-            "name": "Emily"
-        },
-        {
-            "dialogue": "(...well, public speaking class now...",
-            "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
-            "lineIndex": "22",
-            "nextLine": "22a",
-            "name": "Meimei"
+            "nextLine": "puzzle"
         },
         {
             "dialogue": "Guys, you have 20 minutes to prepare for the upcoming presentation. \nAfter finalizing your ideas, each team will get 5 minutes to talk.",
             "illustration": "Professor_illustration",
-            "frame": "dialogue-box",
-            "lineIndex": "22a",
-            "nextLine": "23",
-            "name": "Professor"
+            "frame": "text_box",
+            "lineIndex": "22",
+            "nextLine": "23"
         },
         {
             "dialogue": "All right. Let's get started.",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "23",
-            "nextLine": "24",
-            "name": "Emily"
+            "nextLine": "24"
         },
         {
             "dialogue": "Sure! I got an idea about the topic for our presentation, which is ......",
             "illustration": "Frank_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "24",
-            "nextLine": "25",
-            "name": "Frank"
+            "nextLine": "25"
         },
         {
             "dialogue": "That's a good idea! Maybe we can also add something like......",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "25",
-            "nextLine": "26",
-            "name": "Emily"
+            "nextLine": "26"
         },
         {
             "dialogue": "Good point! Let's use your suggestion!",
             "illustration": "Frank_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "26",
-            "nextLine": "27",
-            "name": "Frank"
+            "nextLine": "27"
         },
         {
             "dialogue": "Actually, I have another idea about this topic.",
             "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "27",
-            "nextLine": "28",
-            "name": "Meimei"
+            "nextLine": "28"
         },
         {
             "dialogue": "Based on what the professor just mentioned, maybe... um... we can think about this topic in this way....",
             "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "28",
-            "nextLine": "puzzle2-1",
-            "name": "Meimei"
+            "nextLine": "puzzle2-1"
         },
         {
             "dialogue": "...Oh, I got your point. Do you mean something like this......?",
             "illustration": "Frank_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "29",
-            "nextLine": "29a",
-            "name": "Frank"
-        },
-        {
-            "dialogue": "(...no, he didn't...)",
-            "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
-            "lineIndex": "29a",
-            "nextLine": "30",
-            "name": "Frank"
+            "nextLine": "30"
         },
         {
             "dialogue": "You only have 5 minutes remaining for your in-class presentation.\nMake sure you guys are ready for what you are going to say.",
             "illustration": "Professor_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "30",
-            "nextLine": "31",
-            "name": "Professor"
+            "nextLine": "31"
         },
         {
             "dialogue": "Meimei, your idea sounds really good. But I think your idea is kind of similar to Frank's.",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "31",
-            "nextLine": "31A",
-            "name": "Emily"
+            "nextLine": "31A"
         },
         {
             "dialogue": "We can just add it as an appendix when we finalize our presentation.",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "31A",
-            "nextLine": "32",
-            "name": "Emily"
+            "nextLine": "32"
         },
         {
             "dialogue": "What do you think?",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "32",
-            "nextLine": "options",
-            "name": "Emily"
+            "nextLine": "options"
         },
         {
             "dialogue": "Nice job, everyone. So we'll present what we just discussed. MeiMei, if there is a chance, we can talk about your idea next time.",
             "illustration": "Frank_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "33A",
-            "nextLine": "puzzle",
-            "name": "Frank"
+            "nextLine": "puzzle"
         },
         {
             "dialogue": "Thanks for clarifying your idea for us! I really appreciate it. We should consider your idea as part of our presentation.",
             "illustration": "Frank_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "33B",
-            "nextLine": "puzzle",
-            "name": "Frank"
+            "nextLine": "puzzle"
         },
         {
             "dialogue": "Oh, sorry, I didn't quite understand your idea earlier, but I believe it will be an excellent point to add to our presentation.",
             "illustration": "Karen_illustration",
-            "frame": "dialogue-box",
+            "frame": "text_box",
             "lineIndex": "33C",
-            "nextLine": "puzzle",
-            "name": "Emily"
+            "nextLine": "puzzle"
         }
     ]
 }
