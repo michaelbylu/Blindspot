@@ -37,9 +37,10 @@ public class LoadingBar : MonoBehaviour
         startPage.SetActive(false);
         videoPlayer.gameObject.SetActive(true);
         videoPlayer.url = "https://projectblindspot.s3.amazonaws.com/Intro_with_subs.mp4";
-        // RenderTexture rt = new RenderTexture(Screen.width, Screen.height, 24, RenderTextureFormat.ARGB32);
-        // rt.Create();
-        // videoPlayer.targetTexture = rt;
+        RenderTexture rt = new RenderTexture(1920, 1080, 24, RenderTextureFormat.ARGB32);
+        rt.Create();
+        videoPlayer.targetTexture = rt;
+        videoPlayer.GetComponent<RawImage>().texture = rt;
         // videoPlayer.GetComponent<RawImage>().texture = rt;
         // videoPlayer.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, Screen.height);
         // videoPlayer.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, Screen.width);

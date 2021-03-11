@@ -6,7 +6,7 @@ public class PuzzleController : MonoBehaviour
 {
     public Transform destination;
     public bool canScatter = false;
-    public float minDistance = 1.0f;
+    public float minDistance = 0.7f;
     public float moveSpeed = 2.0f;
     public float scatterSpeed = 0.2f;
     private Vector3 screenPoint;
@@ -70,10 +70,7 @@ public class PuzzleController : MonoBehaviour
                     transform.position = destination.position;
                 }
                 else {
-                    hasPlaced = true;
-                    isScattering = true;
-                    scatterDir = (destination.position - transform.position).normalized;
-                    print(scatterDir);
+                    StartCoroutine(WaitForScatter());
                 }
             }
         }
@@ -84,6 +81,13 @@ public class PuzzleController : MonoBehaviour
         float _x = v.x*Mathf.Cos(radian) - v.y*Mathf.Sin(radian);
         float _y = v.x*Mathf.Sin(radian) + v.y*Mathf.Cos(radian);
         return new Vector3(_x, _y, 0);
+    }
+
+    IEnumerator WaitForScatter() {
+        yield return new WaitForSeconds(1f);
+        hasPlaced = true;
+        isScattering = true;
+        scatterDir = (destination.position - transform.position).normalized;
     }
     
 

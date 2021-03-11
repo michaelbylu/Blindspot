@@ -14,7 +14,7 @@ public class Chapter1Manager : MonoBehaviour
     public GameObject puzzle1_1;
     public GameObject puzzle1_2;
     public GameObject puzzle2_1;
-    public GameObject puzzle2_2;
+    public GameObject[] puzzle2_2;
     public GameObject flashback;
     public GameObject endPage;
     public GameObject crowd;
@@ -36,7 +36,7 @@ public class Chapter1Manager : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.L)) {
-            currentStage = 10;
+            currentStage = 14;
             CheckStage();
         }
         if(Input.GetKeyDown(KeyCode.R) && currentStage >= 15) {
@@ -101,7 +101,12 @@ public class Chapter1Manager : MonoBehaviour
                 jsonReader.ChangeLine("29");
                 break;
             case 12: //Start puzzle2-2
-                puzzle2_2.SetActive(true);
+                if(currentDifficulty == "C" || currentDifficulty == "B") {
+                    puzzle2_2[0].SetActive(true);
+                }
+                else {
+                    puzzle2_2[1].SetActive(true);
+                }
                 break;
             case 13: //Line before flashback
                 jsonReader.ChangeLine("33" + currentDifficulty);
@@ -125,8 +130,8 @@ public class Chapter1Manager : MonoBehaviour
 
     public void ChangeStage(string puzzleDifficulty) {
         currentStage++;
-        CheckStage();
         currentDifficulty = puzzleDifficulty;
+        CheckStage();
     }
 
     public void AudioFadeOut(float volume) {
@@ -141,14 +146,19 @@ public class Chapter1Manager : MonoBehaviour
     IEnumerator EnableOutro() {
         AudioFadeOut(0f);
         flashback.SetActive(true);
+        VideoPlayer videoPlayer = flashback.GetComponent<VideoPlayer>();
         if(jsonReader.CheckLog("19") && jsonReader.CheckLog("puzzle2-2A")) {
-            flashback.GetComponent<VideoPlayer>().url = 
-                "https://projectblindspot.s3.amazonaws.com/Chapter1NegativeFB_with_sub.mp4";                   
+            videoPlayer.url = 
+                "https://projectblindspot.s3.amazonaws.com/Chapter1NegativeFB_with_subs.mp4";                   
         }
         else {
-            flashback.GetComponent<VideoPlayer>().url = 
-                "https://projectblindspot.s3.amazonaws.com/Chapter1PositiveFB_with_sub.mp4";
+            videoPlayer.url = 
+                "https://projectblindspot.s3.amazonaws.com/Chapter1PositiveFB_with_subs.mp4";
         }
+        RenderTexture rt = new RenderTexture(1920, 1080, 24, RenderTextureFormat.ARGB32);
+        rt.Create();
+        videoPlayer.targetTexture = rt;
+        videoPlayer.GetComponent<RawImage>().texture = rt;
         yield return new WaitForSeconds(2f);
         flashback.GetComponent<VideoPlayer>().Play();
     }

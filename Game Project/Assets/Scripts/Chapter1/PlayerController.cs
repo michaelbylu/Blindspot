@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour
             transform.position = chair.position;
             isMoving = false;
             isSeated = true;
+            GetComponentInChildren<SpriteRenderer>().sortingOrder = -4;
             chair.GetComponentInChildren<FadeInOut>().gameObject.SetActive(false);
             GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
             animator.transform.localScale = new Vector3(1f,1f,1f);
