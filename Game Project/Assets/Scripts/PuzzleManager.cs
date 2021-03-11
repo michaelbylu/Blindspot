@@ -7,7 +7,7 @@ public class PuzzleManager : MonoBehaviour
     // Time interval between each bubble puzzle is generated
     public float bubbleInterval = 3f;
     public GameObject[] puzzles;
-    public GameObject chatBubble;
+    public GameObject[] chatBubbles;
     private int completedPuzzles = 0;
     // Start is called before the first frame update
     void Start()
@@ -31,11 +31,11 @@ public class PuzzleManager : MonoBehaviour
     }
 
     IEnumerator EnableNext() {
-        yield return new WaitForSeconds(1f);
-        chatBubble.SetActive(true);
-        chatBubble.GetComponent<FadeInOut>().StartFadingIn();
+        yield return new WaitForSeconds(2f);
+        chatBubbles[completedPuzzles - 1].SetActive(true);
+        chatBubbles[completedPuzzles - 1].GetComponent<FadeInOut>().StartFadingIn();
         yield return new WaitForSeconds(bubbleInterval);
-        chatBubble.GetComponent<FadeInOut>().StartFadingOut();
+        chatBubbles[completedPuzzles - 1].GetComponent<FadeInOut>().StartFadingOut();
         if(completedPuzzles < puzzles.Length) {
             puzzles[completedPuzzles].SetActive(true);
             puzzles[completedPuzzles - 1].SetActive(false);
