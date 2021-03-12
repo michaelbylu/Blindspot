@@ -79,6 +79,7 @@ public class Chapter1Manager : MonoBehaviour
                 break;
             case 5: //When second part dialogues end and the book is ready for click again
                 book.GetComponent<BookController>().EnableClick();
+                puzzle1_1.SetActive(false);
                 break;
             case 6: //When book is clicked again, show puzzle1-2
                 puzzle1_2.SetActive(true);
@@ -101,6 +102,7 @@ public class Chapter1Manager : MonoBehaviour
                 jsonReader.ChangeLine("29");
                 break;
             case 12: //Start puzzle2-2
+                puzzle2_1.SetActive(false);
                 if(currentDifficulty == "C" || currentDifficulty == "B") {
                     puzzle2_2[0].SetActive(true);
                 }
@@ -176,6 +178,7 @@ public class Chapter1Manager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         book.GetComponent<BookController>().CloseBook();
         yield return new WaitForSeconds(2f);
+        puzzle1_2.SetActive(false);
         jsonReader.ChangeLine("21" + currentDifficulty);
     }
 

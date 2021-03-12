@@ -35,4 +35,8 @@ public class PuzzleContainer : MonoBehaviour
         completePuzzle.SetActive(true);
         GetComponentInParent<PuzzleManager>().PuzzleCompleted();
     }
+
+    public void PuzzleComplete() {
+        GetComponent<AudioSource>().Play();
+    }
 }

@@ -32,14 +32,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-        if(Input.GetMouseButtonUp(0) && !isSeated) {
-            target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-            target.z = 0f;
-            seeker.StartPath(transform.position, target, OnPathComplete);
-            isMoving = true;
-            currentWaypoint = 0;
-            animator.SetBool("isWalking", true);
-        }
+        GeneratePath();
     }
 
     private void Move() {
@@ -76,6 +69,20 @@ public class PlayerController : MonoBehaviour
             GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
             animator.transform.localScale = new Vector3(1f,1f,1f);
             animator.SetBool("isSit", true);
+        }
+    }
+
+    private void GeneratePath() {
+        if(isSeated) {
+            return;
+        }
+        if(Input.GetMouseButtonUp(0)) {
+            target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+            target.z = 0f;
+            seeker.StartPath(transform.position, target, OnPathComplete);
+            isMoving = true;
+            currentWaypoint = 0;
+            animator.SetBool("isWalking", true);
         }
     }
 }

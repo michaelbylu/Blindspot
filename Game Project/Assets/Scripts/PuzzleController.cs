@@ -6,7 +6,7 @@ public class PuzzleController : MonoBehaviour
 {
     public Transform destination;
     public bool canScatter = false;
-    public float minDistance = 0.7f;
+    public float minDistance = 0.4f;
     public float moveSpeed = 2.0f;
     public float scatterSpeed = 0.2f;
     private Vector3 screenPoint;
@@ -68,6 +68,8 @@ public class PuzzleController : MonoBehaviour
                 if(hasPlaced || !canScatter) {
                     isPlaced = true;
                     transform.position = destination.position;
+                    GetComponent<PolygonCollider2D>().enabled = false;
+                    GetComponentInParent<PuzzleContainer>().PuzzleComplete();
                 }
                 else {
                     StartCoroutine(WaitForScatter());

@@ -9,8 +9,10 @@ public class BookController : MonoBehaviour
     public AudioClip closeSFX;
     public AudioClip flipSFX;
     public AudioClip openSFX;
+    public BoxCollider2D deskCollider;
     private AudioSource audioSource;
     private int count = 0;
+    private bool clickable = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +26,18 @@ public class BookController : MonoBehaviour
     }
 
     public void EnableClick() {
-        GetComponent<BoxCollider2D>().enabled = true;
+        deskCollider.enabled = false;
         GetComponent<FadeInOut>().StartBlinking();
+        clickable = true;
     }
 
-    private void OnMouseUp() {
+    private void OnMouseDown() {
+        if(!clickable){
+            return;
+        }
         GetComponent<FadeInOut>().StopBlinking();
-        GetComponent<BoxCollider2D>().enabled = false;
+        clickable = false;
+        deskCollider.enabled = true;
         GetComponent<SpriteRenderer>().sprite = openedBook;
         audioSource.clip = (count == 0)? openSFX : flipSFX;
         audioSource.Play();
