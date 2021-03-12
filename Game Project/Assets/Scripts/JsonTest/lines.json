@@ -3,7 +3,7 @@
         {
             "dialogue": "(...is that Emily? I have not seen her since the last math class...)",
             "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
+            "frame": "inner_thoughts1",
             "lineIndex": "0",
             "nextLine": "0a",
             "name": "Meimei"
@@ -132,7 +132,7 @@
         {
             "dialogue": "(...that's the result of my work...)",
             "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
+            "frame": "inner_thoughts1",
             "lineIndex": "14a",
             "nextLine": "options",
             "name": "Meimei"
@@ -213,7 +213,7 @@
         {
             "dialogue": "(...well, public speaking class now...)",
             "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
+            "frame": "inner_thoughts1",
             "lineIndex": "22",
             "nextLine": "22a",
             "name": "Meimei"
@@ -275,7 +275,7 @@
             "name": "Meimei"
         },
         {
-            "dialogue": "...Oh, I got your point. So you mean something like this......",
+            "dialogue": "Oh, I got your point. So you mean something like this......",
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "29",
@@ -285,7 +285,7 @@
         {
             "dialogue": "(...no, he didn't...)",
             "illustration": "Mei_speaking",
-            "frame": "dialogue-box",
+            "frame": "inner_thoughts1",
             "lineIndex": "29a",
             "nextLine": "30",
             "name": "Meimei"
