@@ -62,7 +62,7 @@ public class FrameController : MonoBehaviour
             
             textMeshProUGUI.color = new Color(textColor.r, textColor.g, textColor.b, frameColor.a);
             textMeshProNameTag.color = new Color(nameTagColor.r, nameTagColor.g, nameTagColor.b, frameColor.a);
-            NextBtnImg.color = new Color(btnColor.r, btnColor.g, btnColor.b, frameColor.a);
+            // NextBtnImg.color = new Color(btnColor.r, btnColor.g, btnColor.b, frameColor.a);
         }
         else {
             Color frameColor = frame.color;
@@ -79,7 +79,7 @@ public class FrameController : MonoBehaviour
             
             textMeshProUGUI.color = new Color(textColor.r, textColor.g, textColor.b, frameColor.a);
             textMeshProNameTag.color = new Color(nameTagColor.r, nameTagColor.g, nameTagColor.b, frameColor.a);
-            NextBtnImg.color = new Color(btnColor.r, btnColor.g, btnColor.b, frameColor.a);
+            // NextBtnImg.color = new Color(btnColor.r, btnColor.g, btnColor.b, frameColor.a);
         }
     }
 
