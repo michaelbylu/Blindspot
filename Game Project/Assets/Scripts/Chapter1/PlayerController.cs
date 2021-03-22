@@ -60,12 +60,13 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.position = path.vectorPath[currentWaypoint];
             currentWaypoint++;
         }
-        if(Vector3.Distance(transform.position, chair.position) <= 0.1f) {
+        if(Vector3.Distance(transform.position, chair.position) <= 0.3f) {
             transform.position = chair.position;
             isMoving = false;
             isSeated = true;
             GetComponentInChildren<SpriteRenderer>().sortingOrder = -4;
             chair.GetComponentInChildren<FadeInOut>().gameObject.SetActive(false);
+            chair.GetComponentInChildren<ChairController>().enabled = false;
             GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
             animator.transform.localScale = new Vector3(1f,1f,1f);
             animator.SetBool("isSit", true);
