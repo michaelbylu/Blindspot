@@ -1128,7 +1128,7 @@ MonoBehaviour:
   minDistance: 0.5
   moveSpeed: 0.5
   dragSpeed: 10
-  blockSpeed: 0.2
+  blockSpeed: 1
   xRange:
   - -8
   - -2.5
@@ -1761,8 +1761,8 @@ MonoBehaviour:
   destination: {fileID: 1893828434}
   minDistance: 0.5
   moveSpeed: 0.5
-  dragSpeed: 3
-  blockSpeed: 0.2
+  dragSpeed: 10
+  blockSpeed: 1
   xRange:
   - -8
   - -2.5
@@ -2027,7 +2027,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d90f57fcf3e9e8340b111a4a975180bf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c5cb5e4779031574db8e14852c5b7e1b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3159,7 +3159,7 @@ MonoBehaviour:
   minDistance: 0.5
   moveSpeed: 0.5
   dragSpeed: 10
-  blockSpeed: 0.2
+  blockSpeed: 1
   xRange:
   - -8
   - -2.5
@@ -4065,8 +4065,8 @@ MonoBehaviour:
   destination: {fileID: 484824596}
   minDistance: 0.3
   moveSpeed: 0.5
-  dragSpeed: 3
-  blockSpeed: 0.2
+  dragSpeed: 10
+  blockSpeed: 1
   xRange:
   - -8
   - -2.5
@@ -4338,8 +4338,8 @@ MonoBehaviour:
   destination: {fileID: 1198863023}
   minDistance: 0.5
   moveSpeed: 0.5
-  dragSpeed: 3
-  blockSpeed: 0.2
+  dragSpeed: 10
+  blockSpeed: 1
   xRange:
   - -8
   - -2.5
@@ -6738,7 +6738,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 475823e0c7bae3a488b4f745fa680c4c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 541fe36d8b0434244af3b7e6e953296c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.4
   m_Pitch: 1
@@ -7921,7 +7921,7 @@ MonoBehaviour:
   minDistance: 0.3
   moveSpeed: 0.5
   dragSpeed: 10
-  blockSpeed: 0.2
+  blockSpeed: 1
   xRange:
   - -8
   - -2.5
@@ -14202,8 +14202,8 @@ MonoBehaviour:
   destination: {fileID: 116963230}
   minDistance: 0.3
   moveSpeed: 0.5
-  dragSpeed: 3
-  blockSpeed: 0.2
+  dragSpeed: 10
+  blockSpeed: 1
   xRange:
   - -8
   - -2.5
@@ -15401,8 +15401,8 @@ MonoBehaviour:
   destination: {fileID: 564943245}
   minDistance: 0.3
   moveSpeed: 0.5
-  dragSpeed: 3
-  blockSpeed: 0.2
+  dragSpeed: 10
+  blockSpeed: 1
   xRange:
   - -8
   - -2.5
@@ -16893,7 +16893,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d90f57fcf3e9e8340b111a4a975180bf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c5cb5e4779031574db8e14852c5b7e1b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -17603,7 +17603,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Meimei
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 263884c4714baf24a80c043a2a548966, type: 2}
   m_sharedMaterial: {fileID: 0}
