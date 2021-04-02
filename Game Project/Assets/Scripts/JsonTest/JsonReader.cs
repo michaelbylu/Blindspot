@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class JsonReader : MonoBehaviour
 {
+    public int chapterIndex = 1;
     public TextAsset linesJson;
     public TextAsset optionsJson;
     public GameObject nextBtn;
@@ -25,7 +26,9 @@ public class JsonReader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.GetKeyDown(KeyCode.K)) {
+            JumpToNext();
+        }
     }
 
     //Switch dialogue content based on targetIndex
@@ -35,10 +38,21 @@ public class JsonReader : MonoBehaviour
             lineObject.SetActive(false);
             if(targetIndex.Length > "puzzlex-x".Length) {
                 string level = targetIndex[9].ToString();
-                GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage(level);
+                if(chapterIndex == 1) {
+                    GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage(level);
+                }
+                else if(chapterIndex == 2) {
+                    GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter2Manager>().ChangeStage(level);
+                }
+                
             }
             else{
-                GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
+                if(chapterIndex == 1) {
+                    GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
+                }
+                else if(chapterIndex == 2) {
+                    GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter2Manager>().ChangeStage();
+                }
             }
             return;
         }
@@ -53,6 +67,7 @@ public class JsonReader : MonoBehaviour
         lineObject.SetActive(true);      
         bool flag = lineObject.transform.Find("Illustration").GetComponent<IllustrationController>().
             ChangeTexture("Art/Scene1/" + next.illustration);
+        flag = flag || lineObject.transform.Find("Illustration").GetComponent<RawImage>().color.a <= 0.01f;
         lineObject.transform.Find("Frame").GetComponent<FrameController>().ChangeText(next.dialogue, "Art/Scene1/" + next.frame, flag);
         lineObject.transform.Find("Frame").GetComponent<FrameController>().ChangeNameTag(next.name, flag);
         currentLine = next.lineIndex;
