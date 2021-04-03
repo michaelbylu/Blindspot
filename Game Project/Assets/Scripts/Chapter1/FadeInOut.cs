@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FadeInOut : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class FadeInOut : MonoBehaviour
     void Update()
     {
         if(isFadingIn) {
-            Color color = GetComponent<SpriteRenderer>().color;
+            Color color = GetColor();
             color.a += Time.deltaTime * speed;
             if(color.a >= 1f) {
                 color.a = 1f;
@@ -33,10 +34,10 @@ public class FadeInOut : MonoBehaviour
                     StartCoroutine(WaitForFadeOut());
                 }
             }
-            GetComponent<SpriteRenderer>().color = color;
+            SetColor(color);
         }
         if(isFadingOut) {
-            Color color = GetComponent<SpriteRenderer>().color;
+            Color color = GetColor();
             color.a -= Time.deltaTime * speed;
             if(color.a <= 0f) {
                 color.a = 0f;
@@ -45,7 +46,7 @@ public class FadeInOut : MonoBehaviour
                     StartCoroutine(WaitForFadeIn());
                 }
             }
-            GetComponent<SpriteRenderer>().color = color;
+            SetColor(color);
         }
     }
 
@@ -65,6 +66,11 @@ public class FadeInOut : MonoBehaviour
         isFadingOut = true;
     }
 
+    public void StartFadingOut(float fadeSpeed) {
+        isFadingOut = true;
+        speed = fadeSpeed;
+    }
+
     public void StartBlinking() {
         isBlinking = true;
         isFadingOut = true;
@@ -74,9 +80,9 @@ public class FadeInOut : MonoBehaviour
         isBlinking = false;
         isFadingIn = false;
         isFadingOut = false;
-        Color color = GetComponent<SpriteRenderer>().color;
+        Color color = GetColor();
         color.a = 1f;
-        GetComponent<SpriteRenderer>().color = color;
+        SetColor(color);
         StopAllCoroutines();
     }
 
@@ -88,5 +94,22 @@ public class FadeInOut : MonoBehaviour
     IEnumerator WaitForFadeIn() {
         yield return new WaitForSeconds(Random.Range(0.8f * blinkInterval, 1.2f * blinkInterval));
         isFadingIn = true;
+    }
+
+    private Color GetColor() {
+        if(GetComponent<SpriteRenderer>() != null) {
+            return GetComponent<SpriteRenderer>().color;
+        } else if(GetComponent<Image>() != null) {
+            return GetComponent<Image>().color;
+        }
+        return new Color(0f, 0f, 0f ,0f);
+    }
+
+    private void SetColor(Color targetColor) {
+        if(GetComponent<SpriteRenderer>() != null) {
+            GetComponent<SpriteRenderer>().color = targetColor;
+        } else if(GetComponent<Image>() != null) {
+            GetComponent<Image>().color = targetColor;
+        }
     }
 }

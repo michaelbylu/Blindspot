@@ -32,7 +32,7 @@ public class IllustrationController : MonoBehaviour
     }
 
     public bool ChangeTexture(string texture) {
-        if(rawImage.texture != Resources.Load<Texture2D>(texture)) {
+        if(rawImage.texture != Resources.Load<Texture2D>(texture) || rawImage.color.a <= 0.01f) {
             targetTexture = texture;
             isSwitching = true;
             isFadingOut = true;

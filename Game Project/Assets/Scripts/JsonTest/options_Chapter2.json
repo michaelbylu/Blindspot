@@ -36,9 +36,9 @@
             "optionIndex": "35",
             "optionLines":
             [                
-                "The dumpling is a very traditional food in Spring Festivals and means a lot in our culture."
+                "The dumpling is a very traditional food in Spring Festivals and means a lot in our culture.",
                 "Haha! Actually, making dumplings is very interesting. Come and have a try next time.",
-                "It is very easy to cook and healthy. Also, it's one-bite size makes it very cute. Right?",
+                "It is very easy to cook and healthy. Also, it's one-bite size makes it very cute. Right?"
 
             ],
             "nextLines":
@@ -54,14 +54,14 @@
             "optionLines":
             [
                 "Just like the Super Bowl! Everyone gets back home and enjoys family time!",
-                "It’s a little bit hard to explain..."
-                "Haha. Don’t overthink it! So we get the second chance to celebrate the new year!",
+                "It’s a little bit hard to explain...",
+                "Haha. Don’t overthink it! So we get the second chance to celebrate the new year!"
             ],
             "nextLines":
             [
-                "puzzle2-1",
-                "puzzle2-2",
-                "puzzle2-1"
+                "puzzle2-1A",
+                "puzzle2-2C",
+                "puzzle2-1B"
             ],
             "illustration": "Mei_make_choices"
         }

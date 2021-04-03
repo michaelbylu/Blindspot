@@ -77,7 +77,7 @@
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "9",
-            "nextLine": "10",
+            "nextLine": "puzzle",
             "name": "Meimei"
         },
         {
@@ -189,7 +189,7 @@
             "illustration": "Jasmine_speaking",
             "frame": "dialogue-box",
             "lineIndex": "23",
-            "nextLine": "options_Chapter2",
+            "nextLine": "options",
             "name": "Jasmine"
         },
 
@@ -201,7 +201,7 @@
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "24",
-            "nextLine": "options_Chapter2",
+            "nextLine": "options",
             "name": "Frank"
         },
 
@@ -269,7 +269,7 @@
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "29",
-            "nextLine": "30",
+            "nextLine": "puzzle",
             "name": "Meimei"
         },
 
@@ -310,7 +310,7 @@
             "illustration": "Mei_speaking",
             "frame": "inner_thoughts1",
             "lineIndex": "pizza",
-            "nextLine": "",
+            "nextLine": "release",
             "name": ""
         },
         {                      
@@ -318,7 +318,7 @@
             "illustration": "Mei_speaking",
             "frame": "inner_thoughts1",
             "lineIndex": "dumpling",
-            "nextLine": "",
+            "nextLine": "release",
             "name": ""
         },
 
@@ -369,7 +369,7 @@
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "34",
-            "nextLine": "35",
+            "nextLine": "35a",
             "name": "Meimei"
         },
         {
@@ -401,7 +401,7 @@
             "illustration": "Mei_speaking",
             "frame": "inner_thoughts1",
             "lineIndex": "37",
-            "nextLine": "options_Chapter2",
+            "nextLine": "options",
             "name": ""
         },
 
@@ -486,7 +486,7 @@
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "41",
-            "nextLine": "end",
+            "nextLine": "puzzle",
             "name": "Meimei"
         },
         {
@@ -494,7 +494,7 @@
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "42",
-            "nextLine": "end",
+            "nextLine": "puzzle",
             "name": "Meimei"
         }
     ]

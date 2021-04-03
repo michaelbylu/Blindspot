@@ -25,6 +25,7 @@ public class ColorPuzzleController : MonoBehaviour
             GetComponent<SpriteRenderer>().material.SetFloat("_Flag", 1f);
             GetComponent<PolygonCollider2D>().enabled = false;
             isPlaced = true;
+            GetComponentInParent<AudioSource>().Play();
         }
         GetComponent<SpriteRenderer>().material.SetFloat("_Thickness", 0f);
     }
@@ -35,7 +36,7 @@ public class ColorPuzzleController : MonoBehaviour
             return;
         }
         else {
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<ColorPuzzleManager>().PieceClicked(gameObject);
+            GetComponentInParent<ColorPuzzleManager>().PieceClicked(gameObject);
         }
     }
 

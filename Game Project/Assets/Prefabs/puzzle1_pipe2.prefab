@@ -101,10 +101,10 @@ MonoBehaviour:
   moveSpeed: 2
   dir: 0
   path:
-  - {x: -5, y: 0, z: 0}
-  - {x: -3, y: 2, z: 0}
+  - {x: -3, y: 0, z: 0}
+  - {x: -1, y: 2, z: 0}
   - {x: 2, y: 3, z: 0}
-  - {x: 8, y: 2, z: 0}
+  - {x: 6, y: 2, z: 0}
 --- !u!61 &4414317811458239136
 BoxCollider2D:
   m_ObjectHideFlags: 0

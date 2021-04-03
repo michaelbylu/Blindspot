@@ -34,6 +34,14 @@ public class JsonReader : MonoBehaviour
     //Switch dialogue content based on targetIndex
     //When targetIndex indicate options, turn on option buttons
     public void ChangeLine(string targetIndex) {
+        if(targetIndex.StartsWith("release")) {
+            lineObject.SetActive(false);  
+            if(currentLine == "dumpling") {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().SwitchWalkAnimation(1);
+            }
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().Release();
+            return;
+        }
         if(targetIndex.StartsWith("puzzle")) {
             lineObject.SetActive(false);
             if(targetIndex.Length > "puzzlex-x".Length) {

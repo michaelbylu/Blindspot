@@ -20,7 +20,12 @@ public class VideoController : MonoBehaviour
             isPlayed = true;
         }
         if(isPlayed && !videoPlayer.isPlaying) {
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
+            if(GameObject.FindGameObjectWithTag("GameController").name.StartsWith("Chapter1")) {
+                GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
+            }
+            else {
+                GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter2Manager>().ChangeStage();
+            }
             gameObject.SetActive(false);
         }
     }

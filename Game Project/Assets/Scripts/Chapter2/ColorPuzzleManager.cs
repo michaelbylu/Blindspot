@@ -6,6 +6,8 @@ public class ColorPuzzleManager : MonoBehaviour
 {
     public GameObject[] colorPuzzles;
     private GameObject selectedOne;
+    private bool isCompleted;
+    private bool clickable = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +17,16 @@ public class ColorPuzzleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(!isCompleted && CheckComplete()) {
+            isCompleted = true;
+            StartCoroutine(FadeOut());
+        }
     }
 
     public void PieceClicked(GameObject e) {
+        if(!clickable) {
+            return;
+        }
         if(selectedOne == null) {
             selectedOne = e;
             e.GetComponent<SpriteRenderer>().material.SetFloat("_Thickness", 1f);
@@ -30,6 +38,7 @@ public class ColorPuzzleManager : MonoBehaviour
     }
 
     IEnumerator SwitchPuzzles(GameObject e) {
+        clickable = false;
         yield return new WaitForSeconds(1f);
         Vector3 pos = e.transform.position;
         e.transform.position = selectedOne.transform.position;
@@ -37,6 +46,7 @@ public class ColorPuzzleManager : MonoBehaviour
         e.GetComponent<ColorPuzzleController>().CheckPlaced();
         selectedOne.GetComponent<ColorPuzzleController>().CheckPlaced();
         selectedOne = null;
+        clickable = true;
     }
 
     public bool CheckComplete() {
@@ -48,5 +58,14 @@ public class ColorPuzzleManager : MonoBehaviour
             }
         }
         return true;
+    }
+
+    IEnumerator FadeOut() {
+        yield return new WaitForSeconds(2f);
+        foreach(FadeInOut f in transform.GetComponentsInChildren<FadeInOut>()){
+            f.StartFadingOut();
+        }
+        yield return new WaitForSeconds(2f);
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter2Manager>().ChangeStage();
     }
 }

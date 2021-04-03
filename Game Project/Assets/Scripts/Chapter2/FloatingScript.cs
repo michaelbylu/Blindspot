@@ -9,7 +9,7 @@ public class FloatingScript : MonoBehaviour
     // Start is called before the first frame update
     public TMP_Text text;
     public float lifeSpan = 4f;
-    public float moveSpeed = 20f;
+    public float dir = 0;
     public bool spawnPuzzleAfter = true;
     public Vector3[] path;
     public float duration;
@@ -20,7 +20,7 @@ public class FloatingScript : MonoBehaviour
         Destroy(gameObject, lifeSpan);
         seed = Random.Range(0f, 100f);
         for(int i = 0; i < path.Length; i++) {
-            path[i] = new Vector3 (path[i].x, Random.Range(path[i].y/2, path[i].y * 2), path[i].z);
+            path[i] = new Vector3 (path[i].x, path[i].y - dir, path[i].z);
         }
         myTween = transform.DOPath(path, duration, PathType.CatmullRom);
         StartCoroutine(SpawnPuzzles());
@@ -39,7 +39,7 @@ public class FloatingScript : MonoBehaviour
             var vertices = textInfo.meshInfo[charInfo.materialReferenceIndex].vertices;
             for(int j=0;j<4;j++) {
                 var orig = vertices[charInfo.vertexIndex + j];
-                vertices[charInfo.vertexIndex + j] = orig + new Vector3(0, Mathf.Sin(Time.time * 2f + orig.x * 0.01f + seed) * 10f, 0);
+                vertices[charInfo.vertexIndex + j] = orig + new Vector3(0, Mathf.Sin(Time.time * 2f + orig.x * 0.01f + Time.time) * 10f, 0);
             }
         }
         for(int i=0; i<textInfo.meshInfo.Length; i++) {
@@ -50,7 +50,7 @@ public class FloatingScript : MonoBehaviour
     }
 
     IEnumerator SpawnPuzzles() {
-        yield return new WaitForSeconds(duration - 2f);
+        yield return new WaitForSeconds(duration - 4f);
         if(spawnPuzzleAfter) {
             GetComponentInParent<FloatingTextManager>().SpawnPuzzle(transform.position);
         }
