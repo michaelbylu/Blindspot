@@ -302,9 +302,27 @@
             "illustration": "NULL",
             "frame": "NULL",
             "lineIndex": "MeimeiBuyDumpling",
-            "nextLine": "EveryoneSitDown",
+            "nextLine": "foodChoice",
             "name": ""
         },
+        {                      
+            "dialogue":"I just ate pizza yesterday. Let's grab something new…",
+            "illustration": "Mei_speaking",
+            "frame": "inner_thoughts1",
+            "lineIndex": "pizza",
+            "nextLine": "",
+            "name": ""
+        },
+        {                      
+            "dialogue":"Wow, they got Pork dumplings here? Let’s have a try!",
+            "illustration": "Mei_speaking",
+            "frame": "inner_thoughts1",
+            "lineIndex": "dumpling",
+            "nextLine": "",
+            "name": ""
+        },
+
+
         {                      
             "dialogue":"",
             "illustration": "NULL",
