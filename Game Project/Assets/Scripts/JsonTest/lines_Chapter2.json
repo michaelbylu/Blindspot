@@ -46,7 +46,7 @@
             "frame": "inner_thoughts1",
             "lineIndex": "5",
             "nextLine": "6",
-            "name": "Meimei"
+            "name": ""
         },
         {
             "dialogue":"For sure! By the way, are you waiting for someone?",
@@ -142,7 +142,7 @@
             "frame": "inner_thoughts1",
             "lineIndex": "17",
             "nextLine": "18",
-            "name": "Meimei"
+            "name": ""
         },
         {
             "dialogue": "Honestly, I'm not sure.",
@@ -174,7 +174,7 @@
             "frame": "inner_thoughts1",
             "lineIndex": "21",
             "nextLine": "puzzle1-2",
-            "name": "Meimei"
+            "name": ""
         },
         {
             "dialogue":"Wait… What are you guys talking about?",
@@ -273,6 +273,48 @@
             "name": "Meimei"
         },
 
+        {       
+            "dialogue":"Yeah…. Sure. But how about we grab something to eat first? I’m starving now.",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "29",
+            "nextLine": "Everyone's buying food",
+            "name": "Meimei"
+        },
+
+
+
+
+
+
+
+        
+        {                      
+            "dialogue":"",
+            "illustration": "NULL",
+            "frame": "NULL",
+            "lineIndex": "Everyone's buying food",
+            "nextLine": "MeimeiBuyDumpling",
+            "name": ""
+        },
+        {                      
+            "dialogue":"",
+            "illustration": "NULL",
+            "frame": "NULL",
+            "lineIndex": "MeimeiBuyDumpling",
+            "nextLine": "EveryoneSitDown",
+            "name": ""
+        },
+        {                      
+            "dialogue":"",
+            "illustration": "NULL",
+            "frame": "NULL",
+            "lineIndex": "EveryoneSitDown",
+            "nextLine": "31",
+            "name": ""
+        },
+
+
 
 
 
@@ -312,18 +354,6 @@
             "nextLine": "35",
             "name": "Meimei"
         },
-        {                      
-            "dialogue":"So why do you guys always have dumplings during the Lunar New Year?",
-            "illustration": "Jasmine_speaking",
-            "frame": "dialogue-box",
-            "lineIndex": "35",
-            "nextLine": "options_Chapter2",
-            "name": "Jasmine"
-        },
-
-
-
-
         {
             "dialogue": "Got it! Did you just say Lunar New Year? What's the difference from ours?",
             "illustration": "Frank_illustration",
@@ -354,7 +384,7 @@
             "frame": "inner_thoughts1",
             "lineIndex": "37",
             "nextLine": "options_Chapter2",
-            "name": "Meimei"
+            "name": ""
         },
 
 
