@@ -157,6 +157,14 @@
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "19",
+            "nextLine": "19a",
+            "name": "Frank"
+        },
+        {
+            "dialogue": "By the way, guess who will perform at the halftime show this year!",
+            "illustration": "Frank_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "19a",
             "nextLine": "20",
             "name": "Frank"
         },
