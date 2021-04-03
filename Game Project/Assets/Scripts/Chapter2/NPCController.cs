@@ -72,16 +72,16 @@ public class NPCController : MonoBehaviour
         }
     }
 
-    public void GeneratePath(int index) {
+    public void GeneratePath(int index, int order) {
         if(index == 0) {
-            animator.GetComponent<SpriteRenderer>().sortingOrder = -6;
+            animator.GetComponent<SpriteRenderer>().sortingOrder = order;
             seeker.StartPath(transform.position, counter.position, OnPathComplete);
             isMoving = true;
             currentWaypoint = 0;
             animator.SetBool("isWalking", true);
         }
         if(index == 1) {
-            animator.GetComponent<SpriteRenderer>().sortingOrder = -6;
+            animator.GetComponent<SpriteRenderer>().sortingOrder = order;
             seeker.StartPath(transform.position, chair.position, OnPathComplete);
             isMoving = true;
             currentWaypoint = 0;
@@ -103,13 +103,13 @@ public class NPCController : MonoBehaviour
         animator.SetBool("isWalking", true);
     }
 
-    public void StartGrabFood() {
-        StartCoroutine(GrabFood());
+    public void StartGrabFood(int order) {
+        StartCoroutine(GrabFood(order));
     }
 
-    IEnumerator GrabFood() {
-        GeneratePath(0);
-        yield return new WaitForSeconds(10f);
-        GeneratePath(1);
+    IEnumerator GrabFood(int order) {
+        GeneratePath(0, order);
+        yield return new WaitForSeconds(8f);
+        GeneratePath(1, order);
     }
 }

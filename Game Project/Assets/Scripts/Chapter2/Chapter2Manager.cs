@@ -144,9 +144,9 @@ public class Chapter2Manager : MonoBehaviour
     IEnumerator StartGrabFood() {
         markers.SetActive(true);
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().Release();
-        jasmine.GetComponent<NPCController>().StartGrabFood();
+        jasmine.GetComponent<NPCController>().StartGrabFood(-7);
         yield return new WaitForSeconds(3f);
-        frank.GetComponent<NPCController>().StartGrabFood();
+        frank.GetComponent<NPCController>().StartGrabFood(-6);
     }
 
     public void ChangeStage()
