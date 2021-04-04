@@ -51,7 +51,8 @@ public class NPCController : MonoBehaviour
             }
             return;
         }
-        if(path.vectorPath[currentWaypoint].x > gameObject.transform.position.x) {
+        if(path.vectorPath[currentWaypoint].x > gameObject.transform.position.x || 
+            Mathf.Abs(path.vectorPath[currentWaypoint].x - gameObject.transform.position.x) <= 0.001f) {
             animator.transform.localScale = new Vector3(-1f,1f,1f);
         }
         else{
@@ -94,6 +95,9 @@ public class NPCController : MonoBehaviour
     private void OnPathComplete(Path p) {
         if(!p.error) {
             path = p;
+            for(int i = 0; i < path.vectorPath.Count; i++) {
+                Debug.Log(path.vectorPath[i]);
+            }
         }
     }
 

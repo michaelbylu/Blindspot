@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Chopsticks : MonoBehaviour
 {
+    public SpriteRenderer leftChopstick;
     public Transform endPos;
     public Transform plate;
     public List<Transform> destinations;
@@ -23,18 +24,19 @@ public class Chopsticks : MonoBehaviour
         MoveWithMouse();
         if(Input.GetMouseButtonDown(0)) {
             if(selectedDumpling == null) {
-                print("null");
                 return;
             }
             initialPos = selectedDumpling.transform.position;
             selectedDumpling.transform.position = endPos.position;
             selectedDumpling.transform.SetParent(endPos);
+            leftChopstick.sortingOrder = 1;
         }
-        if(Input.GetMouseButtonUp(0)) {
+        else if(Input.GetMouseButtonUp(0)) {
             if(endPos.childCount == 0) {
                 return;
             }
             selectedDumpling = endPos.GetChild(0).gameObject;
+            leftChopstick.sortingOrder = 3;
             float minDis = 10f;
             Transform dest = null;
             for(int i = 0; i < destinations.Count; i++) {
@@ -43,9 +45,7 @@ public class Chopsticks : MonoBehaviour
                     dest = destinations[i];
                 }
             }
-            if(minDis <= 0.3f) {
-                print(dest.name);
-                print(selectedDumpling.name);
+            if(minDis <= 0.5f) {
                 selectedDumpling.transform.SetParent(plate);
                 selectedDumpling.transform.position = dest.position;
                 dest.gameObject.SetActive(false);
