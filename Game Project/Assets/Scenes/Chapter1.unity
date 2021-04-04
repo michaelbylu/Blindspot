@@ -5944,6 +5944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c29bc3ac9c3b1e943be5fb95d26d03e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chapterIndex: 1
   linesJson: {fileID: 4900000, guid: ca8c80e20390c0a4485ebd5478be902c, type: 3}
   optionsJson: {fileID: 4900000, guid: d797ce76b68887a4d8f8f2e0ce08b6d2, type: 3}
   nextBtn: {fileID: 754104540}
@@ -7592,7 +7593,7 @@ MonoBehaviour:
   m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -7620,7 +7621,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -536.91235, w: 0}
+  m_margin: {x: 0, y: -6.2001534, z: -536.91235, w: -7.2335014}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10200,7 +10201,7 @@ MonoBehaviour:
   m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -10228,7 +10229,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 7.133728, z: -543.8247, w: -7.689636}
+  m_margin: {x: 0, y: 6.155796, z: -543.8247, w: -21.380512}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10841,6 +10842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa5ea7b413bf2024c9a739ecbb3ffb28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorOverrideControllers: []
   moveSpeed: 2
   chair: {fileID: 23127146}
 --- !u!58 &1015329768
@@ -13353,7 +13355,7 @@ MonoBehaviour:
   m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -13381,7 +13383,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -510.98926, w: 0}
+  m_margin: {x: 0, y: 0, z: -510.98926, w: -15.679829}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -17606,7 +17608,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 263884c4714baf24a80c043a2a548966, type: 2}
-  m_sharedMaterial: {fileID: 0}
+  m_sharedMaterial: {fileID: -6072803799962723005, guid: 263884c4714baf24a80c043a2a548966, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18638,7 +18640,7 @@ MonoBehaviour:
   m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -18666,7 +18668,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -535.0254, w: 0}
+  m_margin: {x: 0, y: -9.011139, z: -535.0254, w: -8.191961}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -20356,7 +20358,7 @@ MonoBehaviour:
   m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -20384,7 +20386,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -523.92456, w: 0}
+  m_margin: {x: 0, y: 0, z: -523.92456, w: -13.415619}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -20800,7 +20802,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0bc9be3b8f226504eab9c01c317bcdbe, type: 2}
-  m_sharedMaterial: {fileID: 0}
+  m_sharedMaterial: {fileID: 6787814869384435503, guid: 0bc9be3b8f226504eab9c01c317bcdbe, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
