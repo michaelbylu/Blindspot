@@ -120,7 +120,6 @@ public class FloatingTextManager : MonoBehaviour
         isSpawning = true;
         spawnCount = 0;
         waveIndex++;
-        print(waveIndex);
         if(waveIndex >= sentences.Length) {
             waveIndex = 0;
         }

@@ -177,11 +177,11 @@ public class Chapter2Manager : MonoBehaviour
         VideoPlayer videoPlayer = flashback.GetComponent<VideoPlayer>();
         if(currentDifficulty == "A" || currentDifficulty == "B") {
             videoPlayer.url = 
-                "https://projectblindspot.s3.amazonaws.com/Chapter2NegativeFB.mp4";                   
+                "https://projectblindspot.s3.amazonaws.com/Chapter2PositiveFB.mp4";                   
         }
         else {
             videoPlayer.url = 
-                "https://projectblindspot.s3.amazonaws.com/Chapter2PositiveFB.mp4";
+                "https://projectblindspot.s3.amazonaws.com/Chapter2NegativeFB.mp4";
         }
         RenderTexture rt = new RenderTexture(1920, 1080, 24, RenderTextureFormat.ARGB32);
         rt.Create();

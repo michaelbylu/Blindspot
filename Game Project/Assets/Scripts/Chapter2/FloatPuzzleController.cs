@@ -7,6 +7,8 @@ public class FloatPuzzleController : MonoBehaviour
 {
     public int index;
     public float dir = 0;
+    public float duration;
+    public bool hasRotation = false;
     public Transform destination;
     public Vector3[] path;
     private Vector3 screenPoint;
@@ -20,14 +22,19 @@ public class FloatPuzzleController : MonoBehaviour
         for(int i = 1; i < path.Length; i++) {
             path[i] = new Vector3(path[i].x, transform.position.y + Random.Range(2, -2), path[i].z);
         }
-        myTween = transform.DOPath(path, Random.Range(16f, 20f), PathType.CatmullRom);
+        myTween = transform.DOPath(path, Random.Range(duration, 1.25f * duration), PathType.CatmullRom);
+        if(hasRotation) {
+            transform.eulerAngles += new Vector3(0, 0, Random.Range(0f, 360f));
+        }
         StartCoroutine(SpawnNext());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(hasRotation) {
+            transform.eulerAngles += new Vector3(0, 0, Random.Range(10 * Time.deltaTime, 15 * Time.deltaTime));
+        }
     }
 
     private void OnMouseDown() {
@@ -51,6 +58,10 @@ public class FloatPuzzleController : MonoBehaviour
             GetComponent<PolygonCollider2D>().enabled = false;
             GetComponent<SpriteRenderer>().sortingOrder--;
             myTween.Kill();
+            if(hasRotation) {
+                hasRotation = false;
+                transform.rotation = Quaternion.identity;
+            }
         }
         else {
             myTween.Play();

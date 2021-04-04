@@ -24,6 +24,7 @@ public class NPCController : MonoBehaviour
         seeker = GetComponent<Seeker>();
         if(currentStage == -1) {
             MoveTo(chair.position);
+            animator.GetComponent<SpriteRenderer>().sortingOrder = -6;
         }
     }
 
@@ -41,7 +42,7 @@ public class NPCController : MonoBehaviour
         if(currentWaypoint >= path.vectorPath.Count) {
             isMoving = false;
             animator.SetBool("isWalking", false);
-            animator.GetComponent<SpriteRenderer>().sortingOrder = -2;
+            animator.GetComponent<SpriteRenderer>().sortingOrder += 3;
             if(currentStage == 1) {
                 food.SetActive(true);
             }

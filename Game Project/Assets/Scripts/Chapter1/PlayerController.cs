@@ -111,7 +111,10 @@ public class PlayerController : MonoBehaviour
         animator.runtimeAnimatorController = animatorOverrideControllers[index];
         if(index == 1) {
             isSeated = false;
-            //animator.SetTrigger("Release");
+            chair.GetComponentInChildren<FadeInOut>(true).gameObject.SetActive(true);
+            if(chair.GetComponentInChildren<ChairController>(true) != null) {
+                chair.GetComponentInChildren<ChairController>(true).enabled = true;
+            }
         }
     }
 

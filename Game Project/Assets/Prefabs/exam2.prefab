@@ -101,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 1
   dir: 0
+  duration: 16
+  hasRotation: 0
   destination: {fileID: 0}
   path:
   - {x: -3, y: 0, z: 0}
