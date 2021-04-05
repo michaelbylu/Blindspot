@@ -116,5 +116,7 @@ public class NPCController : MonoBehaviour
         GeneratePath(0, order);
         yield return new WaitForSeconds(8f);
         GeneratePath(1, order);
+        yield return new WaitForSeconds(5f);
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter2Manager>().ChangeStage();
     }
 }

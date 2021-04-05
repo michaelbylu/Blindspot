@@ -98,12 +98,22 @@ public class Chapter2Manager : MonoBehaviour
                 StartCoroutine(StartGrabFood());
                 markers.SetActive(true);
                 break;
-            case 9: //Meimei got her food and return to the table, resume dialogue
+            case 9:
+                if(GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Animator>().GetBool("isSit")) {
+                    food.SetActive(true);
+                }
+                break;
+            case 10:
+                if(GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Animator>().GetBool("isSit")) {
+                    food.SetActive(true);
+                }
+                break;
+            case 11: //Meimei got her food and return to the table, resume dialogue
                 jsonReader.ChangeLine("31");
                 markers.SetActive(false);
                 food.SetActive(true);
                 break;
-            case 10: //Enable puzzle2-1 or 2-2 based on the choice
+            case 12: //Enable puzzle2-1 or 2-2 based on the choice
                 if(currentDifficulty == "A" || currentDifficulty == "B") {
                     puzzle2_1.SetActive(true);
                 }
@@ -111,7 +121,7 @@ public class Chapter2Manager : MonoBehaviour
                     puzzle2_2.SetActive(true);
                 }
                 break;
-            case 11: //Puzzle cleared, resume to dialogue
+            case 13: //Puzzle cleared, resume to dialogue
                 if(currentDifficulty == "A") {
                     jsonReader.ChangeLine("38a");
                     puzzle2_1.SetActive(false);
@@ -126,14 +136,14 @@ public class Chapter2Manager : MonoBehaviour
                     currentStage++;
                 }
                 break;
-            case 12: //Active dumplings interaction
+            case 14: //Active dumplings interaction
                 dumplingInteraction.SetActive(true);
                 break;
-            case 13:
+            case 15:
                 dumplingInteraction.SetActive(false);
                 StartCoroutine(EnableOutro());
                 break;
-            case 14:
+            case 16:
                 endPage.SetActive(true);
                 break;
             default:

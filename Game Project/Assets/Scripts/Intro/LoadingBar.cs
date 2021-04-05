@@ -36,7 +36,8 @@ public class LoadingBar : MonoBehaviour
     public void StartIntro() {
         startPage.SetActive(false);
         videoPlayer.gameObject.SetActive(true);
-        videoPlayer.url = "https://projectblindspot.s3.amazonaws.com/Intro_with_subs.mp4";
+        //videoPlayer.url = "https://projectblindspot.s3.amazonaws.com/Intro_with_subs.mp4";
+        videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Intro_with_vo_1.mp4");
         RenderTexture rt = new RenderTexture(1920, 1080, 24, RenderTextureFormat.ARGB32);
         rt.Create();
         videoPlayer.targetTexture = rt;

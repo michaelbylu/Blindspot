@@ -22,7 +22,9 @@ public class PlayerController : MonoBehaviour
         seeker = GetComponent<Seeker>();
         target = transform.position;
         animator = GetComponentInChildren<Animator>();
-        animator.runtimeAnimatorController = animatorOverrideControllers[0];
+        if(animatorOverrideControllers.Length > 0) {
+            animator.runtimeAnimatorController = animatorOverrideControllers[0];
+        }
     }
 
     private void OnPathComplete(Path p) {
@@ -69,6 +71,7 @@ public class PlayerController : MonoBehaviour
             isSeated = true;
             canMove = false;
             GetComponentInChildren<SpriteRenderer>().sortingOrder = -4;
+            animator.SetBool("isSit", true);
             if(chair.GetComponentInChildren<FadeInOut>() != null) {
                 chair.GetComponentInChildren<FadeInOut>().gameObject.SetActive(false);
             }
@@ -82,7 +85,6 @@ public class PlayerController : MonoBehaviour
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter2Manager>().ChangeStage();
             }
             animator.transform.localScale = new Vector3(1f, 1f, 1f);
-            animator.SetBool("isSit", true);
         }
     }
 

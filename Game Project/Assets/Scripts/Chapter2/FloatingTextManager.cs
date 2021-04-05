@@ -129,7 +129,10 @@ public class FloatingTextManager : MonoBehaviour
         foreach(FloatingScript f in transform.GetComponentsInChildren<FloatingScript>()){
             f.StopAllCoroutines();
         }
-        yield return new WaitForSeconds(2f);
+        foreach(FloatPuzzleController f in transform.GetComponentsInChildren<FloatPuzzleController>()){
+            f.StopAllCoroutines();
+        }
+        yield return new WaitForSeconds(5f);
         foreach(FadeInOut f in transform.parent.GetComponentsInChildren<FadeInOut>()){
             f.StartFadingOut();
         }
