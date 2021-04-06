@@ -504,6 +504,14 @@
             "lineIndex": "42",
             "nextLine": "puzzle",
             "name": "Meimei"
-        }
+        },
+        {
+            "dialogue": "Thanks!",
+            "illustration": "Frank_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "afterSharingDumpling",
+            "nextLine": "",
+            "name": "Meimei"
+        },
     ]
 }
