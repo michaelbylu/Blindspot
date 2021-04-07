@@ -1331,6 +1331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb2385c33e891547827f7a4f506090d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftChopstick: {fileID: 0}
   endPos: {fileID: 800510557}
   plate: {fileID: 186154914}
   destinations:
@@ -3924,6 +3925,51 @@ Transform:
   m_Father: {fileID: 1401613661}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1181413204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1181413206}
+  - component: {fileID: 1181413205}
+  m_Layer: 0
+  m_Name: Logger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1181413205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181413204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19d0d59bf61e0c448707adf489dd30c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  associatedSheet: 1hnW_3tQoynfaq0_L1UizJoBzl7V_XgiKG5FV5OwbMws
+  associatedWorksheet: Stats
+--- !u!4 &1181413206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181413204}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.2866614, y: -0.7165122, z: -3.3667402}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1210103416
 GameObject:
   m_ObjectHideFlags: 0
@@ -4515,7 +4561,6 @@ MonoBehaviour:
   spawnAmount: 3
   spawnInterval: 0.3
   sentences: []
-  emphasizeColor: {r: 0, g: 0, b: 0, a: 0}
   inTextPrefab: {fileID: 368573526069279892, guid: 3b04f8de9ede19942aabb745d53ed690, type: 3}
   inTextEmpPrefab: {fileID: 0}
   outTextPrefab: {fileID: 2045713336938298185, guid: 501ad194a1ef82145a7ad97c313c5fec, type: 3}
