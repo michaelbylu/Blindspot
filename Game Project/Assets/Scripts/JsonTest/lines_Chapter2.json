@@ -510,8 +510,8 @@
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "afterSharingDumpling",
-            "nextLine": "",
+            "nextLine": "puzzle",
             "name": "Meimei"
-        },
+        }
     ]
 }

@@ -133,7 +133,7 @@ public class Chapter2Manager : MonoBehaviour
                 else {
                     jsonReader.ChangeLine("40a");
                     puzzle2_2.SetActive(false);
-                    currentStage++;
+                    currentStage = currentStage + 2;
                 }
                 break;
             case 14: //Active dumplings interaction
@@ -141,9 +141,12 @@ public class Chapter2Manager : MonoBehaviour
                 break;
             case 15:
                 dumplingInteraction.SetActive(false);
+                jsonReader.ChangeLine("afterSharingDumpling");
+                break;
+            case 16: 
                 StartCoroutine(EnableOutro());
                 break;
-            case 16:
+            case 17:
                 endPage.SetActive(true);
                 break;
             default:

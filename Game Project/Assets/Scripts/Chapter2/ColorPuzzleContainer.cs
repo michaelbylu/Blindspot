@@ -16,7 +16,7 @@ public class ColorPuzzleContainer : MonoBehaviour
     {
         if(CheckComplete() && !spriteRenderer.enabled) {
             spriteRenderer.enabled = true;
-            transform.Find("Cover").gameObject.SetActive(true);
+            StartCoroutine(EnableCover());
             foreach(ColorPuzzleController puzzle in GetComponentsInChildren<ColorPuzzleController>()) {
                 puzzle.gameObject.SetActive(false);
             }
@@ -30,5 +30,10 @@ public class ColorPuzzleContainer : MonoBehaviour
             }
         }
         return true;
+    }
+
+    IEnumerator EnableCover() {
+        yield return new WaitForSeconds(2f);
+        transform.Find("Cover").gameObject.SetActive(true);
     }
 }
