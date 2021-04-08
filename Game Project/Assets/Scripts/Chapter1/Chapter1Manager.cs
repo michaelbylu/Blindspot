@@ -180,4 +180,8 @@ public class Chapter1Manager : MonoBehaviour
         jsonReader.ChangeLine("21" + currentDifficulty);
     }
 
+    public void LoadScene(int index) {
+        SceneManager.LoadScene(index);
+    }
+
 }

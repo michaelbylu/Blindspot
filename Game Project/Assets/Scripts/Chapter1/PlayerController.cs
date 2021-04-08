@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
             isMoving = false;
             isSeated = true;
             canMove = false;
-            GetComponentInChildren<SpriteRenderer>().sortingOrder = -3;
+            GetComponentInChildren<SpriteRenderer>().sortingOrder = -2;
             animator.SetBool("isSit", true);
             if(chair.GetComponentInChildren<FadeInOut>() != null) {
                 chair.GetComponentInChildren<FadeInOut>().gameObject.SetActive(false);

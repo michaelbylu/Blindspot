@@ -201,4 +201,8 @@ public class Chapter2Manager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         flashback.GetComponent<VideoPlayer>().Play();
     }
+
+    public void LoadScene(int index) {
+        SceneManager.LoadScene(index);
+    }
 }
