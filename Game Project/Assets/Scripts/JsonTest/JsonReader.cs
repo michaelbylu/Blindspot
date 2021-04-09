@@ -15,6 +15,7 @@ public class JsonReader : MonoBehaviour
     private Lines testLines;
     private Options testOptions;
     private ArrayList lineLog;
+    private float startTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -91,6 +92,7 @@ public class JsonReader : MonoBehaviour
 
     //Enable option based on targetIndex (same index in the optionJson)
     public void EnableOptions(string targetIndex) {
+        startTime = Time.time;
         nextBtn.SetActive(false);
         Option target = testOptions.Find(targetIndex);
         if(target == null) {
@@ -109,6 +111,12 @@ public class JsonReader : MonoBehaviour
     //After player made a choice, disable option buttons and move to the line that player chose
     //Show the illustration field in the option
     public void DisableOptions(int optionIndex) {
+        if(GameObject.FindGameObjectWithTag("Logger") != null) {
+            Logger logger = GameObject.FindGameObjectWithTag("Logger").GetComponent<Logger>();
+            logger.LogData(currentLine, optionIndex.ToString());
+            Debug.Log("key " + currentLine + " logged as " + optionIndex.ToString());
+            logger.LogData(currentLine + "Time", (Time.time - startTime).ToString());
+        }
         nextBtn.SetActive(true);
         foreach(Button button in lineObject.transform.Find("Options").GetComponentsInChildren<Button>(true)){
             button.gameObject.SetActive(false);

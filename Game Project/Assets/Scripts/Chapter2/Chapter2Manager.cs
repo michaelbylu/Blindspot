@@ -20,6 +20,7 @@ public class Chapter2Manager : MonoBehaviour
     public GameObject endPage;
     public JsonReader jsonReader;
     public GameObject block;
+    public Logger logger;
     private int currentStage = 0;
     private string currentDifficulty = "A";
     public float fadeSpeed = 0.5f;
@@ -185,6 +186,9 @@ public class Chapter2Manager : MonoBehaviour
     }
 
     IEnumerator EnableOutro() {
+        if(logger != null) {
+            logger.SendLogs();
+        }
         AudioFadeOut(0f);
         flashback.SetActive(true);
         VideoPlayer videoPlayer = flashback.GetComponent<VideoPlayer>();
