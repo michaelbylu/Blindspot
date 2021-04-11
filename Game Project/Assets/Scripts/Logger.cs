@@ -11,6 +11,7 @@ public class Logger : MonoBehaviour
     public string[] entrys;
     private Dictionary<string, string> map;
     private string id;
+    private bool submit = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,9 @@ public class Logger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.E) && submit) {
+            submit = false;
+        }
     }
 
     IEnumerator Post() {
@@ -49,6 +52,9 @@ public class Logger : MonoBehaviour
     }
 
     public void SendLogs() {
+        if(!submit) {
+            return;
+        }
         StartCoroutine(Post());
     }
 }

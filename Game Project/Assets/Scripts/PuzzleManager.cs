@@ -11,10 +11,11 @@ public class PuzzleManager : MonoBehaviour
     public GameObject[] otherBubbles;
     public int num = 0;
     private int completedPuzzles = 0;
+    private float startTime;
     // Start is called before the first frame update
     void Start()
     {
-        
+        startTime = Time.time;
     }
 
     // Update is called once per frame
@@ -66,6 +67,10 @@ public class PuzzleManager : MonoBehaviour
     }
 
     IEnumerator FadeOut() {
+        if(GameObject.FindGameObjectWithTag("Logger") != null) {
+            Logger logger = GameObject.FindGameObjectWithTag("Logger").GetComponent<Logger>();
+            logger.LogData(gameObject.name, (Time.time - startTime).ToString());
+        }
         FadeInOut[] fadeInOuts = gameObject.GetComponentsInChildren<FadeInOut>();
         foreach(FadeInOut fadeInOut in fadeInOuts) {
             fadeInOut.StartFadingOut();

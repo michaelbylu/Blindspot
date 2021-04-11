@@ -5,13 +5,23 @@ using UnityEngine;
 public class ColorPuzzleManager : MonoBehaviour
 {
     public GameObject[] colorPuzzles;
+    public GameObject[] BlinkingPuzzles;
     private GameObject selectedOne;
     private bool isCompleted;
     private bool clickable = true;
+    private float startTime;
     // Start is called before the first frame update
     void Start()
     {
+        startTime = Time.time;
         selectedOne = null;
+        foreach(GameObject e in colorPuzzles) {
+            e.GetComponent<PolygonCollider2D>().enabled = false;
+        }
+        foreach(GameObject e in BlinkingPuzzles) {
+            e.GetComponent<PolygonCollider2D>().enabled = true;
+            e.GetComponent<ColorPuzzleController>().StartBlinking();
+        }
     }
 
     // Update is called once per frame
@@ -20,6 +30,10 @@ public class ColorPuzzleManager : MonoBehaviour
         if(!isCompleted && CheckComplete()) {
             isCompleted = true;
             StartCoroutine(FadeOut());
+            if(GameObject.FindGameObjectWithTag("Logger") != null) {
+                Logger logger = GameObject.FindGameObjectWithTag("Logger").GetComponent<Logger>();
+                logger.LogData(gameObject.name, (Time.time - startTime).ToString());
+            }
         }
     }
 
@@ -30,9 +44,16 @@ public class ColorPuzzleManager : MonoBehaviour
         if(selectedOne == null) {
             selectedOne = e;
             e.GetComponent<SpriteRenderer>().material.SetFloat("_Thickness", 1f);
+            e.GetComponent<ColorPuzzleController>().StopBlinkng();
         }
         else {
+            if(e.GetComponent<ColorPuzzleController>().isBlinking) {
+                foreach(GameObject t in colorPuzzles) {
+                    t.GetComponent<PolygonCollider2D>().enabled = true;
+                }
+            }
             e.GetComponent<SpriteRenderer>().material.SetFloat("_Thickness", 1f);
+            e.GetComponent<ColorPuzzleController>().StopBlinkng();
             StartCoroutine(SwitchPuzzles(e));
         }
     }

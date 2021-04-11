@@ -9,10 +9,11 @@ public class MindPuzzleManager : MonoBehaviour
     private int placedPuzzle = 0;
     private bool isComplete = false;
     private AudioSource audioSource;
+    private float startTime;
     // Start is called before the first frame update
     void Start()
     {
-        
+        startTime = Time.time;
     }
 
     // Update is called once per frame
@@ -29,6 +30,10 @@ public class MindPuzzleManager : MonoBehaviour
         if(placedPuzzle == equations.Length && !isComplete) {
             isComplete = true;
             StartCoroutine(ShowSolution());
+            if(GameObject.FindGameObjectWithTag("Logger") != null) {
+                Logger logger = GameObject.FindGameObjectWithTag("Logger").GetComponent<Logger>();
+                logger.LogData(gameObject.name, (Time.time - startTime).ToString());
+            }
         }
     }
 

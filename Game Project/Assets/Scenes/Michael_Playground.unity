@@ -305,6 +305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 992126892}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!50 &71863893
 Rigidbody2D:
   serializedVersion: 4
@@ -1989,6 +1991,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1851198137}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!50 &648835082
 Rigidbody2D:
   serializedVersion: 4
@@ -2382,7 +2386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &791155917
 Transform:
   m_ObjectHideFlags: 0
@@ -3954,8 +3958,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d0d59bf61e0c448707adf489dd30c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  associatedSheet: 1hnW_3tQoynfaq0_L1UizJoBzl7V_XgiKG5FV5OwbMws
-  associatedWorksheet: Stats
+  formUrl: 1hnW_3tQoynfaq0_L1UizJoBzl7V_XgiKG5FV5OwbMws
+  fields: []
+  entrys: []
 --- !u!4 &1181413206
 Transform:
   m_ObjectHideFlags: 0
@@ -4759,6 +4764,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1997311122}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!50 &1366853466
 Rigidbody2D:
   serializedVersion: 4
@@ -7083,6 +7090,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 661142839}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!50 &2050529139
 Rigidbody2D:
   serializedVersion: 4

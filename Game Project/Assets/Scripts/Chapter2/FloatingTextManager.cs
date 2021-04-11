@@ -23,10 +23,12 @@ public class FloatingTextManager : MonoBehaviour
     private bool isSpawning;
     private string[] currentText;
     private List<int> puzzleIndex;
+    private float startTime;
 
     // Start is called before the first frame update
     void Start()
     {
+        startTime = Time.time;
         waveIndex = 0;
         lastSpawn = Time.time + 2f;
         interval = spawnInterval;
@@ -105,6 +107,10 @@ public class FloatingTextManager : MonoBehaviour
             if(puzzleIndex.Count == 0) {
                 StopAllCoroutines();
                 StartCoroutine(FadeOut());
+                if(GameObject.FindGameObjectWithTag("Logger") != null) {
+                    Logger logger = GameObject.FindGameObjectWithTag("Logger").GetComponent<Logger>();
+                    logger.LogData(puzzleParent.name, (Time.time - startTime).ToString());
+                }
             }
             return true;
         }

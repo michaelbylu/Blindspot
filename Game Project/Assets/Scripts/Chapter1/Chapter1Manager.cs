@@ -22,6 +22,7 @@ public class Chapter1Manager : MonoBehaviour
     private int currentStage = 0;
     private string currentDifficulty = "A";
     public float fadeSpeed = 0.5f;
+    public Logger logger;
     private AudioSource audioSource;
     private float targetVolume;
 
@@ -146,6 +147,9 @@ public class Chapter1Manager : MonoBehaviour
         targetVolume = volume;
     }
     IEnumerator EnableOutro() {
+        if(logger != null) {
+            logger.SendLogs();
+        }
         AudioFadeOut(0f);
         flashback.SetActive(true);
         VideoPlayer videoPlayer = flashback.GetComponent<VideoPlayer>();

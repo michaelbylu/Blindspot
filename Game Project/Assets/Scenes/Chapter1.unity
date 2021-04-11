@@ -5968,7 +5968,7 @@ GameObject:
   - component: {fileID: 557560764}
   - component: {fileID: 557560763}
   m_Layer: 0
-  m_Name: Puzzle2-2ManagerNeg
+  m_Name: Puzzle2-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6998,6 +6998,7 @@ MonoBehaviour:
   crowd: {fileID: 1815214155}
   jsonReader: {fileID: 576220624}
   fadeSpeed: 0.5
+  logger: {fileID: 1899512803}
 --- !u!82 &631068880
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13906,7 +13907,7 @@ GameObject:
   - component: {fileID: 1327369394}
   - component: {fileID: 1327369393}
   m_Layer: 0
-  m_Name: Puzzle2-1Manager
+  m_Name: Puzzle2-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16830,6 +16831,7 @@ MonoBehaviour:
   crowd: {fileID: 0}
   jsonReader: {fileID: 0}
   fadeSpeed: 0.5
+  logger: {fileID: 0}
 --- !u!4 &1642670624
 Transform:
   m_ObjectHideFlags: 0
@@ -18243,6 +18245,76 @@ Transform:
   m_Children: []
   m_Father: {fileID: 313284546}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1899512802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1899512804}
+  - component: {fileID: 1899512803}
+  m_Layer: 0
+  m_Name: Logger
+  m_TagString: Logger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1899512803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899512802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19d0d59bf61e0c448707adf489dd30c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formUrl: https://docs.google.com/forms/d/e/1FAIpQLSfUZ7eptEF1i94W_8w3ArbEH69Jk0unJ6Gl0B_RpTjHWssymg/formResponse
+  fields:
+  - Id
+  - 6
+  - 6Time
+  - 14a
+  - 14aTime
+  - 32
+  - 32Time
+  - Puzzle1-1
+  - Puzzle1-2
+  - Puzzle2-1
+  - Puzzle2-2
+  - Puzzle2-3
+  entrys:
+  - 781832759
+  - 515221851
+  - 1601884170
+  - 1870882598
+  - 708534924
+  - 1953838971
+  - 390996871
+  - 17325115
+  - 552493323
+  - 2003255047
+  - 1440025891
+  - 529777317
+--- !u!4 &1899512804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899512802}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6953784, y: 1.425137, z: -7.755299}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1903002525
 GameObject:
@@ -20595,7 +20667,7 @@ GameObject:
   - component: {fileID: 2049532424}
   - component: {fileID: 2049532423}
   m_Layer: 0
-  m_Name: Puzzle2-2ManagerPos
+  m_Name: Puzzle2-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

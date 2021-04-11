@@ -225,6 +225,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 427307275}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!212 &14649533
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2278,6 +2280,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 170452935}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!114 &322902553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2811,6 +2815,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 220444988}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!114 &394528407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3128,6 +3134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 744228879}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!212 &463099220
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3615,6 +3623,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1408917146}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!114 &491340428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4217,6 +4227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 2108527367}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!114 &533485447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4459,6 +4471,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1230844886}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!212 &541961515
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5686,6 +5700,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1706516135}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!212 &714322682
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6429,6 +6445,7 @@ MonoBehaviour:
   crowd: {fileID: 0}
   jsonReader: {fileID: 0}
   fadeSpeed: 0.5
+  logger: {fileID: 0}
 --- !u!1 &765069291
 GameObject:
   m_ObjectHideFlags: 0
@@ -7892,21 +7909,25 @@ MonoBehaviour:
   - 23Time
   - 24
   - 24Time
-  - 35
-  - 35Time
   - 37
   - 37Time
   - Id
+  - Puzzle1-1
+  - Puzzle1-2
+  - Puzzle2-1
+  - Puzzle2-2
   entrys:
   - 256879361
   - 1185051690
   - 460788004
   - 1138087037
-  - 1077274211
-  - 418773447
   - 1987904138
   - 1406289550
   - 378198818
+  - 1002276487
+  - 1175037641
+  - 913528825
+  - 1958442302
 --- !u!4 &1058522291
 Transform:
   m_ObjectHideFlags: 0
@@ -9290,7 +9311,7 @@ GameObject:
   - component: {fileID: 1221045510}
   - component: {fileID: 1221045512}
   m_Layer: 0
-  m_Name: Puzzle2Neg
+  m_Name: Puzzle2-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9318,6 +9339,9 @@ MonoBehaviour:
   - {fileID: 1462560392}
   - {fileID: 714322678}
   - {fileID: 1719580487}
+  BlinkingPuzzles:
+  - {fileID: 1773290562}
+  - {fileID: 1880769974}
 --- !u!4 &1221045511
 Transform:
   m_ObjectHideFlags: 0
@@ -9801,6 +9825,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 2029783191}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!114 &1305668087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10025,6 +10051,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1066928318}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!212 &1317868801
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10588,6 +10616,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 409959848}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!114 &1349537235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11055,6 +11085,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1733740861}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!114 &1394421747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11366,6 +11398,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1983507253}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!114 &1444349031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11577,6 +11611,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1749091296}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!212 &1462560396
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12885,6 +12921,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 934456524}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!212 &1719580490
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13275,6 +13313,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1206925844}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!212 &1773290566
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13793,7 +13833,7 @@ GameObject:
   - component: {fileID: 1819642450}
   - component: {fileID: 1819642452}
   m_Layer: 0
-  m_Name: Puzzle2Pos
+  m_Name: Puzzle2-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13821,6 +13861,9 @@ MonoBehaviour:
   - {fileID: 2025392304}
   - {fileID: 394528402}
   - {fileID: 1305668082}
+  BlinkingPuzzles:
+  - {fileID: 1394421742}
+  - {fileID: 1444349026}
 --- !u!4 &1819642451
 Transform:
   m_ObjectHideFlags: 0
@@ -14071,6 +14114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1865904026}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!212 &1880769977
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15083,6 +15128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 265692682}
+  isBlinking: 0
+  blinkSpeed: 1
 --- !u!114 &2025392309
 MonoBehaviour:
   m_ObjectHideFlags: 0
