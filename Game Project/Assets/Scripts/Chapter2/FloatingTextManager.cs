@@ -16,6 +16,8 @@ public class FloatingTextManager : MonoBehaviour
     public GameObject[] floatingPuzzlePrefab;
     public GameObject[] miscPrefab;
     public Transform[] floatingPuzzleDest;
+    public AudioSource puzzleCorrect;
+    public AudioSource picComplete;
     private int spawnCount;
     private int waveIndex;
     private float lastSpawn;
@@ -103,7 +105,7 @@ public class FloatingTextManager : MonoBehaviour
     public bool PuzzlePlaced(int index) {
         if(puzzleIndex.Contains(index)) {
             puzzleIndex.Remove(index);
-            GetComponent<AudioSource>().Play();
+            puzzleCorrect.Play();
             if(puzzleIndex.Count == 0) {
                 StopAllCoroutines();
                 StartCoroutine(FadeOut());
@@ -138,7 +140,9 @@ public class FloatingTextManager : MonoBehaviour
         foreach(FloatPuzzleController f in transform.GetComponentsInChildren<FloatPuzzleController>()){
             f.StopAllCoroutines();
         }
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(0.5f);
+        picComplete.Play();
+        yield return new WaitForSeconds(4f);
         foreach(FadeInOut f in transform.parent.GetComponentsInChildren<FadeInOut>()){
             f.StartFadingOut();
         }

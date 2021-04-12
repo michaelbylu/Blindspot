@@ -50,4 +50,5 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.1822268, g: 0.7937689, b: 0.8584906, a: 1}
+    - _FrameColor: {r: 0.25792095, g: 0.770225, b: 0.8679245, a: 0}
   m_BuildTextureStacks: []

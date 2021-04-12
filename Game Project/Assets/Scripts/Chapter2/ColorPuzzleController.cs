@@ -28,7 +28,6 @@ public class ColorPuzzleController : MonoBehaviour
             GetComponent<SpriteRenderer>().material.SetFloat("_Flag", 1f);
             GetComponent<PolygonCollider2D>().enabled = false;
             isPlaced = true;
-            GetComponentInParent<AudioSource>().Play();
         }
         GetComponent<SpriteRenderer>().material.SetFloat("_Thickness", 0f);
     }

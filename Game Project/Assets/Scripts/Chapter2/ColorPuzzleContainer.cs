@@ -33,6 +33,8 @@ public class ColorPuzzleContainer : MonoBehaviour
     }
 
     IEnumerator EnableCover() {
+        yield return new WaitForSeconds(0.5f);
+        GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(2f);
         transform.Find("Cover").gameObject.SetActive(true);
     }

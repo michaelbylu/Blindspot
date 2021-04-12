@@ -68,6 +68,7 @@ public class ColorPuzzleManager : MonoBehaviour
         selectedOne.GetComponent<ColorPuzzleController>().CheckPlaced();
         selectedOne = null;
         clickable = true;
+        GetComponent<AudioSource>().Play();
     }
 
     public bool CheckComplete() {
