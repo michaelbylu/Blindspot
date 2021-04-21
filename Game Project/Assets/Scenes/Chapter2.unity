@@ -3906,6 +3906,7 @@ MonoBehaviour:
   outTextPrefab: {fileID: 2045713336938298185, guid: 501ad194a1ef82145a7ad97c313c5fec, type: 3}
   outTextEmpPrefab: {fileID: 2314253603898798459, guid: 775be8080303b29448b3710fdb83bfba, type: 3}
   puzzleParent: {fileID: 285227948}
+  puzzleMat: {fileID: 2100000, guid: aeada1e2fc5f8de4d9c5123b7623b10a, type: 2}
   floatingPuzzlePrefab:
   - {fileID: 8005347392181727463, guid: 205e3a62654a7084eb3c3e977f65e308, type: 3}
   - {fileID: 7904505497608541543, guid: 77fe1b2eb00f0dd499733738756dc1e1, type: 3}
@@ -5750,7 +5751,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1799035993}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Chapter2Manager, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 3
@@ -8192,6 +8193,7 @@ MonoBehaviour:
   outTextPrefab: {fileID: 2045713336938298185, guid: 501ad194a1ef82145a7ad97c313c5fec, type: 3}
   outTextEmpPrefab: {fileID: 2314253603898798459, guid: 775be8080303b29448b3710fdb83bfba, type: 3}
   puzzleParent: {fileID: 524491405}
+  puzzleMat: {fileID: 2100000, guid: aeada1e2fc5f8de4d9c5123b7623b10a, type: 2}
   floatingPuzzlePrefab:
   - {fileID: 4331923536442357422, guid: ff5b70b120ddad542ac5f7d980ff6581, type: 3}
   - {fileID: 698087680632710614, guid: e5f3e43a2e72dd74996fab22f6e19cf3, type: 3}
@@ -9932,7 +9934,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1799035993}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Chapter2Manager, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 3
@@ -14202,8 +14204,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1799035996}
   - component: {fileID: 1799035995}
-  - component: {fileID: 1799035993}
   - component: {fileID: 1799035994}
+  - component: {fileID: 1799035997}
   m_Layer: 0
   m_Name: Chapter2Manager
   m_TagString: GameController
@@ -14211,33 +14213,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1799035993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799035992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f920d43894b896045b9f05e62d3a2fa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frank: {fileID: 1970788105}
-  jasmine: {fileID: 1621954048}
-  puzzle1_1: {fileID: 2139775945}
-  puzzle1_2: {fileID: 745483043}
-  markers: {fileID: 287540922}
-  food: {fileID: 274727038}
-  puzzle2_1: {fileID: 1819642449}
-  puzzle2_2: {fileID: 1221045509}
-  dumplingInteraction: {fileID: 1596373546}
-  flashback: {fileID: 945798681}
-  endPage: {fileID: 570664342}
-  jsonReader: {fileID: 1364587460}
-  block: {fileID: 1237402519}
-  logger: {fileID: 1058522290}
-  fadeSpeed: 0.5
 --- !u!82 &1799035994
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14403,6 +14378,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1799035997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799035992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f920d43894b896045b9f05e62d3a2fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frank: {fileID: 1970788105}
+  jasmine: {fileID: 1621954048}
+  puzzle1_1: {fileID: 2139775945}
+  puzzle1_2: {fileID: 745483043}
+  markers: {fileID: 287540922}
+  food: {fileID: 274727038}
+  puzzle2_1: {fileID: 1819642449}
+  puzzle2_2: {fileID: 1221045509}
+  dumplingInteraction: {fileID: 1596373546}
+  flashback: {fileID: 945798681}
+  endPage: {fileID: 570664342}
+  jsonReader: {fileID: 1364587460}
+  block: {fileID: 1237402519}
+  logger: {fileID: 1058522290}
+  fadeSpeed: 0.5
 --- !u!1 &1815321654
 GameObject:
   m_ObjectHideFlags: 0

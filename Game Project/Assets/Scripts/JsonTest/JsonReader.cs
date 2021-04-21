@@ -53,6 +53,9 @@ public class JsonReader : MonoBehaviour
                 else if(chapterIndex == 2) {
                     GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter2Manager>().ChangeStage(level);
                 }
+                else if(chapterIndex == 3) {
+                    GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter3Manager>().ChangeStage(level);
+                }
                 
             }
             else{
@@ -61,6 +64,9 @@ public class JsonReader : MonoBehaviour
                 }
                 else if(chapterIndex == 2) {
                     GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter2Manager>().ChangeStage();
+                }
+                else if(chapterIndex == 3) {
+                    GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter3Manager>().ChangeStage();
                 }
             }
             return;

@@ -1258,6 +1258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a20236e584a85d43b437a2c48fa7b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzleMat: {fileID: 2100000, guid: ed8f0ce16c64b7843855236e0bbbca08, type: 2}
   destination: {fileID: 1075173904}
   minDistance: 0.5
   moveSpeed: 0.5
@@ -2025,6 +2026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a20236e584a85d43b437a2c48fa7b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzleMat: {fileID: 2100000, guid: ed8f0ce16c64b7843855236e0bbbca08, type: 2}
   destination: {fileID: 1893828434}
   minDistance: 0.5
   moveSpeed: 0.5
@@ -3422,6 +3424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a20236e584a85d43b437a2c48fa7b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzleMat: {fileID: 2100000, guid: ed8f0ce16c64b7843855236e0bbbca08, type: 2}
   destination: {fileID: 1520286147}
   minDistance: 0.5
   moveSpeed: 0.5
@@ -4329,6 +4332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a20236e584a85d43b437a2c48fa7b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzleMat: {fileID: 2100000, guid: ed8f0ce16c64b7843855236e0bbbca08, type: 2}
   destination: {fileID: 484824596}
   minDistance: 0.3
   moveSpeed: 0.5
@@ -4602,6 +4606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a20236e584a85d43b437a2c48fa7b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzleMat: {fileID: 2100000, guid: ed8f0ce16c64b7843855236e0bbbca08, type: 2}
   destination: {fileID: 1198863023}
   minDistance: 0.5
   moveSpeed: 0.5
@@ -8188,6 +8193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a20236e584a85d43b437a2c48fa7b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzleMat: {fileID: 2100000, guid: ed8f0ce16c64b7843855236e0bbbca08, type: 2}
   destination: {fileID: 530756121}
   minDistance: 0.3
   moveSpeed: 0.5
@@ -14601,6 +14607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a20236e584a85d43b437a2c48fa7b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzleMat: {fileID: 2100000, guid: ed8f0ce16c64b7843855236e0bbbca08, type: 2}
   destination: {fileID: 116963230}
   minDistance: 0.3
   moveSpeed: 0.5
@@ -15933,6 +15940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a20236e584a85d43b437a2c48fa7b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzleMat: {fileID: 2100000, guid: ed8f0ce16c64b7843855236e0bbbca08, type: 2}
   destination: {fileID: 564943245}
   minDistance: 0.3
   moveSpeed: 0.5

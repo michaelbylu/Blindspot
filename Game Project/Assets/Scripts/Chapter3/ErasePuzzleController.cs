@@ -1,5 +1,6 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-
 public class ErasePuzzleController : MonoBehaviour
 {
     private Texture2D m_Texture;
@@ -13,6 +14,7 @@ public class ErasePuzzleController : MonoBehaviour
     public float erasePersent;
     public GameObject cover;
     private bool Drawing = false;
+    private bool isComplete = false;
     void Start ()
     {
         spriteRend = gameObject.GetComponent<SpriteRenderer>();
@@ -40,9 +42,8 @@ public class ErasePuzzleController : MonoBehaviour
         else {
             Drawing = false;
         }
-        if(!cover.activeSelf && CheckErased()) {
-            cover.SetActive(true);
-            gameObject.SetActive(false);
+        if(!isComplete && CheckErased()) {
+            StartCoroutine(FadeOut());
         }
     }
 
@@ -98,5 +99,13 @@ public class ErasePuzzleController : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    IEnumerator FadeOut() {
+        isComplete = true;
+        GetComponent<FadeInOut>().StartFadingOut();
+        yield return new WaitForSeconds(2f);
+        cover.SetActive(true);
+        gameObject.SetActive(false);
     }
 }

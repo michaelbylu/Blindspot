@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MindPuzzleController : MonoBehaviour
 {
+    public Material puzzleMat;
     public Transform destination;
     public float minDistance = 1.0f;
     public float moveSpeed = 2.0f;
@@ -24,7 +25,9 @@ public class MindPuzzleController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(puzzleMat != null) {
+            GetComponent<SpriteRenderer>().material = new Material(puzzleMat);
+        }
     }
 
     // Update is called once per frame
@@ -94,6 +97,14 @@ public class MindPuzzleController : MonoBehaviour
             isNear = true;
             GetComponent<PolygonCollider2D>().enabled = false;
         }
+    }
+
+    private void OnMouseOver() {
+        GetComponent<SpriteRenderer>().material.SetFloat("_Thickness", 0.05f);
+    }
+
+    private void OnMouseExit() {
+        GetComponent<SpriteRenderer>().material.SetFloat("_Thickness", 0f);
     }
 
     public bool CheckPlaced() {

@@ -13,6 +13,7 @@ public class FloatingTextManager : MonoBehaviour
     public GameObject outTextPrefab;
     public GameObject outTextEmpPrefab;
     public Transform puzzleParent;
+    public Material puzzleMat;
     public GameObject[] floatingPuzzlePrefab;
     public GameObject[] miscPrefab;
     public Transform[] floatingPuzzleDest;
@@ -162,6 +163,8 @@ public class FloatingTextManager : MonoBehaviour
         else if(puzzleIndex.Count == 1) {
             GameObject[] puzzles = new GameObject[spawnCount];
             GameObject puzzle = GameObject.Instantiate(floatingPuzzlePrefab[puzzleIndex[0]], pos, Quaternion.identity);
+            Material mat = new Material(puzzleMat);
+            puzzle.GetComponent<SpriteRenderer>().material = mat;
             puzzle.GetComponent<FloatPuzzleController>().destination = floatingPuzzleDest[puzzleIndex[0]];
             puzzle.GetComponent<FloatPuzzleController>().SetText(currentText[0]);
             puzzles[0] = puzzle;
@@ -186,11 +189,15 @@ public class FloatingTextManager : MonoBehaviour
             GameObject puzzle1 = GameObject.Instantiate(floatingPuzzlePrefab[puzzleIndex[shuffle[0]]], pos, Quaternion.identity);
             puzzle1.GetComponent<FloatPuzzleController>().destination = floatingPuzzleDest[puzzleIndex[shuffle[0]]];
             puzzle1.GetComponent<FloatPuzzleController>().SetText(currentText[0]);
+            Material mat1 = new Material(puzzleMat);
+            puzzle1.GetComponent<SpriteRenderer>().material = mat1;
             puzzles[0] = puzzle1;
             GameObject puzzle2 = GameObject.Instantiate(floatingPuzzlePrefab[puzzleIndex[shuffle[1]]], pos, Quaternion.identity);
             puzzle2.GetComponent<FloatPuzzleController>().destination = floatingPuzzleDest[puzzleIndex[shuffle[1]]];
             puzzle2.GetComponent<FloatPuzzleController>().SetText(currentText[1]);
-            puzzles[1] = puzzle2;
+            Material mat2 = new Material(puzzleMat);
+            puzzle2.GetComponent<SpriteRenderer>().material = mat2;
+            puzzles[1] = puzzle2;  
             shuffle = Shuffle(miscPrefab.Length);
             for(int i = 2; i < spawnCount; i++) {
                 GameObject misc = GameObject.Instantiate(miscPrefab[shuffle[i - 1]], pos, Quaternion.identity);

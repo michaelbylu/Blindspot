@@ -48,9 +48,9 @@ public class PuzzleManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
             int rng = Random.Range(0, otherBubbles.Length);
             otherBubbles[rng].SetActive(true);
-            yield return new WaitForSeconds(2.5f);
-            otherBubbles[rng].GetComponent<FadeInOut>().StartFadingOut();
             yield return new WaitForSeconds(1.5f);
+            otherBubbles[rng].GetComponent<FadeInOut>().StartFadingOut();
+            yield return new WaitForSeconds(1f);
             otherBubbles[rng].SetActive(false);
 
         }

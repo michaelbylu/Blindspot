@@ -68,6 +68,14 @@ public class FloatPuzzleController : MonoBehaviour
         }
     }
 
+    private void OnMouseOver() {
+        GetComponent<SpriteRenderer>().material.SetFloat("_Thickness", 0.05f);
+    }
+
+    private void OnMouseExit() {
+        GetComponent<SpriteRenderer>().material.SetFloat("_Thickness", 0f);
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.name.StartsWith("Edge")) {
             StartCoroutine(StartFadingOut());
