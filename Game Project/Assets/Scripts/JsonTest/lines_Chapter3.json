@@ -1,0 +1,505 @@
+{
+    "lines": [        
+        {
+            "dialogue":"...Has the party already begun yet?...",
+            "illustration": "Mei_speaking",
+            "frame": "inner_thoughts1",
+            "lineIndex": "0",
+            "nextLine": "1",
+            "name": ""
+        },
+        {
+            "dialogue":"Hey, Emma. Have you heard that Spring Carnival will be next week?",
+            "illustration": "Kevin_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "1",
+            "nextLine": "2",
+            "name": "Kevin"
+        },
+        {
+            "dialogue":"Oh yeah. I know that and I am super curious about which Buggy team will win the race this year!",
+            "illustration": "Emma_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "2",
+            "nextLine": "3",
+            "name": "Emma"
+        },
+        {
+            "dialogue":"Haha, me too! I am also very interested in the Mobot Competition. There must be so many well-designed robots over there.",
+            "illustration": "Kevin_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "3",
+            "nextLine": "4",
+            "name": "Kevin"
+        },
+        {
+            "dialogue":"Hi Kevin, Emma. Are you guys talking about Spring Carnival?",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "4",
+            "nextLine": "5",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"Yeah, Meimei. We haven't seen you for a long time.",
+            "illustration": "Kevin_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "5",
+            "nextLine": "6",
+            "name": "Kevin"
+        },
+        {
+            "dialogue":"Right, don't you usually study very hard in the library at this time?",
+            "illustration": "Emma_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "6",
+            "nextLine": "options",
+            "name": "Emma"
+        },
+        {
+            "dialogue":"Oh, sorry. My bad…",
+            "illustration": "Emma_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "7",
+            "nextLine": "8",
+            "name": "Emma"
+        },
+        {
+            "dialogue":"Never mind. By the way, I am also very looking forward to the upcoming Spring Carnival.",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "8",
+            "nextLine": "9",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"Really? But I remember not too many international students who were willing to join this kind of event last year.",
+            "illustration": "Kevin_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "9",
+            "nextLine": "10",
+            "name": "Kevin"
+        },
+        {
+            "dialogue":"Well, here I come! And I believe many of my friends have the same excitement about Carnival as me.",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "10",
+            "nextLine": "11",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"Wow. That's good!",
+            "illustration": "Kevin_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "11",
+            "nextLine": "12",
+            "name": "Kevin"
+        },
+        {
+            "dialogue":"By the way, are they doing karaoke now?",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "12",
+            "nextLine": "13",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"Right, Tiara is singing now.",
+            "illustration": "Emma_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "13",
+            "nextLine": "14",
+            "name": "Emma"
+        },
+        {
+            "dialogue":"Yeah, it’s usually a great way for us to relax and get closer to each other during the party.",
+            "illustration": "Kevin_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "14",
+            "nextLine": "15",
+            "name": "Kevin"
+        },
+        {
+            "dialogue":"Cool...",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "15",
+            "nextLine": "16",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"Emma, Kevin. Would you like to join karaoke with us?",
+            "illustration": "Tiara_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "16",
+            "nextLine": "17",
+            "name": "Tiara"
+        },
+        {
+            "dialogue": "Sure. Please wait for me to pick a song for us!",
+            "illustration": "Emma_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "17",
+            "nextLine": "18",
+            "name": "Emma"
+        },
+        {
+            "dialogue":"Hi Meimei. Welcome to the party! Would you mind waiting for us?",
+            "illustration": "Tiara_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "18",
+            "nextLine": "19",
+            "name": "Tiara"
+        },
+        {
+            "dialogue":"We’ll be right back after we finish the karaoke.",
+            "illustration": "Kevin_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "19",
+            "nextLine": "20",
+            "name": "Kevin"
+        },
+        {
+            "dialogue":"OK… Have fun. I'm not very good at these English songs, anyway...",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "20",
+            "nextLine": "21",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"...Actually, I could have a try...",
+            "illustration": "Mei_speaking",
+            "frame": "inner_thoughts1",
+            "lineIndex": "21",
+            "nextLine": "puzzle1",
+            "name": ""
+        },
+
+
+
+
+
+
+
+
+
+        {
+            "dialogue": "Hey, Meimei. Welcome to the party! Do you have any friends to come with you?",
+            "illustration": "Frank_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "22",
+            "nextLine": "23",
+            "name": "Frank"
+        },
+        {
+            "dialogue":"Hi Frank. Actually, Grace told me that there would be a party here, but I am not sure when she will be here.",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "23",
+            "nextLine": "24",
+            "name": "Meimei"
+        },
+        {
+            "dialogue": "Nice. I just saw that you were talking with Kevin and Emma right? Is everything going well?",
+            "illustration": "Frank_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "24",
+            "nextLine": "25",
+            "name": "Frank"
+        },
+        {
+            "dialogue":"Yeah. They are very nice people. We had a great talk about the Spring Carnival.",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "25",
+            "nextLine": "26",
+            "name": "Meimei"
+        },
+        {
+            "dialogue": "Good to hear that! Oh, they are doing karaoke now. Do you want to watch them with me?",
+            "illustration": "Frank_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "26",
+            "nextLine": "options",
+            "name": "Frank"
+        },
+        {
+            "dialogue": "OK... Enjoy the party!",
+            "illustration": "Frank_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "27",
+            "nextLine": "28",
+            "name": "Frank"
+        },
+
+
+
+
+
+        {
+            "dialogue":"...Is that Grace? She is one of my best friends...",
+            "illustration": "Mei_speaking",
+            "frame": "inner_thoughts1",
+            "lineIndex": "28",
+            "nextLine": "29",
+            "name": ""
+        },
+        {
+            "dialogue":"Hey Meimei, what's going on?",
+            "illustration": "Grace_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "29",
+            "nextLine": "30",
+            "name": "Grace"
+        },
+        {
+            "dialogue":"Hi Grace. I just… I feel like I do not belong here.",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "30",
+            "nextLine": "31",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"Do they get confused about what you’re talking about?",
+            "illustration": "Grace_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "31",
+            "nextLine": "32",
+            "name": "Grace"
+        },
+        {
+            "dialogue":"It's not like that…",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "32",
+            "nextLine": "33",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"Is there anything wrong between you and these people here?",
+            "illustration": "Grace_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "33",
+            "nextLine": "34",
+            "name": "Grace"
+        },
+        {
+            "dialogue":"Probably, they thought I am not an outgoing person willing to sing along with them…",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "34",
+            "nextLine": "35",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"Come on Meimei! Don’t worry about that.",
+            "illustration": "Grace_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "35",
+            "nextLine": "36",
+            "name": "Grace"
+        },
+        {
+            "dialogue":"Well.. It just feels like everyone is surprised that I came to the party and the Spring Carnival...",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "37",
+            "nextLine": "38",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"Actually, it happened to me several times before. They just don’t get it.",
+            "illustration": "Grace_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "39",
+            "nextLine": "40",
+            "name": "Grace"
+        },
+        {
+            "dialogue":"Really? Have you experienced the same situation as me before?",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "40",
+            "nextLine": "41",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"Yeah, of course. Some of them are assuming Asian people are quiet until they get to know us.",
+            "illustration": "Grace_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "41",
+            "nextLine": "options",
+            "name": "Grace"
+        },
+
+
+        {
+            "dialogue":"Probably, it is from some TV shows and movies which stereotype all Asian people as geeks.",
+            "illustration": "Grace_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "42",
+            "nextLine": "42a",
+            "name": "Grace"
+        },
+        {
+            "dialogue":"So based on their understanding, Asian people are less communicative who only enjoy studying by themselves, right?",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "42a",
+            "nextLine": "42b",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"Exactly. That's why maybe Kevin and Emma just want to leave some space for you.",
+            "illustration": "Grace_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "42b",
+            "nextLine": "puzzle2-1",
+            "name": "Grace"
+        },
+
+        {
+            "dialogue":"Oh, I got it! Although it's indeed a racial stereotype of Asian people, I believe it can be solved with some attention and action.",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "42c",
+            "nextLine": "42d",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"That's right! As long as we all work on it together, it's not a big deal for us.",
+            "illustration": "Grace_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "42d",
+            "nextLine": "42e",
+            "name": "Grace"
+        },
+        {
+            "dialogue":"That makes me feel much better now. Thanks, Grace!",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "42e",
+            "nextLine": "42f",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"No worry! So let's join the karaoke with them?",
+            "illustration": "Grace_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "42f",
+            "nextLine": "42g",
+            "name": "Grace"
+        },
+        {
+            "dialogue":"For sure. Let's sing the next one together!",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "42g",
+            "nextLine": "",
+            "name": "Meimei"
+        },
+
+
+
+
+
+        {
+            "dialogue":"Yeah, maybe try to share some of our traditional food or dessert with them?",
+            "illustration": "Grace_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "43",
+            "nextLine": "43a",
+            "name": "Grace"
+        },
+        {
+            "dialogue":"That's a good idea! Remember the boba tea store we tried last time? We could let them have a try.",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "43a",
+            "nextLine": "43b",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"Wow, I remember the taro milk tea tasted so good! They are going to love it!",
+            "illustration": "Grace_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "43b",
+            "nextLine": "puzzle2-2",
+            "name": "Grace"
+        },
+
+
+
+
+        {
+            "dialogue":"By the way, a new noodle bar just opened last week, which is closed to us.",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "43c",
+            "nextLine": "43d",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"I knew that one! I heard that the beef noodle soup is really good.",
+            "illustration": "Grace_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "43d",
+            "nextLine": "43e",
+            "name": "Grace"
+        },
+        {
+            "dialogue":"Nice! Let’s try that together next time!",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "43e",
+            "nextLine": "43f",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"Sounds great! So why don't we grab something to eat and join the karaoke?",
+            "illustration": "Grace_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "43f",
+            "nextLine": "43g",
+            "name": "Grace"
+        },
+        {
+            "dialogue":"Yeah, let's enjoy the party with everyone else!",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "43g",
+            "nextLine": "",
+            "name": "Meimei"
+        },
+        {
+            "dialogue":"Hey guys! Do you guys mind if we sing the next one together?",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "44",
+            "nextLine": "45",
+            "name": "Meimei"
+        },
+        {   
+            "dialogue": "Hey Meimei, Grace! We are waiting for you guys.",
+            "illustration": "Frank_illustration",
+            "frame": "dialogue-box",
+            "lineIndex": "45",
+            "nextLine": "46",
+            "name": "Frank"
+        },
+        {
+            "dialogue":"Let’s enjoy the music!",
+            "illustration": "Mei_speaking",
+            "frame": "dialogue-box",
+            "lineIndex": "46",
+            "nextLine": "the end",
+            "name": "Meimei"
+        }
+    ]
+}
+
+
+
