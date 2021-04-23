@@ -8,9 +8,11 @@ public class ShadowPuzzleManager : MonoBehaviour
     public ShadowFigureController shadow;
     public GameObject[] crowd;
     private int stage = 0;
+    private float startTime;
     // Start is called before the first frame update
     void Start()
     {
+        startTime = Time.time;
         StartCoroutine(StartPuzzle());
     }
 
@@ -31,6 +33,9 @@ public class ShadowPuzzleManager : MonoBehaviour
             StartCoroutine(EnableNextCrowd());
         }
         else {
+            if(GameObject.FindGameObjectWithTag("Logger") != null) {
+                GameObject.FindGameObjectWithTag("Logger").GetComponent<Logger>().LogData("Puzzle1", (Time.time - startTime).ToString());
+            }
             StartCoroutine(FadeOut());
         }
         
@@ -43,16 +48,22 @@ public class ShadowPuzzleManager : MonoBehaviour
 
     IEnumerator EnableNextCrowd() {
         shadow.GetComponent<FadeInOut>().StartFadingOut();
+        yield return new WaitForSeconds(3f);
+        crowd[stage - 1].GetComponent<Bubble>().FadeOut();
         yield return new WaitForSeconds(1f);
         crowd[stage - 1].GetComponent<FadeInOut>().StartFadingOut();
         yield return new WaitForSeconds(2f);
         crowd[stage].SetActive(true);
+        crowd[stage - 1].SetActive(false);
         yield return new WaitForSeconds(2f);
         shadow.SetDestination(shadowWaypoints[stage]);
         shadow.GetComponent<FadeInOut>().StartFadingIn();
     }
 
     IEnumerator FadeOut() {
+        shadow.GetComponent<FadeInOut>().StartFadingOut();
+        yield return new WaitForSeconds(2f);
+        crowd[stage - 1].GetComponent<Bubble>().FadeOut();
         yield return new WaitForSeconds(2f);
         foreach(FadeInOut f in GetComponentsInChildren<FadeInOut>()) {
             f.StartFadingOut();

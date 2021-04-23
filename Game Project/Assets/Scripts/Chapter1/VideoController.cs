@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
+
 
 public class VideoController : MonoBehaviour
 {
@@ -22,11 +24,17 @@ public class VideoController : MonoBehaviour
         if(isPlayed && !videoPlayer.isPlaying) {
             if(GameObject.FindGameObjectWithTag("GameController").name.StartsWith("Chapter1")) {
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
+                PlayerPrefs.SetInt("1", 1);
             }
-            else {
+            else if(GameObject.FindGameObjectWithTag("GameController").name.StartsWith("Chapter2")){
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter2Manager>().ChangeStage();
+                PlayerPrefs.SetInt("2", 1);
+            } 
+            else if(GameObject.FindGameObjectWithTag("GameController").name.StartsWith("Chapter3")){
+                PlayerPrefs.SetInt("3", 1);
             }
             gameObject.SetActive(false);
+            SceneManager.LoadScene(0);
         }
     }
 

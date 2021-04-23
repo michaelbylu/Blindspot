@@ -81,8 +81,11 @@ public class PlayerController : MonoBehaviour
             if(GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>() != null) {
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
             }
-            else {
+            else if(GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter2Manager>() != null) {
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter2Manager>().ChangeStage();
+            }
+            else if(GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter3Manager>() != null) {
+                GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter3Manager>().ChangeStage();
             }
             animator.transform.localScale = new Vector3(1f, 1f, 1f);
         }
@@ -111,7 +114,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         animator.runtimeAnimatorController = animatorOverrideControllers[index];
-        if(index == 1) {
+        if(index >= 1) {
             isSeated = false;
             chair.GetComponentInChildren<FadeInOut>(true).gameObject.SetActive(true);
             if(chair.GetComponentInChildren<ChairController>(true) != null) {
@@ -133,7 +136,6 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isSit", false);
         animator.SetBool("isWalking", false);
         animator.SetTrigger("Release");
-        print("Release triggered");
         canMove = true;
     }
 }

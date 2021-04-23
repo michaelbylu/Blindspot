@@ -27,6 +27,9 @@ public class ColoredFigureController : MonoBehaviour
         if(!isWalking) {
             return;
         }
+        if(!GetComponent<AudioSource>().isPlaying) {
+            GetComponent<AudioSource>().Play();
+        }
         Vector3 dir = (destination - transform.position).normalized;
         if(dir.x * transform.localScale.x > 0) {
             transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
@@ -36,6 +39,7 @@ public class ColoredFigureController : MonoBehaviour
             GetComponent<Animator>().SetBool("isWalking", false);
             isWalking = false;
             transform.position = destination;
+            GetComponent<AudioSource>().Stop();
         }
     }
 
@@ -55,6 +59,7 @@ public class ColoredFigureController : MonoBehaviour
             GetComponentInParent<ShadowPuzzleManager>().FreezePlayer();
             GetComponent<Animator>().SetBool("isWalking", false);
             isWalking = false;
+            GetComponent<AudioSource>().Stop();
         }
     }
 }

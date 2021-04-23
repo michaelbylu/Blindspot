@@ -154,10 +154,10 @@ public class Chapter1Manager : MonoBehaviour
         flashback.SetActive(true);
         VideoPlayer videoPlayer = flashback.GetComponent<VideoPlayer>();
         if(jsonReader.CheckLog("19") && jsonReader.CheckLog("puzzle2-2A")) {
-            videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Chapter1NegativeFB_with_vo_1.mp4");                   
+            videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Chapter1NegativeFB_final.mp4");                   
         }
         else {
-            videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Chapter1PositiveFB_with_vo_1.mp4");
+            videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Chapter1PositiveFB_final.mp4");
         }
         RenderTexture rt = new RenderTexture(1920, 1080, 24, RenderTextureFormat.ARGB32);
         rt.Create();

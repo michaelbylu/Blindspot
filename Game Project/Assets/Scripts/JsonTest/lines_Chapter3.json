@@ -230,7 +230,7 @@
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "27",
-            "nextLine": "28",
+            "nextLine": "puzzle",
             "name": "Frank"
         },
 
@@ -299,7 +299,7 @@
             "illustration": "Grace_illustration",
             "frame": "dialogue-box",
             "lineIndex": "35",
-            "nextLine": "36",
+            "nextLine": "37",
             "name": "Grace"
         },
         {
@@ -307,7 +307,7 @@
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "37",
-            "nextLine": "38",
+            "nextLine": "39",
             "name": "Meimei"
         },
         {
@@ -357,7 +357,7 @@
             "illustration": "Grace_illustration",
             "frame": "dialogue-box",
             "lineIndex": "42b",
-            "nextLine": "puzzle2-1",
+            "nextLine": "puzzle2-2B",
             "name": "Grace"
         },
 
@@ -398,7 +398,7 @@
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "42g",
-            "nextLine": "",
+            "nextLine": "puzzle",
             "name": "Meimei"
         },
 
@@ -427,7 +427,7 @@
             "illustration": "Grace_illustration",
             "frame": "dialogue-box",
             "lineIndex": "43b",
-            "nextLine": "puzzle2-2",
+            "nextLine": "puzzle2-1A",
             "name": "Grace"
         },
 
@@ -471,7 +471,7 @@
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "43g",
-            "nextLine": "",
+            "nextLine": "puzzle",
             "name": "Meimei"
         },
         {
@@ -495,7 +495,7 @@
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "46",
-            "nextLine": "the end",
+            "nextLine": "puzzle",
             "name": "Meimei"
         }
     ]

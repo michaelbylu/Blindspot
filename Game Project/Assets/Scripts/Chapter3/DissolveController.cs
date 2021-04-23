@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DissolveController : MonoBehaviour
 {
+    public AudioClip[] sfx;
     public Material dissolveMat;
     public GameObject particleEffect;
     public Sprite[] sprites;
@@ -40,11 +41,17 @@ public class DissolveController : MonoBehaviour
         if(stage < sprites.Length - 1) {
             stage++;
             GetComponent<SpriteRenderer>().sprite = sprites[stage];
+            GetComponent<AudioSource>().clip = sfx[0];
         }
         else {
             isDissolving = true;
-            particleEffect.SetActive(true);
+            foreach(ParticleEffect p in GetComponentsInChildren<ParticleEffect>(true)) {
+                p.gameObject.SetActive(true);
+            }
+            //particleEffect.SetActive(true);
             GetComponent<PolygonCollider2D>().enabled = false;
+            GetComponent<AudioSource>().clip = sfx[1];
         }
+        GetComponent<AudioSource>().Play();
     }
 }

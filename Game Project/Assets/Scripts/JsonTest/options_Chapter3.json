@@ -21,12 +21,12 @@
             "optionLines":
             [
                 "It's ok frank. Don't worry about me. Go ahead.",
-                " I'm doing good now. I will join you guys later",
+                " I'm doing good now. I will join you guys later"
             ],
             "nextLines":
             [
                 "27",
-                "27",
+                "27"
             ],
             "illustration": "Mei_make_choices"
         },
@@ -40,7 +40,7 @@
             "nextLines":
             [
                 "42",
-                "43",
+                "43"
             ],
             "illustration": "Mei_make_choices"
         }

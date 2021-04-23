@@ -63,6 +63,7 @@ public class FadeInOut : MonoBehaviour
     }
 
     public void StartFadingOut() {
+        isFadingIn = false;
         isFadingOut = true;
     }
 

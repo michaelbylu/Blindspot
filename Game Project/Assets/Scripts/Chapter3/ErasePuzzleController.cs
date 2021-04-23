@@ -9,12 +9,16 @@ public class ErasePuzzleController : MonoBehaviour
     SpriteRenderer spriteRend;
     Color zeroAlpha = Color.clear;
     public int erSize;
+    public float autoEraseTime;
+    public Vector3[] autoWaypoints;
     public Vector2Int lastPos;
-    public Vector2Int mousePosition;
+    public Vector3 mousePosition;
     public float erasePersent;
-    public GameObject cover;
     private bool Drawing = false;
     private bool isComplete = false;
+    private bool drawable = false;
+    private float startTime;
+    private int currentIndex = 0;
     void Start ()
     {
         spriteRend = gameObject.GetComponent<SpriteRenderer>();
@@ -26,18 +30,29 @@ public class ErasePuzzleController : MonoBehaviour
         m_Texture.SetPixels(m_Colors);
         m_Texture.Apply();
         spriteRend.sprite = Sprite.Create(m_Texture, spriteRend.sprite.rect, new Vector2(0.5f, 0.5f));
+        startTime = Time.time;
 	}
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && drawable)
         {
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if(hit.collider != null) {
                 UpdateTexture();
                 Drawing = true;
             }
-
+        }
+        else if(!drawable) {
+            Vector3 mockMousePos = GetMockPos();
+            hit = Physics2D.Raycast(mockMousePos, Vector2.zero);
+            if(hit.collider != null) {
+                UpdateTexture();
+                Drawing = true;
+            }
+            if(Time.time - startTime >= autoEraseTime * autoWaypoints.Length) {
+                drawable = true;
+            }
         }
         else {
             Drawing = false;
@@ -45,6 +60,18 @@ public class ErasePuzzleController : MonoBehaviour
         if(!isComplete && CheckErased()) {
             StartCoroutine(FadeOut());
         }
+    }
+
+    private Vector3 GetMockPos() {
+        if(currentIndex >= autoWaypoints.Length - 1) {
+            return autoWaypoints[autoWaypoints.Length - 1];
+        }
+        Vector3 mockMousePos = Vector3.Lerp(autoWaypoints[currentIndex], autoWaypoints[currentIndex+1], 
+             (Time.time - startTime) / autoEraseTime - currentIndex);
+        if(Time.time - startTime >= autoEraseTime * (currentIndex + 1)){
+            currentIndex++;
+        }
+        return mockMousePos;
     }
 
     public void UpdateTexture()
@@ -55,7 +82,7 @@ public class ErasePuzzleController : MonoBehaviour
         mousePos.x *= w / hit.collider.bounds.size.x;
         mousePos.y *= h / hit.collider.bounds.size.y;
         Vector2Int p = new Vector2Int((int)mousePos.x, (int)mousePos.y);
-        mousePosition = p;
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2Int start = new Vector2Int();
         Vector2Int end = new Vector2Int();
         if(!Drawing)
@@ -102,10 +129,17 @@ public class ErasePuzzleController : MonoBehaviour
     }
 
     IEnumerator FadeOut() {
+        if(GameObject.FindGameObjectWithTag("Logger") != null) {
+            GameObject.FindGameObjectWithTag("Logger").GetComponent<Logger>().LogData("Puzzle2-1", (Time.time - startTime).ToString());
+        }
         isComplete = true;
         GetComponent<FadeInOut>().StartFadingOut();
+        yield return new WaitForSeconds(3f);
+        GetComponentInParent<FadeInOut>().StartFadingOut();
+        foreach(FadeInOut f in transform.parent.GetComponentsInChildren<FadeInOut>()) {
+            f.StartFadingOut();
+        }
         yield return new WaitForSeconds(2f);
-        cover.SetActive(true);
-        gameObject.SetActive(false);
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter3Manager>().ChangeStage();
     }
 }
