@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 9308839}
   - component: {fileID: 9308838}
   - component: {fileID: 9308837}
+  - component: {fileID: 9308840}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -256,6 +257,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9308835}
   m_CullTransparentMesh: 0
+--- !u!114 &9308840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9308835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.9150943, g: 0.5913581, b: 0.5913581, a: 0.5}
+  m_EffectDistance: {x: 4, y: 4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &86018797
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +587,7 @@ GameObject:
   - component: {fileID: 243834689}
   - component: {fileID: 243834688}
   - component: {fileID: 243834687}
+  - component: {fileID: 243834690}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -692,6 +709,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243834685}
   m_CullTransparentMesh: 0
+--- !u!114 &243834690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243834685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.9150943, g: 0.5913581, b: 0.5913581, a: 0.5}
+  m_EffectDistance: {x: 4, y: 4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &709649036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,6 +1111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba652781f71d69340b5500722057156b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chapter1: {fileID: 9308837}
   chapter2: {fileID: 1118768389}
   chapter3: {fileID: 243834687}
 --- !u!1 &931222168
@@ -1465,6 +1498,7 @@ GameObject:
   - component: {fileID: 1118768391}
   - component: {fileID: 1118768390}
   - component: {fileID: 1118768389}
+  - component: {fileID: 1118768392}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1586,6 +1620,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118768387}
   m_CullTransparentMesh: 0
+--- !u!114 &1118768392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118768387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.9150943, g: 0.5913581, b: 0.5913581, a: 0.5}
+  m_EffectDistance: {x: 4, y: 4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1602020138
 GameObject:
   m_ObjectHideFlags: 0
