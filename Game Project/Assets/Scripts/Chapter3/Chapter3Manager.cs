@@ -102,17 +102,19 @@ public class Chapter3Manager : MonoBehaviour
             case 9: //Continue conversation after puzzle is completed
                 if(currentDifficulty == "A") {
                     puzzle2[0].SetActive(false);
-                    jsonReader.ChangeLine("42c");
+                    jsonReader.ChangeLine("43c");
                 }
                 else if(currentDifficulty == "B") {
                     puzzle2[1].SetActive(false);
-                    jsonReader.ChangeLine("43c");
+                    jsonReader.ChangeLine("42c");
                 }
                 break;
-            case 10: //Let player walk to the karaoke
+            case 10: //Let player walk to the karaoke，Grace starts walking as well
                 player.chair.position = waypoints[1].position;
                 player.Release();
                 player.SwitchWalkAnimation(2);
+                GetComponent<PlayableDirector>().playableAsset = timelines[2];
+                GetComponent<PlayableDirector>().Play();
                 break;
             case 11: //Play the ending timeline
                 jsonReader.ChangeLine("44");

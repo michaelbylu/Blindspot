@@ -719,6 +719,8 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 57a4adf931f72b7449a763c06f2054f3, type: 2}
+    - {fileID: 11400000, guid: c7ee3302709a819449fef7c58addb554, type: 2}
+    - {fileID: 11400000, guid: 3cc62490baabec141bf0360d523ebef5, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -732,6 +734,34 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: Sit
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1265723529}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Walk
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1265723529}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Stand
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!95 &188666874
@@ -21036,7 +21066,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingOrder: -4
   m_Sprite: {fileID: 21300000, guid: 93bcf5f287d376f44b056246468b7c69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -73918,7 +73948,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -5
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: 1d39264b87d126e49ac3f08dd1f41b8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -94681,6 +94711,7 @@ MonoBehaviour:
   timelines:
   - {fileID: 11400000, guid: 6a6cc2e0f45ffde44aef039592f47d68, type: 2}
   - {fileID: 11400000, guid: 4b343b2eb1dce9f4b988c7b5bf13dc10, type: 2}
+  - {fileID: 11400000, guid: 5703fb0cebf6ca14bbb91cc63f9ffe61, type: 2}
   player: {fileID: 1172747467}
   puzzle1: {fileID: 2073030403}
   waypoints:
@@ -94918,6 +94949,8 @@ PlayableDirector:
     value: {fileID: 1416754626}
   - key: {fileID: 3368925097826738725, guid: 1d7b706042a7ec54fa9eac44903e817d, type: 2}
     value: {fileID: 480147941}
+  - key: {fileID: 9120436611924907164, guid: 5703fb0cebf6ca14bbb91cc63f9ffe61, type: 2}
+    value: {fileID: 188666874}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1806433441

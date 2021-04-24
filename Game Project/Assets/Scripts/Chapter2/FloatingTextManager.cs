@@ -27,6 +27,7 @@ public class FloatingTextManager : MonoBehaviour
     private string[] currentText;
     private List<int> puzzleIndex;
     private float startTime;
+    private Vector3 lastSpawnPos;
 
     // Start is called before the first frame update
     void Start()
@@ -100,6 +101,7 @@ public class FloatingTextManager : MonoBehaviour
     }
 
     public void SpawnPuzzle(Vector3 pos) {
+        lastSpawnPos = pos;
         StartCoroutine(Spawn(pos));
     }
 
@@ -135,8 +137,11 @@ public class FloatingTextManager : MonoBehaviour
     }
 
     IEnumerator FadeOut() {
+        StopCoroutine(Spawn(lastSpawnPos));
+        lastSpawn = Time.time + 100f;
         foreach(FloatingScript f in transform.GetComponentsInChildren<FloatingScript>()){
             f.StopAllCoroutines();
+            f.StartFadingOut();
         }
         foreach(FloatPuzzleController f in transform.GetComponentsInChildren<FloatPuzzleController>()){
             f.StopAllCoroutines();

@@ -13,8 +13,10 @@ public class FloatingScript : MonoBehaviour
     public bool spawnPuzzleAfter = true;
     public Vector3[] path;
     public float duration;
+    public float fadeSpeed = 2f;
     private float seed;
     private Tween myTween;
+    private bool isFadingOut = false;
     void Start()
     {
         Destroy(gameObject, lifeSpan);
@@ -47,6 +49,19 @@ public class FloatingScript : MonoBehaviour
             meshInfo.mesh.vertices = meshInfo.vertices;
             text.UpdateGeometry(meshInfo.mesh, i);
         }
+        if(isFadingOut) {
+            Color c = text.color;
+            c.a -= Time.deltaTime * fadeSpeed;
+            if(c.a <= 0) {
+                c.a = 0;
+                isFadingOut = false;
+            }
+            text.color = c;
+        }
+    }
+
+    public void StartFadingOut() {
+        isFadingOut = true;
     }
 
     IEnumerator SpawnPuzzles() {
