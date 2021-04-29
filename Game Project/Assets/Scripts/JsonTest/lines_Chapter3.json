@@ -1,7 +1,7 @@
 {
     "lines": [        
         {
-            "dialogue":"...Has the party already begun yet?...",
+            "dialogue":"...Has the party begun yet?...",
             "illustration": "Mei_speaking",
             "frame": "inner_thoughts1",
             "lineIndex": "0",
@@ -17,7 +17,7 @@
             "name": "Kevin"
         },
         {
-            "dialogue":"Oh yeah. I know that and I am super curious about which Buggy team will win the race this year!",
+            "dialogue":"Oh yeah. I know that and I'm super curious about which Buggy team will win the race this year!",
             "illustration": "Emma_speaking",
             "frame": "dialogue-box",
             "lineIndex": "2",
@@ -49,7 +49,7 @@
             "name": "Kevin"
         },
         {
-            "dialogue":"Right, don't you usually study very hard in the library at this time?",
+            "dialogue":"Right, don't you usually spend most of your evenings studying in the library?",
             "illustration": "Emma_speaking",
             "frame": "dialogue-box",
             "lineIndex": "6",
@@ -57,7 +57,7 @@
             "name": "Emma"
         },
         {
-            "dialogue":"Oh, sorry. My bad…",
+            "dialogue":"Oh, sorry. My bad....",
             "illustration": "Emma_speaking",
             "frame": "dialogue-box",
             "lineIndex": "7",
@@ -73,7 +73,7 @@
             "name": "Meimei"
         },
         {
-            "dialogue":"Really? But I remember not too many international students who were willing to join this kind of event last year.",
+            "dialogue":"Really? But I remember not too many international students willing to join Carnival last year.",
             "illustration": "Kevin_speaking",
             "frame": "dialogue-box",
             "lineIndex": "9",
@@ -113,7 +113,7 @@
             "name": "Emma"
         },
         {
-            "dialogue":"Yeah, it’s usually a great way for us to relax and get closer to each other during the party.",
+            "dialogue":"Yeah, it's usually a great way for us to relax and get closer to each other during the party.",
             "illustration": "Kevin_speaking",
             "frame": "dialogue-box",
             "lineIndex": "14",
@@ -153,7 +153,7 @@
             "name": "Tiara"
         },
         {
-            "dialogue":"We’ll be right back after we finish the karaoke.",
+            "dialogue":"We'll be right back after we finish the karaoke.",
             "illustration": "Kevin_speaking",
             "frame": "dialogue-box",
             "lineIndex": "19",
@@ -161,7 +161,7 @@
             "name": "Kevin"
         },
         {
-            "dialogue":"OK… Have fun. I'm not very good at these English songs, anyway...",
+            "dialogue":"OK... Have fun....",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "20",
@@ -186,7 +186,7 @@
 
 
         {
-            "dialogue": "Hey, Meimei. Welcome to the party! Do you have any friends to come with you?",
+            "dialogue": "Hey, Meimei. Welcome to the party! Did you have any friends come with you?",
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "22",
@@ -194,7 +194,7 @@
             "name": "Frank"
         },
         {
-            "dialogue":"Hi Frank. Actually, Grace told me that there would be a party here, but I am not sure when she will be here.",
+            "dialogue":"Hi Frank. Actually, Grace told me that there would be a party here, but I am not sure when she'll arrive.",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "23",
@@ -202,7 +202,7 @@
             "name": "Meimei"
         },
         {
-            "dialogue": "Nice. I just saw that you were talking with Kevin and Emma right? Is everything going well?",
+            "dialogue": "Nice. I just saw that you were talking with Kevin and Emma, right? Is everything going OK?",
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "24",
@@ -230,8 +230,16 @@
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "27",
-            "nextLine": "puzzle",
+            "nextLine": "27a",
             "name": "Frank"
+        },
+        {
+            "dialogue": "...Maybe, I'm just not ready for that...",
+            "illustration": "Mei_speaking",
+            "frame": "inner_thoughts1",
+            "lineIndex": "27a",
+            "nextLine": "puzzle",
+            "name": ""
         },
 
 
@@ -255,7 +263,7 @@
             "name": "Grace"
         },
         {
-            "dialogue":"Hi Grace. I just… I feel like I do not belong here.",
+            "dialogue":"Hi Grace. I just... I feel like I do not belong here.",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "30",
@@ -263,7 +271,7 @@
             "name": "Meimei"
         },
         {
-            "dialogue":"Do they get confused about what you’re talking about?",
+            "dialogue":"Do they get confused about what you're talking about again?",
             "illustration": "Grace_illustration",
             "frame": "dialogue-box",
             "lineIndex": "31",
@@ -271,7 +279,7 @@
             "name": "Grace"
         },
         {
-            "dialogue":"It's not like that…",
+            "dialogue":"It's not like that....",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "32",
@@ -287,7 +295,7 @@
             "name": "Grace"
         },
         {
-            "dialogue":"Probably, they thought I am not an outgoing person willing to sing along with them…",
+            "dialogue":"Probably, they thought I am not an outgoing person willing to sing along with them....",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "34",
@@ -295,7 +303,7 @@
             "name": "Meimei"
         },
         {
-            "dialogue":"Come on Meimei! Don’t worry about that.",
+            "dialogue":"Come on Meimei! Don't worry about that.",
             "illustration": "Grace_illustration",
             "frame": "dialogue-box",
             "lineIndex": "35",
@@ -311,7 +319,7 @@
             "name": "Meimei"
         },
         {
-            "dialogue":"Actually, it happened to me several times before. They just don’t get it.",
+            "dialogue":"Actually, it happened to me several times before. They just don't get us.",
             "illustration": "Grace_illustration",
             "frame": "dialogue-box",
             "lineIndex": "39",
@@ -327,7 +335,7 @@
             "name": "Meimei"
         },
         {
-            "dialogue":"Yeah, of course. Some of them are assuming Asian people are quiet until they get to know us.",
+            "dialogue":"Yeah, of course. Some of them are thinking Asian people are quiet until they get to know us.",
             "illustration": "Grace_illustration",
             "frame": "dialogue-box",
             "lineIndex": "41",
@@ -345,7 +353,7 @@
             "name": "Grace"
         },
         {
-            "dialogue":"So based on their understanding, Asian people are less communicative who only enjoy studying by themselves, right?",
+            "dialogue":"So based on their understanding, Asian people are less talkative who only enjoy studying by themselves, right?",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "42a",
@@ -353,7 +361,7 @@
             "name": "Meimei"
         },
         {
-            "dialogue":"Exactly. That's why maybe Kevin and Emma just want to leave some space for you.",
+            "dialogue":"Exactly. That's why maybe Kevin and Emma just wanted to give you some space.",
             "illustration": "Grace_illustration",
             "frame": "dialogue-box",
             "lineIndex": "42b",
@@ -362,7 +370,7 @@
         },
 
         {
-            "dialogue":"Oh, I got it! Although it's indeed a racial stereotype of Asian people, I believe it can be solved with some attention and action.",
+            "dialogue":"Oh, I got it.... Although it's indeed a racial stereotype of Asian people, I think we can overcome it if we try.",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "42c",
@@ -435,7 +443,7 @@
 
 
         {
-            "dialogue":"By the way, a new noodle bar just opened last week, which is closed to us.",
+            "dialogue":"By the way, a new noodle bar just opened last week very close to us.",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "43c",
@@ -443,7 +451,7 @@
             "name": "Meimei"
         },
         {
-            "dialogue":"I knew that one! I heard that the beef noodle soup is really good.",
+            "dialogue":"I know that one! I heard the beef noodle soup is really good.",
             "illustration": "Grace_illustration",
             "frame": "dialogue-box",
             "lineIndex": "43d",
@@ -451,7 +459,7 @@
             "name": "Grace"
         },
         {
-            "dialogue":"Nice! Let’s try that together next time!",
+            "dialogue":"Nice! Let's try that together next time!",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "43e",
@@ -483,7 +491,7 @@
             "name": "Meimei"
         },
         {   
-            "dialogue": "Hey Meimei, Grace! We are waiting for you guys.",
+            "dialogue": "Hey Meimei, Grace! We're waiting for you guys.",
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "45",
@@ -491,7 +499,7 @@
             "name": "Frank"
         },
         {
-            "dialogue":"Let’s enjoy the music!",
+            "dialogue":"Let's enjoy the music!",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "46",

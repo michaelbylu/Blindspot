@@ -1,7 +1,7 @@
 {
     "lines": [        
         {
-            "dialogue": "I almost ran out of time on that exam…",
+            "dialogue": "I ran out of time on that exam....",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "0",
@@ -17,7 +17,7 @@
             "name": "Jasmine"
         },
         {
-            "dialogue":"Same here. That was so frustrating….",
+            "dialogue":"Same here. That was so frustrating....",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "2",
@@ -25,7 +25,7 @@
             "name": "Meimei"
         },
         {   
-            "dialogue":"That study guide provided by the professor didn’t help at all.",
+            "dialogue":"That study guide provided by the professor didn't help at all.",
             "illustration": "Jasmine_speaking",
             "frame": "dialogue-box",
             "lineIndex": "3",
@@ -41,7 +41,7 @@
             "name": "Jasmine"
         },
         {
-            "dialogue": "...That’s nice of Jasmine to say so...",
+            "dialogue": "...That's nice of Jasmine to say so...",
             "illustration": "Mei_speaking",
             "frame": "inner_thoughts1",
             "lineIndex": "5",
@@ -57,7 +57,7 @@
             "name": "Meimei"
         },
         {   
-            "dialogue":"Yeah, I believe Frank will be here soon.",
+            "dialogue":"Yeah, I think Frank will be here soon.",
             "illustration": "Jasmine_speaking",
             "frame": "dialogue-box",
             "lineIndex": "7",
@@ -73,7 +73,7 @@
             "name": "Jasmine"
         },
         {
-            "dialogue":"Yeah, It's him.",
+            "dialogue":"Yeah, it's him.",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "9",
@@ -105,7 +105,7 @@
             "name": "Jasmine"
         },
         {
-            "dialogue":"Yeah, that was a tough class… Have a seat.",
+            "dialogue":"Yeah, that was a tough class.... Have a seat.",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "13",
@@ -121,7 +121,7 @@
             "name": "Frank"
         },
         {
-            "dialogue": "Did you guys see the ESPN comments by the coach? So obvious he’s for the West Coast.",
+            "dialogue": "Did you guys see the ESPN comments by the coach? So obvious he's for the Raiders.",
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "15",
@@ -129,7 +129,7 @@
             "name": "Frank"
         },
         {                      
-            "dialogue":"Yeah! Which team do you think will win this year’s Vince Lombardi Trophy?",
+            "dialogue":"Yeah! Who do you think will win this year's Vince Lombardi Trophy?",
             "illustration": "Jasmine_speaking",
             "frame": "dialogue-box",
             "lineIndex": "16",
@@ -153,7 +153,7 @@
             "name": "Frank"
         },
         {
-            "dialogue": "But all the experts are betting on the West Coast team",
+            "dialogue": "But all the experts are betting on the Raiders",
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "19",
@@ -161,7 +161,7 @@
             "name": "Frank"
         },
         {
-            "dialogue": "By the way, guess who will perform at the halftime show this year!",
+            "dialogue": "By the way, guess who will perform at the Super Bowl halftime show this year!",
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "19a",
@@ -169,7 +169,7 @@
             "name": "Frank"
         },
         {                      
-            "dialogue":"Lady Gaga? Right? I cannot wait to see her!",
+            "dialogue":"Lady Gaga? Right? I can't wait to see her!",
             "illustration": "Jasmine_speaking",
             "frame": "dialogue-box",
             "lineIndex": "20",
@@ -185,7 +185,7 @@
             "name": ""
         },
         {
-            "dialogue":"Wait… What are you guys talking about?",
+            "dialogue":"Wait... What are you guys talking about?",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "22",
@@ -193,7 +193,7 @@
             "name": "Meimei"
         },
         {                      
-            "dialogue":"Um…… Have you heard of the Super Bowl before?",
+            "dialogue":"Um.... Have you heard of the Super Bowl before?",
             "illustration": "Jasmine_speaking",
             "frame": "dialogue-box",
             "lineIndex": "23",
@@ -225,7 +225,7 @@
             "name": "Jasmine"
         },
         {
-            "dialogue":"Oh really? The Squidward with Travis Scott? I will try to find some videos on YouTube and take a look at them later.",
+            "dialogue":"Oh really? Squidward with Travis Scott? I will try to find some YouTube videos later.",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "25b",
@@ -233,7 +233,7 @@
             "name": "Meimei"
         },
         {
-            "dialogue": "Yeah. And I know Budweiser beer commercials with Clydesdale horses are always getting a lot of attention!",
+            "dialogue": "Yeah. And I know Budweiser commercials with Clydesdale horses are always getting a lot of attention!",
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "26a",
@@ -241,7 +241,7 @@
             "name": "Frank"
         },
         {
-            "dialogue":"Um… the Clydesdale horses? Actually, I’m not a fan of beer... That sounds quite familiar but I really don’t remember it...",
+            "dialogue":"Um... the Clydesdale horses? That sounds quite familiar but I really don't remember it....",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "26b",
@@ -249,7 +249,7 @@
             "name": "Meimei"
         },
         {                      
-            "dialogue":"You’re right! And the Vince Lombardi trophy is named after the coach who won the first two Super Bowls.",
+            "dialogue":"You're right! And the Vince Lombardi trophy is named after the coach who won the first two Super Bowls.",
             "illustration": "Jasmine_speaking",
             "frame": "dialogue-box",
             "lineIndex": "27a",
@@ -257,7 +257,7 @@
             "name": "Jasmine"
         },
         {
-            "dialogue":"Oh, that trophy has its own name?  Vince Lombardi? I believe he must be a very famous person in the football league.",
+            "dialogue":"Oh, that trophy has its own name?  Vince Lombardi? I believe he must be a very famous football person.",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "27b",
@@ -265,7 +265,7 @@
             "name": "Meimei"
         },
         {                      
-            "dialogue":"Meimei if you are interested in the Super Bowl, we can always share some interesting stories with you.",
+            "dialogue":"Meimei, if you're interested in the Super Bowl, we can always share some interesting stories with you.",
             "illustration": "Jasmine_speaking",
             "frame": "dialogue-box",
             "lineIndex": "28",
@@ -273,7 +273,7 @@
             "name": "Jasmine"
         },
         {       
-            "dialogue":"Yeah…. Sure. But how about we grab something to eat first? I’m starving now.",
+            "dialogue":"Yeah.... Sure. But how about we grab something to eat first? I'm starving now.",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "29",
@@ -282,7 +282,7 @@
         },
 
         {       
-            "dialogue":"Yeah…. Sure. But how about we grab something to eat first? I’m starving now.",
+            "dialogue":"Yeah.... Sure. But how about we grab something to eat first? I'm starving now.",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "29",
@@ -314,7 +314,7 @@
             "name": ""
         },
         {                      
-            "dialogue":"I just ate pizza yesterday. Let's grab something new…",
+            "dialogue":"I just ate pizza yesterday. Let's grab something new....",
             "illustration": "Mei_speaking",
             "frame": "inner_thoughts1",
             "lineIndex": "pizza",
@@ -322,7 +322,7 @@
             "name": ""
         },
         {                      
-            "dialogue":"Wow, they got Pork dumplings here? Let’s have a try!",
+            "dialogue":"Wow, they got Pork dumplings here? Let's have a try!",
             "illustration": "Mei_speaking",
             "frame": "inner_thoughts1",
             "lineIndex": "dumpling",
@@ -405,7 +405,7 @@
             "name": "Jasmine"
         },
         {
-            "dialogue": "...That’s a little bit complicated...",
+            "dialogue": "...That's a little bit complicated...",
             "illustration": "Mei_speaking",
             "frame": "inner_thoughts1",
             "lineIndex": "37",
@@ -418,7 +418,7 @@
 
 
         {
-            "dialogue": "Sounds great! Is there something like the halftime show in the Spring Festival?",
+            "dialogue": "Sounds great! Is there something like the halftime show in the Lunar New Year?",
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "38a",
@@ -426,7 +426,7 @@
             "name": "Frank"
         },
         {
-            "dialogue": "We called it Spring Festival Gala! It’s a Chinese New Year special!",
+            "dialogue": "We called it the Spring Festival Gala! It's a Chinese New Year special!",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "38b",
@@ -458,7 +458,7 @@
             "name": "Meimei"
         },
         {                      
-            "dialogue":"Nice! Please let me know if you have a party for it, I’d like to join!",
+            "dialogue":"Nice! Please let me know if you have a party for it, I'd like to join!",
             "illustration": "Jasmine_speaking",
             "frame": "dialogue-box",
             "lineIndex": "39c",
@@ -466,7 +466,7 @@
             "name": "Jasmine"
         },
         {
-            "dialogue": "Oh. That's the lunar calendar right? So did you get used to our calendar now?",
+            "dialogue": "Oh. That's the lunar calendar, right? So are you used to our calendar now?",
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "40a",
@@ -498,7 +498,7 @@
             "name": "Meimei"
         },
         {
-            "dialogue": "It’s ok. Totally understood.",
+            "dialogue": "It's ok. Totally understood.",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "42",
