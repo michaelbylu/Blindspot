@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 public class Chapter1Manager : MonoBehaviour
 {
     public GameObject[] clocks;
+    public GameObject blocks;
     public GameObject book;
     public GameObject puzzle1_1;
     public GameObject puzzle1_2;
@@ -71,6 +72,7 @@ public class Chapter1Manager : MonoBehaviour
                 break;
             case 2: //When first part dialogues end and the book is ready for click
                 book.GetComponent<BookController>().EnableClick();
+                blocks.SetActive(false);
                 break;
             case 3: //When book is clicked, show puzzle1-1
                 puzzle1_1.SetActive(true);
@@ -151,6 +153,11 @@ public class Chapter1Manager : MonoBehaviour
             logger.SendLogs();
         }
         AudioFadeOut(0f);
+        foreach(FadeInOut f in GameObject.FindObjectsOfType<FadeInOut>()) {
+            f.speed = 2f;
+            f.StartFadingOut();
+        }
+        yield return new WaitForSeconds(2f);
         flashback.SetActive(true);
         VideoPlayer videoPlayer = flashback.GetComponent<VideoPlayer>();
         if(jsonReader.CheckLog("19") && jsonReader.CheckLog("puzzle2-2A")) {

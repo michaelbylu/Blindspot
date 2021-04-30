@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
+using System;
 
 public class JsonReader : MonoBehaviour
 {
     public int chapterIndex = 1;
-    public TextAsset linesJson;
-    public TextAsset optionsJson;
+    public string linesJson;
+    public string optionsJson;
     public GameObject nextBtn;
     public GameObject lineObject;
     private string currentLine = "0";
@@ -19,8 +21,12 @@ public class JsonReader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        testLines = JsonUtility.FromJson<Lines>(linesJson.text);
-        testOptions = JsonUtility.FromJson<Options>(optionsJson.text);
+        string path = Application.streamingAssetsPath + String.Format("/{0}.json", linesJson);
+        string contents = File.ReadAllText(path);
+        testLines = JsonUtility.FromJson<Lines>(contents);
+        path = Application.streamingAssetsPath + String.Format("/{0}.json", optionsJson);
+        contents = File.ReadAllText(path);
+        testOptions = JsonUtility.FromJson<Options>(contents);
         lineLog = new ArrayList();
     }
 

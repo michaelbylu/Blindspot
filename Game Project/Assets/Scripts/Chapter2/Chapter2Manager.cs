@@ -190,6 +190,11 @@ public class Chapter2Manager : MonoBehaviour
             logger.SendLogs();
         }
         AudioFadeOut(0f);
+        foreach(FadeInOut f in GameObject.FindObjectsOfType<FadeInOut>()) {
+            f.speed = 1f;
+            f.StartFadingOut();
+        }
+        yield return new WaitForSeconds(2f);
         flashback.SetActive(true);
         VideoPlayer videoPlayer = flashback.GetComponent<VideoPlayer>();
         if(currentDifficulty == "A" || currentDifficulty == "B") {

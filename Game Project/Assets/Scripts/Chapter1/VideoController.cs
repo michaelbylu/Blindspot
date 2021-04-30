@@ -21,7 +21,7 @@ public class VideoController : MonoBehaviour
         if(videoPlayer.isPlaying && !isPlayed) {
             isPlayed = true;
         }
-        if(isPlayed && !videoPlayer.isPlaying) {
+        if(isPlayed && !videoPlayer.isPlaying && videoPlayer.frame > (long)videoPlayer.frameCount - 5) {
             if(GameObject.FindGameObjectWithTag("GameController").name.StartsWith("Chapter1")) {
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
                 PlayerPrefs.SetInt("1", 1);
@@ -31,10 +31,10 @@ public class VideoController : MonoBehaviour
                 PlayerPrefs.SetInt("2", 1);
             } 
             else if(GameObject.FindGameObjectWithTag("GameController").name.StartsWith("Chapter3")){
+                GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter3Manager>().ChangeStage();
                 PlayerPrefs.SetInt("3", 1);
             }
             gameObject.SetActive(false);
-            SceneManager.LoadScene(0);
         }
     }
 

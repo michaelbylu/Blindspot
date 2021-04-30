@@ -72,8 +72,10 @@ public class PlayerController : MonoBehaviour
             canMove = false;
             GetComponentInChildren<SpriteRenderer>().sortingOrder = -2;
             animator.SetBool("isSit", true);
-            if(chair.GetComponentInChildren<FadeInOut>() != null) {
-                chair.GetComponentInChildren<FadeInOut>().gameObject.SetActive(false);
+            foreach(FadeInOut f in chair.GetComponentsInChildren<FadeInOut>()) {
+                if(f.blinkAtStart) {
+                    f.gameObject.SetActive(false);
+                }
             }
             if(chair.GetComponentInChildren<ChairController>() != null) {
                 chair.GetComponentInChildren<ChairController>().enabled = false;

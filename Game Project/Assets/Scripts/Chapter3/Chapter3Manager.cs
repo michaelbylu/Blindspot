@@ -125,6 +125,9 @@ public class Chapter3Manager : MonoBehaviour
                 }
                 StartCoroutine(EnableOutro());
                 break;
+            case 13:
+                SceneManager.LoadScene(0);
+                break;
             default:
                 break;
         }
@@ -158,13 +161,25 @@ public class Chapter3Manager : MonoBehaviour
             logger.SendLogs();
         }
         AudioFadeOut(0f);
+        foreach(SpriteRenderer f in GameObject.FindObjectsOfType<SpriteRenderer>()) {
+            if(f.GetComponent<FadeInOut>() == null) {
+                FadeInOut fadeInOut = f.gameObject.AddComponent<FadeInOut>();
+                fadeInOut.speed = 1f;
+                fadeInOut.StartFadingOut();
+            }
+            else {
+                f.GetComponent<FadeInOut>().speed = 1f;
+                f.GetComponent<FadeInOut>().StartFadingOut();
+            }
+        }
+        yield return new WaitForSeconds(2f);
         flashback.SetActive(true);
         VideoPlayer videoPlayer = flashback.GetComponent<VideoPlayer>();
         if(currentDifficulty == "A" || currentDifficulty == "B") {
-            videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Chapter3FBandEnding_final.mp4");                   
+            videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Chapter3FBandEnding_finalfinal.mp4");                   
         }
         else {
-            videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Chapter3FBandEnding_final.mp4");
+            videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Chapter3FBandEnding_finalfinal.mp4");
         }
         RenderTexture rt = new RenderTexture(1920, 1080, 24, RenderTextureFormat.ARGB32);
         rt.Create();

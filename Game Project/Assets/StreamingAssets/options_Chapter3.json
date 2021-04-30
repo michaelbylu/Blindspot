@@ -1,0 +1,48 @@
+{
+    "options": 
+    [
+        {
+            "optionIndex": "6",
+            "optionLines":
+            [
+                "Um… Not really. Studying in the library is not my life.",
+                "Guys, that's not true! Don't think of me as a nerd…"
+
+            ],
+            "nextLines":
+            [
+                "7",
+                "7"
+            ],
+            "illustration": "Mei_make_choices"
+        },
+        {
+            "optionIndex": "26",
+            "optionLines":
+            [
+                "It's ok frank. Don't worry about me. Go ahead.",
+                " I'm doing good now. I will join you guys later"
+            ],
+            "nextLines":
+            [
+                "27",
+                "27"
+            ],
+            "illustration": "Mei_make_choices"
+        },
+        {
+            "optionIndex": "41",
+            "optionLines":
+            [                
+                "So why did they have this kind of stereotype for Asians?",
+                "Maybe I should try other ways to get closer with them?"
+            ],
+            "nextLines":
+            [
+                "42",
+                "43"
+            ],
+            "illustration": "Mei_make_choices"
+        }
+    ]
+}

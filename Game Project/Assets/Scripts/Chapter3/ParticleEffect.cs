@@ -9,6 +9,7 @@ public class ParticleEffect : MonoBehaviour
     public float duration;
     private ParticleSystem ps;
     // Start is called before the first frame update
+    
     void Start()
     {
         ps = GetComponent<ParticleSystem>();
