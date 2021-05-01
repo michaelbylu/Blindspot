@@ -47,6 +47,9 @@ public class ShadowPuzzleManager : MonoBehaviour
     }
 
     IEnumerator EnableNextCrowd() {
+        if(shadow.marker.activeSelf) {
+            shadow.marker.SetActive(false);
+        }
         shadow.GetComponent<FadeInOut>().StartFadingOut();
         yield return new WaitForSeconds(3f);
         crowd[stage - 1].GetComponent<Bubble>().FadeOut();

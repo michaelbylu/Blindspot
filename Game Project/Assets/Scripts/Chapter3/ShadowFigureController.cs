@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class ShadowFigureController : MonoBehaviour
 {
+    public GameObject marker;
     public float moveSpeed;
     private bool isWalking = false;
     private Vector3 destination;
+    private bool markerEnabled = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,10 @@ public class ShadowFigureController : MonoBehaviour
             GetComponent<Animator>().SetBool("isWalking", false);
             isWalking = false;
             transform.position = destination;
+            if(!markerEnabled) {
+                markerEnabled = true;
+                marker.SetActive(true);
+            }
             GetComponentInParent<ShadowPuzzleManager>().ReleasePlayer();
         }
     }

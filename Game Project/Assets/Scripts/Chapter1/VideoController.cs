@@ -32,6 +32,8 @@ public class VideoController : MonoBehaviour
             } 
             else if(GameObject.FindGameObjectWithTag("GameController").name.StartsWith("Chapter3")){
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter3Manager>().ChangeStage();
+                videoPlayer.frame = (long)videoPlayer.frameCount - 5;
+                videoPlayer.Pause();
                 PlayerPrefs.SetInt("3", 1);
             }
             gameObject.SetActive(false);
