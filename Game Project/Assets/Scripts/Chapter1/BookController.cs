@@ -9,7 +9,6 @@ public class BookController : MonoBehaviour
     public AudioClip closeSFX;
     public AudioClip flipSFX;
     public AudioClip openSFX;
-    public BoxCollider2D deskCollider;
     private AudioSource audioSource;
     private int count = 0;
     private bool clickable = false;
@@ -26,7 +25,6 @@ public class BookController : MonoBehaviour
     }
 
     public void EnableClick() {
-        deskCollider.enabled = false;
         GetComponent<FadeInOut>().StartBlinking();
         clickable = true;
     }
@@ -37,7 +35,6 @@ public class BookController : MonoBehaviour
         }
         GetComponent<FadeInOut>().StopBlinking();
         clickable = false;
-        deskCollider.enabled = true;
         GetComponent<SpriteRenderer>().sprite = openedBook;
         audioSource.clip = (count == 0)? openSFX : flipSFX;
         audioSource.Play();

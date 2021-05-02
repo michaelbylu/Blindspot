@@ -25,18 +25,19 @@ public class VideoController : MonoBehaviour
             if(GameObject.FindGameObjectWithTag("GameController").name.StartsWith("Chapter1")) {
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter1Manager>().ChangeStage();
                 PlayerPrefs.SetInt("1", 1);
+                gameObject.SetActive(false);
             }
             else if(GameObject.FindGameObjectWithTag("GameController").name.StartsWith("Chapter2")){
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter2Manager>().ChangeStage();
                 PlayerPrefs.SetInt("2", 1);
+                gameObject.SetActive(false);
             } 
             else if(GameObject.FindGameObjectWithTag("GameController").name.StartsWith("Chapter3")){
-                GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter3Manager>().ChangeStage();
-                videoPlayer.frame = (long)videoPlayer.frameCount - 5;
+                //GameObject.FindGameObjectWithTag("GameController").GetComponent<Chapter3Manager>().ChangeStage();
+                videoPlayer.frame = (long)videoPlayer.frameCount - 20;
                 videoPlayer.Pause();
                 PlayerPrefs.SetInt("3", 1);
-            }
-            gameObject.SetActive(false);
+            }      
         }
     }
 

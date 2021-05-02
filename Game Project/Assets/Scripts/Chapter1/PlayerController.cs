@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public AnimatorOverrideController[] animatorOverrideControllers;
     public float moveSpeed = 2.0f;
     public Transform chair;
+    public int sitSortingOrder = 0;
     private Vector3 target;
     private bool isMoving = false;
     private bool isSeated = false;
@@ -70,7 +71,12 @@ public class PlayerController : MonoBehaviour
             isMoving = false;
             isSeated = true;
             canMove = false;
-            GetComponentInChildren<SpriteRenderer>().sortingOrder = -2;
+            if(sitSortingOrder != 0) {
+                GetComponentInChildren<SpriteRenderer>().sortingOrder = sitSortingOrder;
+            }
+            else {
+                GetComponentInChildren<SpriteRenderer>().sortingOrder = -2;
+            }
             animator.SetBool("isSit", true);
             foreach(FadeInOut f in chair.GetComponentsInChildren<FadeInOut>()) {
                 if(f.blinkAtStart) {

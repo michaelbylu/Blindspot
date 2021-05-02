@@ -28,6 +28,8 @@ public class ChairController : MonoBehaviour
     }
 
     private void OnDisable() {
-        material.SetFloat("_Thickness", 0);
+        if(material != null) {
+            material.SetFloat("_Thickness", 0);
+        }
     }
 }

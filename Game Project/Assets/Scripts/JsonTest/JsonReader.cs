@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 using System.IO;
 using System;
 
@@ -21,12 +22,20 @@ public class JsonReader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string path = Application.streamingAssetsPath + String.Format("/{0}.json", linesJson);
-        string contents = File.ReadAllText(path);
-        testLines = JsonUtility.FromJson<Lines>(contents);
-        path = Application.streamingAssetsPath + String.Format("/{0}.json", optionsJson);
-        contents = File.ReadAllText(path);
-        testOptions = JsonUtility.FromJson<Options>(contents);
+        // string path = System.IO.Path.Combine(Application.streamingAssetsPath, String.Format("{0}.json", linesJson));
+        // WWW reader = new WWW(path);
+        // while (!reader.isDone) {
+        // }
+        // string contents = reader.text;
+        // testLines = JsonUtility.FromJson<Lines>(contents);
+        // path = System.IO.Path.Combine(Application.streamingAssetsPath, String.Format("{0}.json", optionsJson));
+        // reader = new WWW(path);
+        // while (!reader.isDone) {
+        // }
+        // contents = reader.text;
+        // testOptions = JsonUtility.FromJson<Options>(contents);
+        StartCoroutine(LoadLineFromJson());
+        StartCoroutine(LoadOptionFromJson());
         lineLog = new ArrayList();
     }
 
@@ -146,5 +155,21 @@ public class JsonReader : MonoBehaviour
 
     public bool CheckLog(string line) {
         return lineLog.Contains(line);
+    }
+
+    IEnumerator LoadLineFromJson() {
+        string path = System.IO.Path.Combine(Application.streamingAssetsPath, String.Format("{0}.json", linesJson));
+        UnityWebRequest www = UnityWebRequest.Get(path);
+        yield return www.SendWebRequest();
+        string contents = www.downloadHandler.text;
+        testLines = JsonUtility.FromJson<Lines>(contents);
+    }
+
+        IEnumerator LoadOptionFromJson() {
+        string path = System.IO.Path.Combine(Application.streamingAssetsPath, String.Format("{0}.json", optionsJson));
+        UnityWebRequest www = UnityWebRequest.Get(path);
+        yield return www.SendWebRequest();
+        string contents = www.downloadHandler.text;
+        testOptions = JsonUtility.FromJson<Options>(contents);
     }
 }

@@ -83,7 +83,7 @@ public class ColorPuzzleManager : MonoBehaviour
     }
 
     IEnumerator FadeOut() {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(6f);
         foreach(FadeInOut f in transform.GetComponentsInChildren<FadeInOut>()){
             f.StartFadingOut();
         }

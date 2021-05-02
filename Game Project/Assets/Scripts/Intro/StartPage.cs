@@ -16,7 +16,7 @@ public class StartPage : MonoBehaviour
     void Start()
     {
         videoPlayer.gameObject.SetActive(true);
-        videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Intro_with_vo_1.mp4");
+        videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Prologue_final.mp4");
         RenderTexture rt = new RenderTexture(1920, 1080, 24, RenderTextureFormat.ARGB32);
         rt.Create();
         videoPlayer.targetTexture = rt;
