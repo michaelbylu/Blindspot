@@ -18,3 +18,14 @@ All the assets for this project are placed under the [Assets](https://github.com
 * Make sure to include all the custom shaders in build setting.
 
 ## Know issues
+* Using `VideoPlayer.clip` in a webgl build will not display the video as expected. An alternative is to use `VideoPlayer.url` with the path of videos placed in the `StreamingAssets` folder. Below is an example used in the project:
+```
+videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Prologue_final.mp4");
+```
+* `File.ReadAllText()` for reading the content in a file and store it as string is not supported in webgl builds due to secutiry consideration. An alternative is to use `UnityWebRequest.Get()` and pass the IO path of the target file as the paramenter, then access the content string in the `UnityWebRequest.downloadHandler.text` field. Below is an example used in the project:
+```
+string path = System.IO.Path.Combine(Application.streamingAssetsPath, String.Format("{0}.json", optionsJson));
+UnityWebRequest www = UnityWebRequest.Get(path);
+yield return www.SendWebRequest();
+string contents = www.downloadHandler.text;
+```
