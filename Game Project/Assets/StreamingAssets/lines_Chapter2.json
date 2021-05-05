@@ -9,7 +9,7 @@
             "name": "Meimei"
         },
         {
-            "dialogue": "Me too, there was a question that almost took me a half-hour!",
+            "dialogue": "Me too, there was a question that took me a half-hour!",
             "illustration": "Jasmine_speaking",
             "frame": "dialogue-box",
             "lineIndex": "1",
@@ -105,20 +105,12 @@
             "name": "Jasmine"
         },
         {
-            "dialogue":"Yeah, that was a tough class.... Have a seat.",
+            "dialogue":"Yeah, that was a tough class....",
             "illustration": "Mei_speaking",
             "frame": "dialogue-box",
             "lineIndex": "13",
-            "nextLine": "14",
-            "name": "Meimei"
-        },
-        {
-            "dialogue": "Sure. Thanks.",
-            "illustration": "Frank_illustration",
-            "frame": "dialogue-box",
-            "lineIndex": "14",
             "nextLine": "15",
-            "name": "Frank"
+            "name": "Meimei"
         },
         {
             "dialogue": "Did you guys see the ESPN comments by the coach? So obvious he's for the 49ers.",
@@ -137,7 +129,7 @@
             "name": "Jasmine"
         },
         {
-            "dialogue": "...Trophy?...",
+            "dialogue": "...Vince Lombardi Trophy?...",
             "illustration": "Mei_speaking",
             "frame": "inner_thoughts1",
             "lineIndex": "17",
@@ -153,7 +145,7 @@
             "name": "Frank"
         },
         {
-            "dialogue": "But all the experts are betting on the Raiders",
+            "dialogue": "But all the experts are betting on the 49ers.",
             "illustration": "Frank_illustration",
             "frame": "dialogue-box",
             "lineIndex": "19",
@@ -511,7 +503,7 @@
             "frame": "dialogue-box",
             "lineIndex": "afterSharingDumpling",
             "nextLine": "puzzle",
-            "name": "Meimei"
+            "name": "Frank"
         }
     ]
 }
