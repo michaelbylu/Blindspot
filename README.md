@@ -17,7 +17,7 @@ All the assets for this project are placed under the [Assets](https://github.com
 * Install all the packages used in this game from package manager and unity asset store, including [Dotween](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676) and [Universal Render Pipeline](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@11.0/manual/index.html).
 * Make sure to include all the custom shaders in build setting.
 
-## Know issues
+## Known issues
 * Using `VideoPlayer.clip` in a webgl build will not display the video as expected. An alternative is to use `VideoPlayer.url` with the path of videos placed in the `StreamingAssets` folder. Below is an example used in the project:
 ```
 videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Prologue_final.mp4");

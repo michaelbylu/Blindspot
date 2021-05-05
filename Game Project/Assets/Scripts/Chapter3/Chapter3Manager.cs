@@ -172,10 +172,10 @@ public class Chapter3Manager : MonoBehaviour
                 f.GetComponent<FadeInOut>().StartFadingOut();
             }
         }
-        yield return new WaitForSeconds(2f);
         foreach(ParticleSystem p in GameObject.FindObjectsOfType<ParticleSystem>()) {
             p.gameObject.SetActive(false);
         }
+        yield return new WaitForSeconds(2f);
         flashback.SetActive(true);
         VideoPlayer videoPlayer = flashback.GetComponent<VideoPlayer>();
         if(currentDifficulty == "A" || currentDifficulty == "B") {
