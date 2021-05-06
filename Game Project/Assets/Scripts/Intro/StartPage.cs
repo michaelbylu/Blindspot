@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class StartPage : MonoBehaviour
 {
+    public GameObject startButton;
     public GameObject idleMeimei;
     public VideoPlayer videoPlayer;
     public GameObject loadingBar;
@@ -15,13 +16,7 @@ public class StartPage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        videoPlayer.gameObject.SetActive(true);
-        videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Prologue_final.mp4");
-        RenderTexture rt = new RenderTexture(1920, 1080, 24, RenderTextureFormat.ARGB32);
-        rt.Create();
-        videoPlayer.targetTexture = rt;
-        videoPlayer.GetComponent<RawImage>().texture = rt;
-        videoPlayer.Play();
+        
     }
 
     // Update is called once per frame
@@ -62,5 +57,16 @@ public class StartPage : MonoBehaviour
         loadingBar.SetActive(true);
         startPage.SetActive(false);
         idleMeimei.SetActive(false);
+    }
+
+    public void StartPrologue() {
+        videoPlayer.gameObject.SetActive(true);
+        videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Prologue_final.mp4");
+        RenderTexture rt = new RenderTexture(1920, 1080, 24, RenderTextureFormat.ARGB32);
+        rt.Create();
+        videoPlayer.targetTexture = rt;
+        videoPlayer.GetComponent<RawImage>().texture = rt;
+        videoPlayer.Play();
+        startButton.SetActive(false);
     }
 }
