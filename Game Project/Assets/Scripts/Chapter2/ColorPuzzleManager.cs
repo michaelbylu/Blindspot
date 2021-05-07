@@ -8,6 +8,7 @@ public class ColorPuzzleManager : MonoBehaviour
     public GameObject[] BlinkingPuzzles;
     private GameObject selectedOne;
     private bool isCompleted;
+    private bool hintCompleted = false;
     private bool clickable = true;
     private float startTime;
     // Start is called before the first frame update
@@ -16,10 +17,10 @@ public class ColorPuzzleManager : MonoBehaviour
         startTime = Time.time;
         selectedOne = null;
         foreach(GameObject e in colorPuzzles) {
-            e.GetComponent<PolygonCollider2D>().enabled = false;
+            e.GetComponent<BoxCollider2D>().enabled = false;
         }
         foreach(GameObject e in BlinkingPuzzles) {
-            e.GetComponent<PolygonCollider2D>().enabled = true;
+            e.GetComponent<BoxCollider2D>().enabled = true;
             e.GetComponent<ColorPuzzleController>().StartBlinking();
         }
     }
@@ -47,10 +48,14 @@ public class ColorPuzzleManager : MonoBehaviour
             e.GetComponent<ColorPuzzleController>().StopBlinkng();
         }
         else {
+            if(selectedOne == e && !hintCompleted) {
+                return;
+            }
             if(e.GetComponent<ColorPuzzleController>().isBlinking) {
                 foreach(GameObject t in colorPuzzles) {
-                    t.GetComponent<PolygonCollider2D>().enabled = true;
+                    t.GetComponent<BoxCollider2D>().enabled = true;
                 }
+                hintCompleted = true;
             }
             e.GetComponent<SpriteRenderer>().material.SetFloat("_Thickness", 1f);
             e.GetComponent<ColorPuzzleController>().StopBlinkng();

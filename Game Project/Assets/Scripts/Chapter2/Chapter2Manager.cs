@@ -37,6 +37,9 @@ public class Chapter2Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.F10)) {
+            ChangeStage();
+        }
         if(Input.GetKeyDown(KeyCode.R) && currentStage >= 14) {
             SceneManager.LoadScene(2);
         }
@@ -158,9 +161,9 @@ public class Chapter2Manager : MonoBehaviour
     IEnumerator StartGrabFood() {
         markers.SetActive(true);
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().Release();
-        jasmine.GetComponent<NPCController>().StartGrabFood(-7);
+        jasmine.GetComponent<NPCController>().StartGrabFood(-8);
         yield return new WaitForSeconds(3f);
-        frank.GetComponent<NPCController>().StartGrabFood(-6);
+        frank.GetComponent<NPCController>().StartGrabFood(-7);
     }
 
     public void ChangeStage()

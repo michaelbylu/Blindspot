@@ -24,7 +24,7 @@ public class NPCController : MonoBehaviour
         seeker = GetComponent<Seeker>();
         if(currentStage == -1) {
             MoveTo(chair.position);
-            animator.GetComponent<SpriteRenderer>().sortingOrder = -6;
+            animator.GetComponent<SpriteRenderer>().sortingOrder = -7;
         }
     }
 
