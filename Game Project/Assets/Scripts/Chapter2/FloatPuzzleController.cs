@@ -52,7 +52,7 @@ public class FloatPuzzleController : MonoBehaviour
 
     private void OnMouseUp() {
         FloatingTextManager ftm = GameObject.FindGameObjectWithTag("Respawn").GetComponent<FloatingTextManager>();
-        if(destination != null && Vector3.Distance(gameObject.transform.position, destination.position) < 0.7f && ftm.PuzzlePlaced(index)) {
+        if(destination != null && Vector3.Distance(gameObject.transform.position, destination.position) < 1.2f && ftm.PuzzlePlaced(index)) {
             transform.position = destination.position;
             transform.localScale = new Vector3(1f, 1f, 1f);
             GetComponent<PolygonCollider2D>().enabled = false;

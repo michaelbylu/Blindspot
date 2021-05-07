@@ -201,8 +201,8 @@ GameObject:
   - component: {fileID: 14649534}
   - component: {fileID: 14649533}
   - component: {fileID: 14649532}
-  - component: {fileID: 14649531}
   - component: {fileID: 14649535}
+  - component: {fileID: 14649531}
   m_Layer: 0
   m_Name: chunwan4
   m_TagString: Untagged
@@ -210,8 +210,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!60 &14649531
-PolygonCollider2D:
+--- !u!61 &14649531
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -233,22 +233,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.38, y: 1.23}
-      - {x: -0.39999998, y: 1.22}
-      - {x: -0.45999998, y: 1.23}
-      - {x: -0.59999996, y: 1.23}
-      - {x: -0.64, y: 1.22}
-      - {x: -0.64, y: 1.23}
-      - {x: -1.2099999, y: 1.23}
-      - {x: -1.23, y: 1.22}
-      - {x: -1.23, y: -1.12}
-      - {x: -1.2099999, y: -1.22}
-      - {x: -1.1999999, y: -1.23}
-      - {x: 1.23, y: -1.23}
-      - {x: 1.23, y: 1.22}
-      - {x: 1.1899999, y: 1.23}
+  serializedVersion: 2
+  m_Size: {x: 2.46, y: 2.45}
+  m_EdgeRadius: 0
 --- !u!114 &14649532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,6 +251,7 @@ MonoBehaviour:
   destination: {fileID: 427307275}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!212 &14649533
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2202,8 +2190,8 @@ GameObject:
   - component: {fileID: 322902550}
   - component: {fileID: 322902549}
   - component: {fileID: 322902552}
-  - component: {fileID: 322902551}
   - component: {fileID: 322902553}
+  - component: {fileID: 322902551}
   m_Layer: 0
   m_Name: chunwan3
   m_TagString: Untagged
@@ -2277,8 +2265,8 @@ Transform:
   m_Father: {fileID: 1705803903}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &322902551
-PolygonCollider2D:
+--- !u!61 &322902551
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2300,42 +2288,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.23, y: -1.0849999}
-      - {x: 1.22, y: -0.775}
-      - {x: 1.23, y: -0.635}
-      - {x: 1.23, y: -0.195}
-      - {x: 1.22, y: -0.065}
-      - {x: 1.23, y: 0.005}
-      - {x: 1.23, y: 1.155}
-      - {x: 1.22, y: 1.225}
-      - {x: 1.22, y: 1.235}
-      - {x: 1.05, y: 1.235}
-      - {x: 1.01, y: 1.225}
-      - {x: 0.94, y: 1.235}
-      - {x: 0.83, y: 1.225}
-      - {x: 0.75, y: 1.2149999}
-      - {x: 0.63, y: 1.2049999}
-      - {x: 0.59, y: 1.225}
-      - {x: 0.51, y: 1.2149999}
-      - {x: 0.35, y: 1.235}
-      - {x: 0.14999999, y: 1.235}
-      - {x: 0.089999996, y: 1.225}
-      - {x: 0.049999997, y: 1.235}
-      - {x: -0.049999997, y: 1.235}
-      - {x: -0.19, y: 1.225}
-      - {x: -0.26999998, y: 1.235}
-      - {x: -1.0699999, y: 1.235}
-      - {x: -1.09, y: 1.2149999}
-      - {x: -1.1899999, y: 1.235}
-      - {x: -1.22, y: 1.235}
-      - {x: -1.23, y: 1.225}
-      - {x: -1.23, y: -1.225}
-      - {x: -1.22, y: -1.235}
-      - {x: 1.2099999, y: -1.235}
-      - {x: 1.22, y: -1.225}
-      - {x: 1.23, y: -1.165}
+  serializedVersion: 2
+  m_Size: {x: 2.46, y: 2.47}
+  m_EdgeRadius: 0
 --- !u!114 &322902552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2351,6 +2306,7 @@ MonoBehaviour:
   destination: {fileID: 170452935}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!114 &322902553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2928,8 +2884,8 @@ GameObject:
   - component: {fileID: 394528404}
   - component: {fileID: 394528403}
   - component: {fileID: 394528406}
-  - component: {fileID: 394528405}
   - component: {fileID: 394528407}
+  - component: {fileID: 394528405}
   m_Layer: 0
   m_Name: jiaozi3
   m_TagString: Untagged
@@ -3003,8 +2959,8 @@ Transform:
   m_Father: {fileID: 394370707}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &394528405
-PolygonCollider2D:
+--- !u!61 &394528405
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3026,48 +2982,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.23, y: -0.87}
-      - {x: 1.22, y: -0.79999995}
-      - {x: 1.23, y: -0.75}
-      - {x: 1.23, y: 0.39}
-      - {x: 1.22, y: 0.45}
-      - {x: 1.23, y: 0.47}
-      - {x: 1.23, y: 0.52}
-      - {x: 1.22, y: 0.53999996}
-      - {x: 1.23, y: 0.63}
-      - {x: 1.23, y: 0.76}
-      - {x: 1.2099999, y: 0.77}
-      - {x: 1.23, y: 0.88}
-      - {x: 1.23, y: 1.2099999}
-      - {x: 1.2099999, y: 1.22}
-      - {x: 0.74, y: 1.22}
-      - {x: 0.7, y: 1.23}
-      - {x: 0.59999996, y: 1.23}
-      - {x: 0.57, y: 1.22}
-      - {x: 0.51, y: 1.23}
-      - {x: 0.22999999, y: 1.23}
-      - {x: 0.02, y: 1.2099999}
-      - {x: 0.02, y: 1.23}
-      - {x: -0.04, y: 1.22}
-      - {x: -0.08, y: 1.23}
-      - {x: -0.35, y: 1.23}
-      - {x: -0.48, y: 1.22}
-      - {x: -0.68, y: 1.23}
-      - {x: -0.71999997, y: 1.2099999}
-      - {x: -0.82, y: 1.23}
-      - {x: -0.89, y: 1.23}
-      - {x: -1.02, y: 1.22}
-      - {x: -1.04, y: 1.23}
-      - {x: -1.0799999, y: 1.23}
-      - {x: -1.14, y: 1.22}
-      - {x: -1.1999999, y: 1.23}
-      - {x: -1.23, y: 1.22}
-      - {x: -1.23, y: -1.23}
-      - {x: 1.22, y: -1.23}
-      - {x: 1.22, y: -1.2099999}
-      - {x: 1.23, y: -1.13}
+  serializedVersion: 2
+  m_Size: {x: 2.46, y: 2.46}
+  m_EdgeRadius: 0
 --- !u!114 &394528406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3083,6 +3000,7 @@ MonoBehaviour:
   destination: {fileID: 220444988}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!114 &394528407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3418,8 +3336,8 @@ GameObject:
   - component: {fileID: 463099217}
   - component: {fileID: 463099220}
   - component: {fileID: 463099219}
-  - component: {fileID: 463099218}
   - component: {fileID: 463099221}
+  - component: {fileID: 463099218}
   m_Layer: 0
   m_Name: chunlian3
   m_TagString: Untagged
@@ -3441,8 +3359,8 @@ Transform:
   m_Father: {fileID: 536929237}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &463099218
-PolygonCollider2D:
+--- !u!61 &463099218
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3464,27 +3382,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.23, y: 1.1}
-      - {x: 1.22, y: 1.2099999}
-      - {x: 1.2099999, y: 1.23}
-      - {x: 0.55, y: 1.23}
-      - {x: 0.42, y: 1.22}
-      - {x: 0.38, y: 1.23}
-      - {x: -0.049999997, y: 1.23}
-      - {x: -0.11, y: 1.22}
-      - {x: -0.16, y: 1.23}
-      - {x: -0.32, y: 1.23}
-      - {x: -0.39999998, y: 1.22}
-      - {x: -0.45, y: 1.23}
-      - {x: -0.69, y: 1.23}
-      - {x: -0.71, y: 1.22}
-      - {x: -0.79999995, y: 1.23}
-      - {x: -1.1999999, y: 1.23}
-      - {x: -1.23, y: 1.1999999}
-      - {x: -1.23, y: -1.23}
-      - {x: 1.23, y: -1.23}
+  serializedVersion: 2
+  m_Size: {x: 2.46, y: 2.45}
+  m_EdgeRadius: 0
 --- !u!114 &463099219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3500,6 +3400,7 @@ MonoBehaviour:
   destination: {fileID: 744228879}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!212 &463099220
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3860,8 +3761,8 @@ GameObject:
   - component: {fileID: 491340425}
   - component: {fileID: 491340424}
   - component: {fileID: 491340427}
-  - component: {fileID: 491340426}
   - component: {fileID: 491340428}
+  - component: {fileID: 491340426}
   m_Layer: 0
   m_Name: chunwan4
   m_TagString: Untagged
@@ -3935,8 +3836,8 @@ Transform:
   m_Father: {fileID: 1705803903}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &491340426
-PolygonCollider2D:
+--- !u!61 &491340426
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3958,22 +3859,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.38, y: 1.23}
-      - {x: -0.39999998, y: 1.22}
-      - {x: -0.45999998, y: 1.23}
-      - {x: -0.59999996, y: 1.23}
-      - {x: -0.64, y: 1.22}
-      - {x: -0.64, y: 1.23}
-      - {x: -1.2099999, y: 1.23}
-      - {x: -1.23, y: 1.22}
-      - {x: -1.23, y: -1.12}
-      - {x: -1.2099999, y: -1.22}
-      - {x: -1.1999999, y: -1.23}
-      - {x: 1.23, y: -1.23}
-      - {x: 1.23, y: 1.22}
-      - {x: 1.1899999, y: 1.23}
+  serializedVersion: 2
+  m_Size: {x: 2.46, y: 2.46}
+  m_EdgeRadius: 0
 --- !u!114 &491340427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3989,6 +3877,7 @@ MonoBehaviour:
   destination: {fileID: 1408917146}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!114 &491340428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4559,8 +4448,8 @@ GameObject:
   - component: {fileID: 533485444}
   - component: {fileID: 533485443}
   - component: {fileID: 533485446}
-  - component: {fileID: 533485445}
   - component: {fileID: 533485447}
+  - component: {fileID: 533485445}
   m_Layer: 0
   m_Name: chunlian3
   m_TagString: Untagged
@@ -4634,8 +4523,8 @@ Transform:
   m_Father: {fileID: 395146164}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &533485445
-PolygonCollider2D:
+--- !u!61 &533485445
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4657,27 +4546,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.23, y: 1.1}
-      - {x: 1.22, y: 1.2099999}
-      - {x: 1.2099999, y: 1.23}
-      - {x: 0.55, y: 1.23}
-      - {x: 0.42, y: 1.22}
-      - {x: 0.38, y: 1.23}
-      - {x: -0.049999997, y: 1.23}
-      - {x: -0.11, y: 1.22}
-      - {x: -0.16, y: 1.23}
-      - {x: -0.32, y: 1.23}
-      - {x: -0.39999998, y: 1.22}
-      - {x: -0.45, y: 1.23}
-      - {x: -0.69, y: 1.23}
-      - {x: -0.71, y: 1.22}
-      - {x: -0.79999995, y: 1.23}
-      - {x: -1.1999999, y: 1.23}
-      - {x: -1.23, y: 1.1999999}
-      - {x: -1.23, y: -1.23}
-      - {x: 1.23, y: -1.23}
+  serializedVersion: 2
+  m_Size: {x: 2.46, y: 2.46}
+  m_EdgeRadius: 0
 --- !u!114 &533485446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4693,6 +4564,7 @@ MonoBehaviour:
   destination: {fileID: 2108527367}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!114 &533485447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4938,8 +4810,8 @@ GameObject:
   - component: {fileID: 541961512}
   - component: {fileID: 541961515}
   - component: {fileID: 541961514}
-  - component: {fileID: 541961513}
   - component: {fileID: 541961516}
+  - component: {fileID: 541961513}
   m_Layer: 0
   m_Name: chunwan3
   m_TagString: Untagged
@@ -4961,8 +4833,8 @@ Transform:
   m_Father: {fileID: 595346525}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &541961513
-PolygonCollider2D:
+--- !u!61 &541961513
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4984,42 +4856,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.23, y: -1.0849999}
-      - {x: 1.22, y: -0.775}
-      - {x: 1.23, y: -0.635}
-      - {x: 1.23, y: -0.195}
-      - {x: 1.22, y: -0.065}
-      - {x: 1.23, y: 0.005}
-      - {x: 1.23, y: 1.155}
-      - {x: 1.22, y: 1.225}
-      - {x: 1.22, y: 1.235}
-      - {x: 1.05, y: 1.235}
-      - {x: 1.01, y: 1.225}
-      - {x: 0.94, y: 1.235}
-      - {x: 0.83, y: 1.225}
-      - {x: 0.75, y: 1.2149999}
-      - {x: 0.63, y: 1.2049999}
-      - {x: 0.59, y: 1.225}
-      - {x: 0.51, y: 1.2149999}
-      - {x: 0.35, y: 1.235}
-      - {x: 0.14999999, y: 1.235}
-      - {x: 0.089999996, y: 1.225}
-      - {x: 0.049999997, y: 1.235}
-      - {x: -0.049999997, y: 1.235}
-      - {x: -0.19, y: 1.225}
-      - {x: -0.26999998, y: 1.235}
-      - {x: -1.0699999, y: 1.235}
-      - {x: -1.09, y: 1.2149999}
-      - {x: -1.1899999, y: 1.235}
-      - {x: -1.22, y: 1.235}
-      - {x: -1.23, y: 1.225}
-      - {x: -1.23, y: -1.225}
-      - {x: -1.22, y: -1.235}
-      - {x: 1.2099999, y: -1.235}
-      - {x: 1.22, y: -1.225}
-      - {x: 1.23, y: -1.165}
+  serializedVersion: 2
+  m_Size: {x: 2.46, y: 2.45}
+  m_EdgeRadius: 0
 --- !u!114 &541961514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5035,6 +4874,7 @@ MonoBehaviour:
   destination: {fileID: 1230844886}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!212 &541961515
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6214,8 +6054,8 @@ GameObject:
   - component: {fileID: 714322679}
   - component: {fileID: 714322682}
   - component: {fileID: 714322681}
-  - component: {fileID: 714322680}
   - component: {fileID: 714322683}
+  - component: {fileID: 714322680}
   m_Layer: 0
   m_Name: jiaozi3
   m_TagString: Untagged
@@ -6237,8 +6077,8 @@ Transform:
   m_Father: {fileID: 1107364640}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &714322680
-PolygonCollider2D:
+--- !u!61 &714322680
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6260,48 +6100,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.23, y: -0.87}
-      - {x: 1.22, y: -0.79999995}
-      - {x: 1.23, y: -0.75}
-      - {x: 1.23, y: 0.39}
-      - {x: 1.22, y: 0.45}
-      - {x: 1.23, y: 0.47}
-      - {x: 1.23, y: 0.52}
-      - {x: 1.22, y: 0.53999996}
-      - {x: 1.23, y: 0.63}
-      - {x: 1.23, y: 0.76}
-      - {x: 1.2099999, y: 0.77}
-      - {x: 1.23, y: 0.88}
-      - {x: 1.23, y: 1.2099999}
-      - {x: 1.2099999, y: 1.22}
-      - {x: 0.74, y: 1.22}
-      - {x: 0.7, y: 1.23}
-      - {x: 0.59999996, y: 1.23}
-      - {x: 0.57, y: 1.22}
-      - {x: 0.51, y: 1.23}
-      - {x: 0.22999999, y: 1.23}
-      - {x: 0.02, y: 1.2099999}
-      - {x: 0.02, y: 1.23}
-      - {x: -0.04, y: 1.22}
-      - {x: -0.08, y: 1.23}
-      - {x: -0.35, y: 1.23}
-      - {x: -0.48, y: 1.22}
-      - {x: -0.68, y: 1.23}
-      - {x: -0.71999997, y: 1.2099999}
-      - {x: -0.82, y: 1.23}
-      - {x: -0.89, y: 1.23}
-      - {x: -1.02, y: 1.22}
-      - {x: -1.04, y: 1.23}
-      - {x: -1.0799999, y: 1.23}
-      - {x: -1.14, y: 1.22}
-      - {x: -1.1999999, y: 1.23}
-      - {x: -1.23, y: 1.22}
-      - {x: -1.23, y: -1.23}
-      - {x: 1.22, y: -1.23}
-      - {x: 1.22, y: -1.2099999}
-      - {x: 1.23, y: -1.13}
+  serializedVersion: 2
+  m_Size: {x: 2.46, y: 2.46}
+  m_EdgeRadius: 0
 --- !u!114 &714322681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6317,6 +6118,7 @@ MonoBehaviour:
   destination: {fileID: 1706516135}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!212 &714322682
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7676,7 +7478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineIndex: dumpling
-  distance: 0.7
+  distance: 1.4
   player: {fileID: 1172747467}
   jsonReader: {fileID: 1364587460}
 --- !u!4 &921858746
@@ -7687,7 +7489,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921858744}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.46, y: -1.71, z: 0}
+  m_LocalPosition: {x: -4.46, y: -2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 287540923}
@@ -10665,8 +10467,8 @@ GameObject:
   - component: {fileID: 1305668084}
   - component: {fileID: 1305668083}
   - component: {fileID: 1305668086}
-  - component: {fileID: 1305668085}
   - component: {fileID: 1305668087}
+  - component: {fileID: 1305668085}
   m_Layer: 0
   m_Name: jiaozi4
   m_TagString: Untagged
@@ -10740,8 +10542,8 @@ Transform:
   m_Father: {fileID: 394370707}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1305668085
-PolygonCollider2D:
+--- !u!61 &1305668085
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10763,22 +10565,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.03, y: 1.225}
-      - {x: 0.98999995, y: 1.2149999}
-      - {x: 0.97999996, y: 1.225}
-      - {x: -0.9, y: 1.225}
-      - {x: -0.95, y: 1.2149999}
-      - {x: -1.04, y: 1.225}
-      - {x: -1.18, y: 1.225}
-      - {x: -1.23, y: 1.2049999}
-      - {x: -1.23, y: -0.645}
-      - {x: -1.22, y: -0.695}
-      - {x: -1.23, y: -0.695}
-      - {x: -1.23, y: -1.225}
-      - {x: 1.23, y: -1.225}
-      - {x: 1.23, y: 1.225}
+  serializedVersion: 2
+  m_Size: {x: 2.46, y: 2.45}
+  m_EdgeRadius: 0
 --- !u!114 &1305668086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10794,6 +10583,7 @@ MonoBehaviour:
   destination: {fileID: 2029783191}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!114 &1305668087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10936,8 +10726,8 @@ GameObject:
   - component: {fileID: 1317868798}
   - component: {fileID: 1317868801}
   - component: {fileID: 1317868800}
-  - component: {fileID: 1317868799}
   - component: {fileID: 1317868802}
+  - component: {fileID: 1317868799}
   m_Layer: 0
   m_Name: chunwan1
   m_TagString: Untagged
@@ -10959,8 +10749,8 @@ Transform:
   m_Father: {fileID: 595346525}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1317868799
-PolygonCollider2D:
+--- !u!61 &1317868799
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10982,29 +10772,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.23, y: -1.1999999}
-      - {x: 1.23, y: -0.91999996}
-      - {x: 1.2099999, y: -0.72999996}
-      - {x: 1.23, y: -0.71999997}
-      - {x: 1.23, y: -0.59}
-      - {x: 1.22, y: -0.56}
-      - {x: 1.22, y: -0.37}
-      - {x: 1.23, y: -0.37}
-      - {x: 1.23, y: -0.22}
-      - {x: 1.22, y: -0.14999999}
-      - {x: 1.22, y: 0.22}
-      - {x: 1.23, y: 0.22999999}
-      - {x: 1.23, y: 0.75}
-      - {x: 1.22, y: 0.75}
-      - {x: 1.23, y: 0.84}
-      - {x: 1.23, y: 1.0699999}
-      - {x: 1.22, y: 1.0699999}
-      - {x: 1.23, y: 1.22}
-      - {x: -1.23, y: 1.22}
-      - {x: -1.23, y: -1.22}
-      - {x: 1.2099999, y: -1.22}
+  serializedVersion: 2
+  m_Size: {x: 2.46, y: 2.46}
+  m_EdgeRadius: 0
 --- !u!114 &1317868800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11020,6 +10790,7 @@ MonoBehaviour:
   destination: {fileID: 1066928318}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!212 &1317868801
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11449,8 +11220,8 @@ GameObject:
   - component: {fileID: 1349537232}
   - component: {fileID: 1349537231}
   - component: {fileID: 1349537234}
-  - component: {fileID: 1349537233}
   - component: {fileID: 1349537235}
+  - component: {fileID: 1349537233}
   m_Layer: 0
   m_Name: chunwan1
   m_TagString: Untagged
@@ -11524,8 +11295,8 @@ Transform:
   m_Father: {fileID: 1705803903}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1349537233
-PolygonCollider2D:
+--- !u!61 &1349537233
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11547,29 +11318,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.23, y: -1.1999999}
-      - {x: 1.23, y: -0.91999996}
-      - {x: 1.2099999, y: -0.72999996}
-      - {x: 1.23, y: -0.71999997}
-      - {x: 1.23, y: -0.59}
-      - {x: 1.22, y: -0.56}
-      - {x: 1.22, y: -0.37}
-      - {x: 1.23, y: -0.37}
-      - {x: 1.23, y: -0.22}
-      - {x: 1.22, y: -0.14999999}
-      - {x: 1.22, y: 0.22}
-      - {x: 1.23, y: 0.22999999}
-      - {x: 1.23, y: 0.75}
-      - {x: 1.22, y: 0.75}
-      - {x: 1.23, y: 0.84}
-      - {x: 1.23, y: 1.0699999}
-      - {x: 1.22, y: 1.0699999}
-      - {x: 1.23, y: 1.22}
-      - {x: -1.23, y: 1.22}
-      - {x: -1.23, y: -1.22}
-      - {x: 1.2099999, y: -1.22}
+  serializedVersion: 2
+  m_Size: {x: 2.46, y: 2.44}
+  m_EdgeRadius: 0
 --- !u!114 &1349537234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11585,6 +11336,7 @@ MonoBehaviour:
   destination: {fileID: 409959848}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!114 &1349537235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11868,7 +11620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineIndex: pizza
-  distance: 0.9
+  distance: 1.4
   player: {fileID: 1172747467}
   jsonReader: {fileID: 1364587460}
 --- !u!4 &1379052697
@@ -11896,8 +11648,8 @@ GameObject:
   - component: {fileID: 1394421744}
   - component: {fileID: 1394421743}
   - component: {fileID: 1394421746}
-  - component: {fileID: 1394421745}
   - component: {fileID: 1394421747}
+  - component: {fileID: 1394421745}
   m_Layer: 0
   m_Name: chunlian1
   m_TagString: Untagged
@@ -11971,8 +11723,8 @@ Transform:
   m_Father: {fileID: 395146164}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1394421745
-PolygonCollider2D:
+--- !u!61 &1394421745
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11994,51 +11746,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.775, y: -1.22}
-      - {x: -0.73499995, y: -1.2099999}
-      - {x: -0.625, y: -1.22}
-      - {x: -0.39499998, y: -1.22}
-      - {x: -0.375, y: -1.2099999}
-      - {x: -0.345, y: -1.22}
-      - {x: -0.155, y: -1.22}
-      - {x: -0.105, y: -1.2099999}
-      - {x: 0.044999998, y: -1.22}
-      - {x: 0.275, y: -1.22}
-      - {x: 0.445, y: -1.2099999}
-      - {x: 0.53499997, y: -1.22}
-      - {x: 1.115, y: -1.22}
-      - {x: 1.125, y: -1.2099999}
-      - {x: 1.2049999, y: -1.22}
-      - {x: 1.235, y: -1.1899999}
-      - {x: 1.235, y: -0.96999997}
-      - {x: 1.225, y: -0.95}
-      - {x: 1.225, y: -0.81}
-      - {x: 1.235, y: -0.72999996}
-      - {x: 1.235, y: -0.52}
-      - {x: 1.225, y: -0.45}
-      - {x: 1.235, y: -0.37}
-      - {x: 1.235, y: -0.21}
-      - {x: 1.225, y: -0.11}
-      - {x: 1.225, y: 0.32999998}
-      - {x: 1.235, y: 0.35}
-      - {x: 1.2149999, y: 0.48999998}
-      - {x: 1.235, y: 0.52}
-      - {x: 1.235, y: 0.62}
-      - {x: 1.225, y: 0.65}
-      - {x: 1.235, y: 0.72999996}
-      - {x: 1.235, y: 0.84999996}
-      - {x: 1.225, y: 0.98999995}
-      - {x: 1.235, y: 1.04}
-      - {x: 1.235, y: 1.1}
-      - {x: 1.225, y: 1.22}
-      - {x: -1.235, y: 1.22}
-      - {x: -1.235, y: -1.1999999}
-      - {x: -1.225, y: -1.22}
-      - {x: -0.98499995, y: -1.22}
-      - {x: -0.935, y: -1.2099999}
-      - {x: -0.92499995, y: -1.22}
+  serializedVersion: 2
+  m_Size: {x: 2.47, y: 2.44}
+  m_EdgeRadius: 0
 --- !u!114 &1394421746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12054,6 +11764,7 @@ MonoBehaviour:
   destination: {fileID: 1733740861}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!114 &1394421747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12239,8 +11950,8 @@ GameObject:
   - component: {fileID: 1444349028}
   - component: {fileID: 1444349027}
   - component: {fileID: 1444349030}
-  - component: {fileID: 1444349029}
   - component: {fileID: 1444349031}
+  - component: {fileID: 1444349029}
   m_Layer: 0
   m_Name: chunlian4
   m_TagString: Untagged
@@ -12314,8 +12025,8 @@ Transform:
   m_Father: {fileID: 395146164}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1444349029
-PolygonCollider2D:
+--- !u!61 &1444349029
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12337,21 +12048,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -1.1999999, y: 1.225}
-      - {x: -1.23, y: 1.175}
-      - {x: -1.23, y: 0.98499995}
-      - {x: -1.22, y: 0.895}
-      - {x: -1.23, y: 0.865}
-      - {x: -1.23, y: 0.705}
-      - {x: -1.22, y: 0.705}
-      - {x: -1.22, y: 0.575}
-      - {x: -1.23, y: 0.515}
-      - {x: -1.23, y: -1.2049999}
-      - {x: -1.22, y: -1.225}
-      - {x: 1.23, y: -1.225}
-      - {x: 1.23, y: 1.225}
+  serializedVersion: 2
+  m_Size: {x: 2.46, y: 2.45}
+  m_EdgeRadius: 0
 --- !u!114 &1444349030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12367,6 +12066,7 @@ MonoBehaviour:
   destination: {fileID: 1983507253}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!114 &1444349031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12492,8 +12192,8 @@ GameObject:
   - component: {fileID: 1462560393}
   - component: {fileID: 1462560396}
   - component: {fileID: 1462560395}
-  - component: {fileID: 1462560394}
   - component: {fileID: 1462560397}
+  - component: {fileID: 1462560394}
   m_Layer: 0
   m_Name: jiaozi1
   m_TagString: Untagged
@@ -12515,8 +12215,8 @@ Transform:
   m_Father: {fileID: 1107364640}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1462560394
-PolygonCollider2D:
+--- !u!61 &1462560394
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12538,33 +12238,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.96, y: -1.22}
-      - {x: 1, y: -1.2099999}
-      - {x: 1, y: -1.22}
-      - {x: 1.22, y: -1.22}
-      - {x: 1.23, y: -1.2099999}
-      - {x: 1.23, y: -1.05}
-      - {x: 1.1999999, y: -1.02}
-      - {x: 1.23, y: -0.96}
-      - {x: 1.23, y: -0.87}
-      - {x: 1.2099999, y: -0.76}
-      - {x: 1.23, y: -0.76}
-      - {x: 1.23, y: -0.62}
-      - {x: 1.22, y: -0.53999996}
-      - {x: 1.23, y: -0.45999998}
-      - {x: 1.23, y: 0.45}
-      - {x: 1.2099999, y: 0.58}
-      - {x: 1.23, y: 0.59}
-      - {x: 1.23, y: 0.75}
-      - {x: 1.22, y: 0.79999995}
-      - {x: 1.23, y: 0.87}
-      - {x: 1.23, y: 1.2099999}
-      - {x: 1.22, y: 1.22}
-      - {x: -1.23, y: 1.22}
-      - {x: -1.23, y: -1.2099999}
-      - {x: -1.22, y: -1.22}
+  serializedVersion: 2
+  m_Size: {x: 2.45, y: 2.44}
+  m_EdgeRadius: 0
 --- !u!114 &1462560395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12580,6 +12256,7 @@ MonoBehaviour:
   destination: {fileID: 1749091296}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!212 &1462560396
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14187,8 +13864,8 @@ GameObject:
   - component: {fileID: 1719580491}
   - component: {fileID: 1719580490}
   - component: {fileID: 1719580489}
-  - component: {fileID: 1719580488}
   - component: {fileID: 1719580492}
+  - component: {fileID: 1719580488}
   m_Layer: 0
   m_Name: jiaozi4
   m_TagString: Untagged
@@ -14196,8 +13873,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!60 &1719580488
-PolygonCollider2D:
+--- !u!61 &1719580488
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -14219,22 +13896,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.03, y: 1.225}
-      - {x: 0.98999995, y: 1.2149999}
-      - {x: 0.97999996, y: 1.225}
-      - {x: -0.9, y: 1.225}
-      - {x: -0.95, y: 1.2149999}
-      - {x: -1.04, y: 1.225}
-      - {x: -1.18, y: 1.225}
-      - {x: -1.23, y: 1.2049999}
-      - {x: -1.23, y: -0.645}
-      - {x: -1.22, y: -0.695}
-      - {x: -1.23, y: -0.695}
-      - {x: -1.23, y: -1.225}
-      - {x: 1.23, y: -1.225}
-      - {x: 1.23, y: 1.225}
+  serializedVersion: 2
+  m_Size: {x: 2.46, y: 2.46}
+  m_EdgeRadius: 0
 --- !u!114 &1719580489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14250,6 +13914,7 @@ MonoBehaviour:
   destination: {fileID: 934456524}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!212 &1719580490
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14536,8 +14201,8 @@ GameObject:
   - component: {fileID: 1773290563}
   - component: {fileID: 1773290566}
   - component: {fileID: 1773290565}
-  - component: {fileID: 1773290564}
   - component: {fileID: 1773290567}
+  - component: {fileID: 1773290564}
   m_Layer: 0
   m_Name: chunlian1
   m_TagString: Untagged
@@ -14559,8 +14224,8 @@ Transform:
   m_Father: {fileID: 536929237}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1773290564
-PolygonCollider2D:
+--- !u!61 &1773290564
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -14582,51 +14247,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.775, y: -1.22}
-      - {x: -0.73499995, y: -1.2099999}
-      - {x: -0.625, y: -1.22}
-      - {x: -0.39499998, y: -1.22}
-      - {x: -0.375, y: -1.2099999}
-      - {x: -0.345, y: -1.22}
-      - {x: -0.155, y: -1.22}
-      - {x: -0.105, y: -1.2099999}
-      - {x: 0.044999998, y: -1.22}
-      - {x: 0.275, y: -1.22}
-      - {x: 0.445, y: -1.2099999}
-      - {x: 0.53499997, y: -1.22}
-      - {x: 1.115, y: -1.22}
-      - {x: 1.125, y: -1.2099999}
-      - {x: 1.2049999, y: -1.22}
-      - {x: 1.235, y: -1.1899999}
-      - {x: 1.235, y: -0.96999997}
-      - {x: 1.225, y: -0.95}
-      - {x: 1.225, y: -0.81}
-      - {x: 1.235, y: -0.72999996}
-      - {x: 1.235, y: -0.52}
-      - {x: 1.225, y: -0.45}
-      - {x: 1.235, y: -0.37}
-      - {x: 1.235, y: -0.21}
-      - {x: 1.225, y: -0.11}
-      - {x: 1.225, y: 0.32999998}
-      - {x: 1.235, y: 0.35}
-      - {x: 1.2149999, y: 0.48999998}
-      - {x: 1.235, y: 0.52}
-      - {x: 1.235, y: 0.62}
-      - {x: 1.225, y: 0.65}
-      - {x: 1.235, y: 0.72999996}
-      - {x: 1.235, y: 0.84999996}
-      - {x: 1.225, y: 0.98999995}
-      - {x: 1.235, y: 1.04}
-      - {x: 1.235, y: 1.1}
-      - {x: 1.225, y: 1.22}
-      - {x: -1.235, y: 1.22}
-      - {x: -1.235, y: -1.1999999}
-      - {x: -1.225, y: -1.22}
-      - {x: -0.98499995, y: -1.22}
-      - {x: -0.935, y: -1.2099999}
-      - {x: -0.92499995, y: -1.22}
+  serializedVersion: 2
+  m_Size: {x: 2.47, y: 2.46}
+  m_EdgeRadius: 0
 --- !u!114 &1773290565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14642,6 +14265,7 @@ MonoBehaviour:
   destination: {fileID: 1206925844}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!212 &1773290566
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15480,8 +15104,8 @@ GameObject:
   - component: {fileID: 1880769978}
   - component: {fileID: 1880769977}
   - component: {fileID: 1880769976}
-  - component: {fileID: 1880769975}
   - component: {fileID: 1880769979}
+  - component: {fileID: 1880769975}
   m_Layer: 0
   m_Name: chunlian4
   m_TagString: Untagged
@@ -15489,8 +15113,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!60 &1880769975
-PolygonCollider2D:
+--- !u!61 &1880769975
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -15512,21 +15136,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -1.1999999, y: 1.225}
-      - {x: -1.23, y: 1.175}
-      - {x: -1.23, y: 0.98499995}
-      - {x: -1.22, y: 0.895}
-      - {x: -1.23, y: 0.865}
-      - {x: -1.23, y: 0.705}
-      - {x: -1.22, y: 0.705}
-      - {x: -1.22, y: 0.575}
-      - {x: -1.23, y: 0.515}
-      - {x: -1.23, y: -1.2049999}
-      - {x: -1.22, y: -1.225}
-      - {x: 1.23, y: -1.225}
-      - {x: 1.23, y: 1.225}
+  serializedVersion: 2
+  m_Size: {x: 2.46, y: 2.45}
+  m_EdgeRadius: 0
 --- !u!114 &1880769976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15542,6 +15154,7 @@ MonoBehaviour:
   destination: {fileID: 1865904026}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!212 &1880769977
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16630,8 +16243,8 @@ GameObject:
   - component: {fileID: 2025392306}
   - component: {fileID: 2025392305}
   - component: {fileID: 2025392308}
-  - component: {fileID: 2025392307}
   - component: {fileID: 2025392309}
+  - component: {fileID: 2025392307}
   m_Layer: 0
   m_Name: jiaozi1
   m_TagString: Untagged
@@ -16705,8 +16318,8 @@ Transform:
   m_Father: {fileID: 394370707}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &2025392307
-PolygonCollider2D:
+--- !u!61 &2025392307
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -16728,33 +16341,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.96, y: -1.22}
-      - {x: 1, y: -1.2099999}
-      - {x: 1, y: -1.22}
-      - {x: 1.22, y: -1.22}
-      - {x: 1.23, y: -1.2099999}
-      - {x: 1.23, y: -1.05}
-      - {x: 1.1999999, y: -1.02}
-      - {x: 1.23, y: -0.96}
-      - {x: 1.23, y: -0.87}
-      - {x: 1.2099999, y: -0.76}
-      - {x: 1.23, y: -0.76}
-      - {x: 1.23, y: -0.62}
-      - {x: 1.22, y: -0.53999996}
-      - {x: 1.23, y: -0.45999998}
-      - {x: 1.23, y: 0.45}
-      - {x: 1.2099999, y: 0.58}
-      - {x: 1.23, y: 0.59}
-      - {x: 1.23, y: 0.75}
-      - {x: 1.22, y: 0.79999995}
-      - {x: 1.23, y: 0.87}
-      - {x: 1.23, y: 1.2099999}
-      - {x: 1.22, y: 1.22}
-      - {x: -1.23, y: 1.22}
-      - {x: -1.23, y: -1.2099999}
-      - {x: -1.22, y: -1.22}
+  serializedVersion: 2
+  m_Size: {x: 2.46, y: 2.44}
+  m_EdgeRadius: 0
 --- !u!114 &2025392308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16770,6 +16359,7 @@ MonoBehaviour:
   destination: {fileID: 265692682}
   isBlinking: 0
   blinkSpeed: 1
+  isPlaced: 0
 --- !u!114 &2025392309
 MonoBehaviour:
   m_ObjectHideFlags: 0
