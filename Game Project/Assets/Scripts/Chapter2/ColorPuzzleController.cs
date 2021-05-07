@@ -8,6 +8,7 @@ public class ColorPuzzleController : MonoBehaviour
     public bool isBlinking = false;
     public float blinkSpeed = 1f;
     private Vector3 screenPoint;
+    [SerializeField]
     private bool isPlaced = false;
     private bool isFadingIn = true;
 
@@ -26,7 +27,7 @@ public class ColorPuzzleController : MonoBehaviour
     public void CheckPlaced() {
         if(Vector3.Distance(gameObject.transform.position, destination.position) <= 0.1f) {
             GetComponent<SpriteRenderer>().material.SetFloat("_Flag", 1f);
-            GetComponent<PolygonCollider2D>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
             isPlaced = true;
         }
         GetComponent<SpriteRenderer>().material.SetFloat("_Thickness", 0f);
