@@ -1,0 +1,53 @@
+{
+    "options": 
+    [
+        {
+            "optionIndex": "6",
+            "optionLines":
+            [
+                "Exactly! I also spent a lot of time on the quiz.",
+                "Yeah! The TA said the grade would be curved."
+            ],
+            "nextLines":
+            [
+                "7",
+                "11"
+            ],
+            "illustration": "Mei_make_choices"
+        },
+        {
+            "optionIndex": "14a",
+            "optionLines":
+            [
+                "Just lucky, I suppose. Or probably we are really gifted for that. Hah...",
+                "Um... Not really. I just studied very hard for that question yesterday.",
+                "Maybe... But... You mean gifted for math? Do you really believe that?"
+
+            ],
+            "nextLines":
+            [
+                "15",
+                "17",
+                "19"
+            ],
+            "illustration": "Mei_make_choices"
+        },
+        {
+            "optionIndex": "32",
+            "optionLines":
+            [
+                "OK... Never mind. Let's just do Frank's idea. We don't have too much time left now.",
+                "All right, maybe it's my bad for not making it clear. Let me try saying it another way...",
+                "I think you didn't get my point actually. It's very different from Frank's idea. It's like..."
+
+            ],
+            "nextLines":
+            [
+                "puzzle2-2A",
+                "puzzle2-2B",
+                "puzzle2-2C"
+            ],
+            "illustration": "Mei_make_choices"
+        }
+    ]
+}

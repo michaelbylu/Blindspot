@@ -1,0 +1,69 @@
+{
+    "options": 
+    [
+        {
+            "optionIndex": "23",
+            "optionLines":
+            [
+                "American football game?",
+                "Not really... What is that?"
+
+            ],
+            "nextLines":
+            [
+                "24",
+                "24"
+            ],
+            "illustration": "Mei_make_choices"
+        },
+        {
+            "optionIndex": "24",
+            "optionLines":
+            [
+                "Sounds great. You guys said it will have a surprising halftime show, right?",
+                "Oh, I got it. I have seen some interesting advertisements from here before.",
+                "Wow, so the trophy you just mentioned is for the winner of the Super Bowl?"
+            ],
+            "nextLines":
+            [
+                "25a",
+                "26a",
+                "27a"
+            ],
+            "illustration": "Mei_make_choices"
+        },
+        {
+            "optionIndex": "35",
+            "optionLines":
+            [                
+                "The dumpling is a very traditional food in Spring Festivals and means a lot in our culture.",
+                "Haha! Actually, making dumplings is very interesting. Come and have a try next time.",
+                "It is very easy to cook and healthy. Also, it's one-bite size makes it very cute. Right?"
+
+            ],
+            "nextLines":
+            [
+                "35b",
+                "35a",
+                "35a"
+            ],
+            "illustration": "Mei_make_choices"
+        },
+        {
+            "optionIndex": "37",
+            "optionLines":
+            [
+                "Just like the Super Bowl! Everyone gets back home and enjoys family time!",
+                "It's a little bit hard to explain....",
+                "Haha. Don't overthink it! So we get the second chance to celebrate the new year!"
+            ],
+            "nextLines":
+            [
+                "puzzle2-1A",
+                "puzzle2-2C",
+                "puzzle2-1B"
+            ],
+            "illustration": "Mei_make_choices"
+        }
+    ]
+}
